@@ -5,14 +5,13 @@ The source files are not stored in this repository.
 
 | Site image(s) | Source |
 |---|---|
-| `hero-*`, `og-card.jpg`, `world-circles-*`, `world-footvolley-*`, `play-tricks-*` | loading-screen key art final D2 (5120×2880) |
-| `world-court-*`, `world-beach-*`, `play-gameplay-*`, `trailer-poster-*` | loading-screen key art final D1 (5120×2880) |
+| `hero-*`, `og-card.jpg`, all `world-*`, `play-gameplay-*`, `play-tricks-*`, `trailer-poster-*` | the owner-approved loading-screen key art (Railay beach, golden hour; 5120×2880 master, no UI baked in) |
 | `logo-*` | the game logo (`GameLogo.png`) |
 | `favicon*`, `apple-touch-icon`, `icon-*` | the app icon (1254 px original) |
 
 To regenerate (needs Python 3 + Pillow):
 ```bash
-FUTCHY_KEYART_DIR=/path/to/dir/with/D1_and_D2 \
+FUTCHY_KEYART_FILE=/path/to/Futchy_loading_art_MASTER_5120x2880.png \
 FUTCHY_LOGO=/path/to/GameLogo.png \
 FUTCHY_ICON=/path/to/Futchy_AppIcon_original_1254.png \
 npm run images && npm run build

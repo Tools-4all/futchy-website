@@ -294,11 +294,20 @@ h1, h2, h3, p, figure { margin: 0; }
 
 /* desktop hero: the wide key art is scaled up and anchored left so the players land right of the headline */
 @media (min-width: 721px) {
-  .hero__media, .final__media { inset: -5% -22% -5% 0; }
+  .hero__media, .final__media { inset: -5% -12% -5% 0; }
   .hero__title { font-size: clamp(3.6rem, 9vw, 8rem); }
   .hero__shade {
     background:
       linear-gradient(0deg, rgba(4, 14, 24, .8) 0%, rgba(4, 14, 24, 0) 46%),
       linear-gradient(90deg, rgba(4, 14, 24, .62) 0%, rgba(4, 14, 24, 0) 52%);
+  }
+}
+
+/* desktop: logo rides above the headline so it never covers the action at the net */
+@media (min-width: 721px) {
+  .hero__logo {
+    position: absolute; top: calc(env(safe-area-inset-top) + 96px);
+    left: max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));
+    width: clamp(200px, 25vw, 360px);
   }
 }

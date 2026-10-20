@@ -23,14 +23,11 @@ def _need(var):
     return Path(v).expanduser()
 
 
-KEYART = _need("FUTCHY_KEYART_DIR")
+KEYART = _need("FUTCHY_KEYART_FILE")  # the owner-approved 5120x2880 loading-art master
 OUT = Path(__file__).resolve().parent.parent / "src/img"
 OUT.mkdir(parents=True, exist_ok=True)
 
-SRC = {
-    "D1": KEYART / "D1_circle_plus_2v2_5120x2880.png",
-    "D2": KEYART / "D2_circle_plus_2v2_5120x2880.png",
-}
+SRC = {"KA": KEYART}
 LOGO = _need("FUTCHY_LOGO")
 ICON = _need("FUTCHY_ICON")
 
@@ -65,22 +62,22 @@ def crop_set(key, box, name, widths, **kw):
     save_set(master(key).crop((x0, y0, x1, y1)), name, widths, **kw)
 
 
-# --- hero: D2 (ball in the air, a dive at the net) -----------------------------
-crop_set("D2", (0, 0, 1920, 1080), "hero", [2400, 1600, 900])
-crop_set("D2", (700, 0, 1440, 1080), "hero-m", [1000, 640])
+# --- hero: the approved key art (a shark over the net, a scorpion in the circle) --
+crop_set("KA", (0, 0, 1920, 1080), "hero", [2400, 1600, 900])
+crop_set("KA", (1000, 0, 1740, 1080), "hero-m", [1000, 640])
 
 # --- the world of FUTCHY -------------------------------------------------------
-crop_set("D2", (640, 220, 1500, 1080), "world-circles", [1100, 640])
-crop_set("D2", (0, 270, 1000, 832), "world-footvolley", [1600, 900])
-crop_set("D1", (0, 0, 1920, 1080), "world-court", [1600, 900])
-crop_set("D1", (1000, 0, 1920, 690), "world-beach", [1200, 700])
+crop_set("KA", (960, 420, 1620, 1080), "world-circles", [1100, 640])
+crop_set("KA", (300, 380, 1000, 774), "world-footvolley", [1600, 900])
+crop_set("KA", (0, 0, 1920, 1080), "world-court", [1600, 900])
+crop_set("KA", (1000, 0, 1920, 690), "world-beach", [1200, 700])
 
 # --- play your way -------------------------------------------------------------
-crop_set("D1", (560, 380, 1520, 1080), "play-gameplay", [1100, 640])
-crop_set("D2", (210, 480, 620, 760), "play-tricks", [900, 520])
+crop_set("KA", (700, 380, 1660, 1080), "play-gameplay", [1100, 640])
+crop_set("KA", (1100, 590, 1604, 935), "play-tricks", [900, 520])
 
 # --- trailer poster: a real game frame (swap for a trailer frame when it lands) -
-crop_set("D1", (0, 0, 1920, 1080), "trailer-poster", [1600, 900])
+crop_set("KA", (0, 0, 1920, 1080), "trailer-poster", [1600, 900])
 
 # --- logo (original art, transparent) ------------------------------------------
 logo = Image.open(LOGO).convert("RGBA")
@@ -106,7 +103,7 @@ icon.resize((48, 48), Image.LANCZOS).save(
 )
 
 # --- Open Graph card 1200x630: real key art + the real logo ---------------------
-og = master("D2").crop((0, round(5120 / 1920 * 60), 5120, round(5120 / 1920 * 60) + 2688))
+og = master("KA").crop((0, round(5120 / 1920 * 60), 5120, round(5120 / 1920 * 60) + 2688))
 og = og.resize((1200, 630), Image.LANCZOS)
 shade = Image.new("RGBA", og.size, (0, 0, 0, 0))
 d = ImageDraw.Draw(shade)
