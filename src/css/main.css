@@ -311,3 +311,24 @@ h1, h2, h3, p, figure { margin: 0; }
     width: clamp(200px, 25vw, 360px);
   }
 }
+
+/* trailer: the film is vertical (9:16), so it sits in a phone-shaped frame */
+.trailer__grid { display: grid; gap: clamp(28px, 5vw, 56px); align-items: center; justify-items: center; }
+.trailer__grid .section__head { justify-self: start; margin-bottom: 0; }
+.trailer__hint { margin-top: 14px; color: var(--muted); font-size: 1rem; }
+.trailer__frame { aspect-ratio: 9 / 16; width: min(100%, 360px); max-height: 80vh; max-height: 80svh; }
+.trailer__frame video { background: #000; object-fit: contain; }
+@media (min-width: 900px) {
+  .trailer__grid { grid-template-columns: 1fr auto; justify-items: stretch; }
+  .trailer__grid .section__head { align-self: center; }
+  .trailer__grid > div { justify-self: center; }
+  .trailer__frame { width: min(40vw, 420px); }
+}
+.trailer__grid > .reveal { width: 100%; }
+.trailer__frame { width: 100%; max-width: 360px; margin-inline: auto; }
+@media (min-width: 900px) {
+  .trailer__grid { grid-template-columns: 1fr minmax(300px, 420px); }
+  .trailer__frame { max-width: 420px; width: 100%; }
+}
+.trailer__frame { max-height: none; width: min(100%, 360px, calc(80vh * 9 / 16)); width: min(100%, 360px, calc(80svh * 9 / 16)); }
+@media (min-width: 900px) { .trailer__frame { max-width: none; width: min(100%, 420px, calc(80vh * 9 / 16)); width: min(100%, 420px, calc(80svh * 9 / 16)); } }

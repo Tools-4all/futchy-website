@@ -76,8 +76,10 @@ crop_set("KA", (1000, 0, 1920, 690), "world-beach", [1200, 700])
 crop_set("KA", (700, 380, 1660, 1080), "play-gameplay", [1100, 640])
 crop_set("KA", (1100, 590, 1604, 935), "play-tricks", [900, 520])
 
-# --- trailer poster: a real game frame (swap for a trailer frame when it lands) -
-crop_set("KA", (0, 0, 1920, 1080), "trailer-poster", [1600, 900])
+# --- trailer poster: the first-reveal frame of the final trailer (vertical 9:16) --
+_poster = os.environ.get("FUTCHY_TRAILER_POSTER")
+if _poster:
+    save_set(Image.open(Path(_poster).expanduser()).convert("RGB"), "trailer-poster", [810, 540])
 
 # --- logo (original art, transparent) ------------------------------------------
 logo = Image.open(LOGO).convert("RGBA")
