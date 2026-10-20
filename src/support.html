@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+{{> head}}
+</head>
+<body class="doc-page">
+{{> header}}
+
+<main id="main" class="doc">
+  <div class="doc__in">
+    <h1>FUTCHY Support</h1>
+    <p class="lede">Questions, problems or feedback? Write to us and we will get back to you.</p>
+    <p class="meta">Contact: <a href="mailto:{{email}}">{{email}}</a></p>
+
+    <div class="support-cards">
+      <section class="support-card" aria-labelledby="s-game">
+        <h2 id="s-game">Gameplay &amp; support</h2>
+        <p>Something not working, or a question about the game? Tell us your iPhone model, your iOS version and what happened, and a screenshot or screen recording helps.</p>
+        <a class="mail-btn" href="mailto:{{email}}?subject=FUTCHY%20support">Email support</a>
+      </section>
+      <section class="support-card" aria-labelledby="s-priv">
+        <h2 id="s-priv">Privacy questions</h2>
+        <p>Questions about how FUTCHY handles information? Read the <a href="/privacy">Privacy Policy</a>, or write to us.</p>
+        <a class="mail-btn" href="mailto:{{email}}?subject=FUTCHY%20privacy%20question">Email about privacy</a>
+      </section>
+      <section class="support-card" aria-labelledby="s-ad">
+        <h2 id="s-ad">Report an inappropriate advertisement</h2>
+        <p>If an ad shown in FUTCHY looked inappropriate or unsuitable, tell us what you saw, roughly when, and a screenshot if you can. Please do not include passwords or other sensitive personal details.</p>
+        <a class="mail-btn" href="mailto:{{email}}?subject=FUTCHY%20ad%20report">Report an ad</a>
+      </section>
+    </div>
+  </div>
+</main>
+
+{{> footer}}
+<script src="{{js}}" defer></script>
+</body>
+</html>

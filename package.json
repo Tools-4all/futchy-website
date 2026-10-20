@@ -1,0 +1,13 @@
+{
+  "name": "futchy-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official launch website for FUTCHY — futchy.co. Static, zero dependencies.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node tools/serve.mjs",
+    "images": "python3 tools/make-images.py"
+  },
+  "engines": { "node": ">=18" }
+}

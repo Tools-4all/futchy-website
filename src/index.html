@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+{{> head}}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","name":"FUTCHY","url":"{{siteUrl}}/"},
+{"@type":"VideoGame","name":"FUTCHY","url":"{{siteUrl}}/","description":"A mobile beach footvolley game for iPhone.","gamePlatform":"iOS","applicationCategory":"Game","image":"{{siteUrl}}/img/og-card.jpg"}
+]}
+</script>
+</head>
+<body class="home">
+{{> header}}
+
+<main id="main">
+
+  <!-- 1 · HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__media" data-hero-media>
+      {{picture name="hero" mobile="hero-m" sizes="100vw" alt="Players on a beach court at golden hour, a ball high in the air above the sand, palm trees and a grandstand behind." eager}}
+    </div>
+    <div class="hero__shade" aria-hidden="true"></div>
+    <div class="wrap hero__body">
+      <img class="hero__logo" src="/img/logo-900.webp" width="900" height="402" alt="FUTCHY" fetchpriority="high">
+      <h1 id="hero-title" class="hero__title"><span class="sr-only">FUTCHY. </span>Own the<br>beach<span class="dot">.</span></h1>
+      <div class="hero__cta">{{cta:hero}}</div>
+    </div>
+    <a class="scroll-cue" href="#trailer" aria-label="Scroll to the trailer"><span>Scroll</span><i aria-hidden="true"></i></a>
+  </section>
+
+  <!-- 2 · TRAILER -->
+  <section class="section trailer" id="trailer" aria-labelledby="trailer-title">
+    <div class="wrap">
+      <header class="section__head reveal">
+        <p class="eyebrow">The launch trailer</p>
+        <h2 id="trailer-title" class="h2">See it move</h2>
+      </header>
+      <div class="reveal">{{trailer}}</div>
+    </div>
+  </section>
+
+  <!-- 3 · THE WORLD OF FUTCHY -->
+  <section class="section world" id="world" aria-labelledby="world-title">
+    <div class="wrap">
+      <header class="section__head reveal">
+        <p class="eyebrow">Sand. Sun. Ball.</p>
+        <h2 id="world-title" class="h2">The world of<br>FUTCHY</h2>
+      </header>
+      <div class="bento">
+        <figure class="tile tile--circles reveal">
+          <div class="tile__img" data-parallax="22">{{picture name="world-circles" sizes="(min-width: 900px) 42vw, 100vw" alt="A circle of players keeping the ball up on the sand."}}</div>
+          <figcaption class="tile__cap"><b>Circles</b><span>Keep it in the air.</span></figcaption>
+        </figure>
+        <figure class="tile tile--foot reveal">
+          <div class="tile__img" data-parallax="22">{{picture name="world-footvolley" sizes="(min-width: 900px) 58vw, 100vw" alt="A player diving at the net while spectators watch from the grandstand."}}</div>
+          <figcaption class="tile__cap"><b>Footvolley</b><span>Feet. Net. Sand.</span></figcaption>
+        </figure>
+        <figure class="tile tile--court reveal">
+          <div class="tile__img" data-parallax="22">{{picture name="world-court" sizes="(min-width: 900px) 58vw, 100vw" alt="The main court at golden hour: net, grandstand, palm trees and more courts beyond."}}</div>
+          <figcaption class="tile__cap"><b>Main Court</b><span>Where it counts.</span></figcaption>
+        </figure>
+        <figure class="tile tile--beach reveal">
+          <div class="tile__img" data-parallax="22">{{picture name="world-beach" sizes="(min-width: 900px) 42vw, 100vw" alt="Palm trees, a beach hut and distant courts in golden light."}}</div>
+          <figcaption class="tile__cap"><b>The beach</b><span>Golden hour.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · PLAY YOUR WAY -->
+  <section class="section play" id="play" aria-labelledby="play-title">
+    <div class="wrap">
+      <header class="section__head reveal">
+        <p class="eyebrow">Your game</p>
+        <h2 id="play-title" class="h2">Play your way</h2>
+      </header>
+      <div class="play-grid">
+        <article class="pcard reveal">
+          <div class="pcard__media">{{picture name="play-gameplay" sizes="(min-width: 900px) 46vw, 100vw" alt="A player about to strike the ball on the sand with teammates beside them."}}</div>
+          <div class="pcard__text"><span class="pcard__n">01</span><h3>Beach gameplay</h3><p>Straight from the sand.</p></div>
+        </article>
+        <article class="pcard reveal">
+          <div class="pcard__media">{{picture name="play-tricks" sizes="(min-width: 900px) 46vw, 100vw" alt="A player diving at the net."}}</div>
+          <div class="pcard__text"><span class="pcard__n">02</span><h3>Tricks &amp; moves</h3><p>Style on every touch.</p></div>
+        </article>
+        <article class="pcard reveal">
+          <div class="pcard__media">{{slot:customization}}</div>
+          <div class="pcard__text"><span class="pcard__n">03</span><h3>Make it yours</h3><p>Your look. Your player.</p></div>
+        </article>
+        <article class="pcard reveal">
+          <div class="pcard__media">{{slot:progression}}</div>
+          <div class="pcard__text"><span class="pcard__n">04</span><h3>Compete &amp; climb</h3><p>Earn your place.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · FINAL CTA -->
+  <section class="final" aria-labelledby="final-title">
+    <div class="final__media" data-parallax="40" aria-hidden="true">
+      {{picture name="hero" mobile="hero-m" sizes="100vw" alt=""}}
+    </div>
+    <div class="hero__shade hero__shade--final" aria-hidden="true"></div>
+    <div class="wrap final__body reveal">
+      <h2 id="final-title" class="final__title"><span class="final__brand">FUTCHY</span><span class="final__line">Own the beach<span class="dot">.</span></span></h2>
+      {{cta:final}}
+    </div>
+  </section>
+
+</main>
+
+{{> footer}}
+<script src="{{js}}" defer></script>
+</body>
+</html>

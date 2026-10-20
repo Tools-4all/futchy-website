@@ -1,0 +1,93 @@
+{
+ "hero": {
+  "widths": [
+   2400,
+   1600,
+   900
+  ],
+  "ratio": [
+   2400,
+   1350
+  ]
+ },
+ "hero-m": {
+  "widths": [
+   1000,
+   640
+  ],
+  "ratio": [
+   1000,
+   1460
+  ]
+ },
+ "world-circles": {
+  "widths": [
+   1100,
+   640
+  ],
+  "ratio": [
+   1100,
+   1100
+  ]
+ },
+ "world-footvolley": {
+  "widths": [
+   1600,
+   900
+  ],
+  "ratio": [
+   1600,
+   899
+  ]
+ },
+ "world-court": {
+  "widths": [
+   1600,
+   900
+  ],
+  "ratio": [
+   1600,
+   900
+  ]
+ },
+ "world-beach": {
+  "widths": [
+   1200,
+   700
+  ],
+  "ratio": [
+   1200,
+   900
+  ]
+ },
+ "play-gameplay": {
+  "widths": [
+   1100,
+   640
+  ],
+  "ratio": [
+   1100,
+   802
+  ]
+ },
+ "play-tricks": {
+  "widths": [
+   900,
+   520
+  ],
+  "ratio": [
+   900,
+   615
+  ]
+ },
+ "trailer-poster": {
+  "widths": [
+   1600,
+   900
+  ],
+  "ratio": [
+   1600,
+   900
+  ]
+ }
+}
