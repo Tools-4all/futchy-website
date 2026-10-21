@@ -351,3 +351,7 @@ h1, h2, h3, p, figure { margin: 0; }
   .social { grid-row: 2; grid-column: 1 / -1; }
   .fine { grid-row: 3; }
 }
+
+/* social links: logo buttons */
+.social a { width: 46px; height: 46px; padding: 0; justify-content: center; align-items: center; border-radius: 50%; }
+.social svg { display: block; }
