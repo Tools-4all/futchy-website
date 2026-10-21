@@ -42,4 +42,4 @@ DNS at the registrar:
 Clean URLs: GitHub Pages serves `privacy.html` at `/privacy` and `support.html` at `/support`; `404.html` is the custom 404.
 GitHub Pages cannot set response headers, so the Content-Security-Policy ships as a `<meta>` tag (see `build.mjs`).
 
-Before the policy is final: sections 3–5 of `src/privacy.html` (ads, consent, tracking) must be reconciled against the exact shipped build.
+The privacy page (`src/privacy.html`, English + Hebrew) follows the final launch architecture: LevelPlay + Unity Ads only, own consent dialog for every player, no ATT. If the shipped build differs, update sections 3–5 in both languages and `privacyUpdated` / `privacyUpdatedHe` in `site.config.json`.

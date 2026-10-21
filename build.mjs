@@ -138,6 +138,7 @@ export function build() {
       siteUrl: cfg.siteUrl,
       year: cfg.year,
       updated: cfg.privacyUpdated,
+      updatedHe: cfg.privacyUpdatedHe,
     };
     return html.replace(/\{\{(\w+)\}\}/g, (m, k) => {
       if (!(k in vars)) throw new Error(`unknown placeholder ${m} in ${page.file}`);

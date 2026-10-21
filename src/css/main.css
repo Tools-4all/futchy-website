@@ -355,3 +355,17 @@ h1, h2, h3, p, figure { margin: 0; }
 /* social links: logo buttons */
 .social a { width: 46px; height: 46px; padding: 0; justify-content: center; align-items: center; border-radius: 50%; }
 .social svg { display: block; }
+
+/* privacy: English + Hebrew on one page */
+.doc .doc-title { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(2.8rem, 8vw, 5rem); line-height: .98; letter-spacing: .01em; margin: 0 0 14px; }
+.doc .doc-h { font-family: var(--display); font-weight: 400; text-transform: uppercase; letter-spacing: .02em; font-size: 1.7rem; line-height: 1.1; margin: 48px 0 12px; color: var(--sand); }
+.langswitch { display: flex; gap: 10px; margin: 0 0 28px; }
+.langswitch a { text-decoration: none; padding: 8px 18px; border: 1px solid var(--line); border-radius: 999px; font-weight: 700; font-size: .9rem; color: var(--sand); }
+.langswitch a:hover { border-color: var(--aqua); color: var(--aqua); }
+.doc-rule { border: 0; border-top: 1px solid var(--line); margin: clamp(56px, 9vw, 96px) 0; }
+.doc section[id] { scroll-margin-top: 84px; }
+.doc [dir="rtl"] { text-align: right; }
+.doc [dir="rtl"] ul { padding-left: 0; padding-right: 1.25em; }
+.doc [dir="rtl"] .toc ol { padding-left: 0; padding-right: 1.2em; }
+.doc [dir="rtl"] .doc-title, .doc [dir="rtl"] .doc-h { font-family: var(--body); font-weight: 800; text-transform: none; letter-spacing: 0; }
+.doc [dir="rtl"] .toc p { letter-spacing: 0; }
