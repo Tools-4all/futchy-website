@@ -8,5 +8,6 @@
     "src": "/media/futchy-trailer.mp4",
     "poster": "/img/trailer-poster-810.webp"
   },
-  "privacyUpdatedHe": "21 באוקטובר 2026"
+  "privacyUpdatedHe": "21 באוקטובר 2026",
+  "backendUrl": "https://hfclcxosyzjgjyxsgzec.supabase.co"
 }

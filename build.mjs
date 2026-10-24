@@ -28,6 +28,12 @@ const PAGES = [
     description: "Contact FUTCHY support: gameplay questions, privacy questions and reporting an inappropriate advertisement.",
   },
   {
+    // The private dashboard: Google sign-in, two owners only (the server decides). Never indexed.
+    file: "admin.html", out: "admin.html", path: "/admin", index: false, admin: true,
+    title: "Dashboard — FUTCHY",
+    description: "FUTCHY's private dashboard.",
+  },
+  {
     file: "404.html", out: "404.html", path: "/404", index: false,
     title: "Page not found — FUTCHY",
     description: "This page does not exist.",
@@ -54,9 +60,10 @@ export function build() {
 
   // hashed css / js so returning visitors never get stale code
   const assets = {};
-  for (const [key, from, ext] of [["css", "css/main.css", "css"], ["js", "js/main.js", "js"]]) {
+  for (const [key, from, ext] of [["css", "css/main.css", "css"], ["js", "js/main.js", "js"],
+                                  ["adminCss", "css/admin.css", "css"], ["adminJs", "js/admin.js", "js"]]) {
     const buf = readFileSync(join(src, from));
-    const name = `assets/main.${hash(buf)}.${ext}`;
+    const name = `assets/${from.split("/")[1].split(".")[0]}.${hash(buf)}.${ext}`;
     writeFileSync(join(dist, name), buf);
     assets[key] = "/" + name;
   }
@@ -117,6 +124,8 @@ export function build() {
   const inlineFlag = 'document.documentElement.classList.add("js")';
   const flagHash = createHash("sha256").update(inlineFlag).digest("base64");
   const csp = `default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self'; script-src 'self' 'sha256-${flagHash}'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'`;
+  // The dashboard also talks to the Futchy backend (its public key only; the server decides who sees anything).
+  const adminCsp = csp.replace("connect-src 'self'", `connect-src 'self' ${cfg.backendUrl}`);
 
   function render(html, page) {
     for (let i = 0; i < 4; i++) html = html.replace(/\{\{> (\w+)\}\}/g, (_, n) => partial(n));
@@ -131,7 +140,9 @@ export function build() {
       description: esc(page.description),
       canonical: cfg.siteUrl + (page.path === "/" ? "/" : page.path),
       robots: page.index ? "index, follow" : "noindex, follow",
-      csp: csp,
+      csp: page.admin ? adminCsp : csp,
+      adminCss: assets.adminCss,
+      adminJs: assets.adminJs,
       css: assets.css,
       js: assets.js,
       email: cfg.email,
@@ -157,7 +168,7 @@ export function build() {
     .join("\n");
   writeFileSync(join(dist, "sitemap.xml"),
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
-  writeFileSync(join(dist, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${cfg.siteUrl}/sitemap.xml\n`);
+  writeFileSync(join(dist, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: /admin\n\nSitemap: ${cfg.siteUrl}/sitemap.xml\n`);
   writeFileSync(join(dist, "site.webmanifest"), JSON.stringify({
     name: "FUTCHY", short_name: "FUTCHY", start_url: "/", display: "browser",
     background_color: "#06141d", theme_color: "#06141d",
