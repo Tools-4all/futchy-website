@@ -10,9 +10,9 @@
   DRAFT for Chen's approval (2026-11-04) - branch privacy/android-testing-2026-11-04, NOT deployed.
   Describes the released iPhone game (store 1.0.2) and the Android testing version (the same 1.0.2, Google Play testing),
   and marks planned features as planned. Based on docs/android/PRIVACY_POLICY_1_0_2_PUBLISH.md in the game repository.
-  ⚠ "On Android" in section 7 is accurate only for an Android build made with AndroidAdStrip.On = true (the ad
-  libraries' advertising-ID permission and start-up entries removed). If that build is made without it, replace that
-  paragraph before publishing.
+  Ads: the rewarded "double coins" video on iPhone and on Android (Chen, 2026-11-04: Android has it from the first
+  testing build). Consent as the code does it: AdsConsentConfig.AskEveryone = false (owner, 2026-10-21) - asked only
+  where the device points to the EEA, the UK or Switzerland, or where nothing can be read (ConsentRegion).
 -->
 
 <main id="main" class="doc">
@@ -27,7 +27,7 @@
       <p class="meta">Last updated: {{updated}}</p>
 
       <div class="box">
-        <p><strong>In short.</strong> You can play FUTCHY without an account. The game sends us usage statistics so we can improve it; they contain no name or email address. On iPhone you can sign in with Apple: your progress, player name and place on the leaderboards are then kept with your account, and you can delete it in the game. On iPhone the only advertising is an optional rewarded video, shown only if you agree. Payments go through Apple or Google; we never see your card. The Android version is in testing: it has no sign-in, no advertising and no purchases yet. This website sets no cookies and has no analytics.</p>
+        <p><strong>In short.</strong> You can play FUTCHY without an account. The game sends us usage statistics so we can improve it; they contain no name or email address. On iPhone you can sign in with Apple: your progress, player name and place on the leaderboards are then kept with your account, and you can delete it in the game. The only advertising is an optional rewarded video you choose to watch for a coin bonus. Payments go through Apple or Google; we never see your card. The Android version is in testing: it has no sign-in and no purchases yet. This website sets no cookies and has no analytics.</p>
       </div>
 
       <nav class="toc" aria-label="On this page">
@@ -83,13 +83,17 @@
       <p>On iPhone, coin packs are sold through the App Store. Apple takes the payment; we never receive your card or payment details. To deliver your coins and prevent abuse, we receive and keep the store's confirmation of the purchase (its identifier, the product and the time). In the Android testing version coin packs are not available: coins are earned by playing.</p>
 
       <h2 id="ads">7. Advertising and consent</h2>
-      <p><strong>On iPhone</strong>, the only advertising is an <strong>optional rewarded video</strong>: you may choose to watch a short ad to receive the ×2 coin bonus. Ads are never required to play. They are provided by two services, both operated by Unity Technologies, each under its own privacy policy:</p>
+      <p>On iPhone and Android the only advertising is an <strong>optional rewarded video</strong>: you may choose to watch a short ad to receive the ×2 coin bonus. Ads are never required to play. They are provided by two services, both operated by Unity Technologies, each under its own privacy policy:</p>
       <ul>
         <li><strong>Unity LevelPlay (ironSource)</strong>, an ad mediation service. See the <a href="https://docs.unity.com/en-us/grow/levelplay/platform/legal-resources/ironsource-gdpr-compliance" rel="noopener">LevelPlay GDPR compliance page</a> and the <a href="https://docs.unity.com/en-us/grow/levelplay/platform/legal-resources/ironsource-us-state-privacy-laws" rel="noopener">LevelPlay US state privacy laws page</a>.</li>
         <li><strong>Unity Ads</strong>, an ad network. See the <a href="https://unity.com/legal/game-player-and-app-user-privacy-faq" rel="noopener">Unity Game Player and App User Privacy FAQ</a> and the <a href="https://unity.com/legal/privacy-policy" rel="noopener">Unity Privacy Policy</a>.</li>
       </ul>
-      <p>Before any advertising starts, every player sees our consent question once. If you decline, or do not answer, no advertising software is started and the whole game stays playable. You can change your choice at any time in Settings → About → Privacy options. When advertising is on, these services may process identifiers available to the advertising software, your IP address and the approximate location derived from it, device and connection information, ad views and interactions, and performance information, to show and measure ads and to prevent fraud, under their own privacy policies. FUTCHY does not show Apple's App Tracking Transparency prompt, so on iPhone the advertising software cannot use your device's advertising identifier.</p>
-      <p><strong>On Android</strong>, the testing version shows no advertising. The advertising services are switched off in it, and it does not request access to your device's advertising ID.</p>
+      <p><strong>Consent.</strong> If your device's time zone or region setting points to the European Economic Area, the United Kingdom or Switzerland - or neither can be read - you see our consent question before any advertising software starts. If you decline, or do not answer, no advertising software is started and the whole game stays playable; you can change your choice at any time in Settings → About → Privacy options. Elsewhere the advertising service starts without this question while you play, and an ad is still shown only when you choose to watch one.</p>
+      <p>When advertising is on, these services may process identifiers available to the advertising software, your IP address and the approximate location derived from it, device and connection information, ad views and interactions, and performance information, to show and measure ads and to prevent fraud, under their own privacy policies.</p>
+      <ul>
+        <li><strong>iPhone:</strong> FUTCHY does not show Apple's App Tracking Transparency prompt, so the advertising software cannot use your device's advertising identifier.</li>
+        <li><strong>Android:</strong> the advertising software can read your device's advertising ID. You can reset it or delete it at any time in your phone's settings (Settings → Privacy → Ads, or Google → Ads, depending on the phone).</li>
+      </ul>
 
       <h2 id="planned">8. Planned features (not in the current versions)</h2>
       <p>We are working on the following. They are <strong>not</strong> in the versions this policy describes today; we will update this policy no later than when they arrive:</p>
@@ -97,7 +101,6 @@
         <li><strong>Online matches</strong> against other players. To connect players, an online-game service (Photon, by Exit Games) and the other players' devices receive your device's IP address and an in-game player identifier; other players see your username and character.</li>
         <li><strong>Sign in with Google</strong> on Android (and on iPhone): Google would give us your email address and name.</li>
         <li><strong>Coin packs on Google Play</strong>, handled like the App Store's (section 6).</li>
-        <li><strong>Rewarded advertising on Android</strong>, with the same consent question as on iPhone.</li>
         <li>A setting to <strong>turn usage statistics off</strong>, and deleting detailed usage statistics after 90 days.</li>
       </ul>
 
@@ -137,7 +140,7 @@
       <p class="meta">עודכן לאחרונה: {{updatedHe}}</p>
 
       <div class="box">
-        <p><strong>בקצרה.</strong> אפשר לשחק ב-FUTCHY בלי חשבון. המשחק שולח לנו סטטיסטיקות שימוש כדי שנוכל לשפר אותו; אין בהן שם או כתובת אימייל. באייפון אפשר להתחבר עם Apple: ההתקדמות, שם השחקן והמקום שלך בדירוג נשמרים אז עם החשבון, ואפשר למחוק אותו מתוך המשחק. באייפון הפרסום היחיד הוא סרטון מתגמל אופציונלי, שמוצג רק אם הסכמת. התשלומים עוברים דרך Apple או Google; איננו רואים את פרטי הכרטיס שלך. גרסת האנדרואיד נמצאת בבדיקות: אין בה עדיין התחברות, פרסום או רכישות. האתר אינו משתמש בעוגיות ואין בו אנליטיקה.</p>
+        <p><strong>בקצרה.</strong> אפשר לשחק ב-FUTCHY בלי חשבון. המשחק שולח לנו סטטיסטיקות שימוש כדי שנוכל לשפר אותו; אין בהן שם או כתובת אימייל. באייפון אפשר להתחבר עם Apple: ההתקדמות, שם השחקן והמקום שלך בדירוג נשמרים אז עם החשבון, ואפשר למחוק אותו מתוך המשחק. הפרסום היחיד הוא סרטון מתגמל אופציונלי שבוחרים לצפות בו תמורת בונוס מטבעות. התשלומים עוברים דרך Apple או Google; איננו רואים את פרטי הכרטיס שלך. גרסת האנדרואיד נמצאת בבדיקות: אין בה עדיין התחברות או רכישות. האתר אינו משתמש בעוגיות ואין בו אנליטיקה.</p>
       </div>
 
       <nav class="toc" aria-label="בעמוד זה">
@@ -193,13 +196,17 @@
       <p>באייפון חבילות מטבעות נמכרות דרך ה-App Store. Apple גובה את התשלום; איננו מקבלים את פרטי הכרטיס או התשלום. כדי למסור את המטבעות ולמנוע ניצול לרעה, אנו מקבלים ושומרים את אישור הרכישה של החנות (המזהה, המוצר והשעה). בגרסת הבדיקות לאנדרואיד חבילות המטבעות אינן זמינות: את המטבעות מרוויחים במשחק.</p>
 
       <h3 id="he-ads" class="doc-h">7. פרסום והסכמה</h3>
-      <p><strong>באייפון</strong> הפרסום היחיד הוא <strong>סרטון מתגמל אופציונלי</strong>: אפשר לבחור לצפות בפרסומת קצרה תמורת בונוס ×2 מטבעות. פרסומות אינן תנאי למשחק. הן מסופקות על ידי שני שירותים, ששניהם בבעלות Unity Technologies, כל אחד לפי מדיניות הפרטיות שלו:</p>
+      <p>באייפון ובאנדרואיד הפרסום היחיד הוא <strong>סרטון מתגמל אופציונלי</strong>: אפשר לבחור לצפות בפרסומת קצרה תמורת בונוס ×2 מטבעות. פרסומות אינן תנאי למשחק. הן מסופקות על ידי שני שירותים, ששניהם בבעלות Unity Technologies, כל אחד לפי מדיניות הפרטיות שלו:</p>
       <ul>
         <li><strong>Unity LevelPlay (ironSource)</strong>, שירות תיווך פרסום. ראו את <a href="https://docs.unity.com/en-us/grow/levelplay/platform/legal-resources/ironsource-gdpr-compliance" rel="noopener">עמוד ה-GDPR של LevelPlay</a> ואת <a href="https://docs.unity.com/en-us/grow/levelplay/platform/legal-resources/ironsource-us-state-privacy-laws" rel="noopener">עמוד חוקי הפרטיות של מדינות ארה״ב</a>.</li>
         <li><strong>Unity Ads</strong>, רשת פרסום. ראו את <a href="https://unity.com/legal/game-player-and-app-user-privacy-faq" rel="noopener">שאלות ותשובות על פרטיות שחקנים ומשתמשים של Unity</a> ואת <a href="https://unity.com/legal/privacy-policy" rel="noopener">מדיניות הפרטיות של Unity</a>.</li>
       </ul>
-      <p>לפני שמופעל פרסום כלשהו, כל שחקן רואה פעם אחת את שאלת ההסכמה שלנו. אם סירבת, או שלא ענית, שום רכיב פרסום לא מופעל והמשחק כולו נשאר זמין. אפשר לשנות את הבחירה בכל עת ב<bdi>הגדרות ← אודות ← אפשרויות פרטיות</bdi>. כשהפרסום מופעל, השירותים האלה עשויים לעבד מזהים הזמינים לרכיב הפרסום, את כתובת ה-IP והמיקום המשוער הנגזר ממנה, מידע על המכשיר והחיבור, צפיות ואינטראקציות עם פרסומות, ומידע על ביצועים, כדי להציג ולמדוד פרסומות ולמנוע הונאות, לפי מדיניות הפרטיות שלהם. FUTCHY אינו מציג את בקשת ההרשאה למעקב של Apple (App Tracking Transparency), ולכן באייפון רכיב הפרסום אינו יכול להשתמש במזהה הפרסום של המכשיר.</p>
-      <p><strong>באנדרואיד</strong> גרסת הבדיקות אינה מציגה פרסום. שירותי הפרסום כבויים בה, והיא אינה מבקשת גישה למזהה הפרסום של המכשיר.</p>
+      <p><strong>הסכמה.</strong> אם אזור הזמן או הגדרת האזור של המכשיר שלך מצביעים על האזור הכלכלי האירופי, הממלכה המאוחדת או שווייץ - או שלא ניתן לקרוא אף אחד מהם - תוצג לך שאלת ההסכמה שלנו לפני שמופעל רכיב פרסום כלשהו. אם סירבת, או שלא ענית, שום רכיב פרסום לא מופעל והמשחק כולו נשאר זמין; אפשר לשנות את הבחירה בכל עת ב<bdi>הגדרות ← אודות ← אפשרויות פרטיות</bdi>. במקומות אחרים שירות הפרסום מופעל בלי השאלה הזו בזמן המשחק, ופרסומת מוצגת רק כשבוחרים לצפות בה.</p>
+      <p>כשהפרסום מופעל, השירותים האלה עשויים לעבד מזהים הזמינים לרכיב הפרסום, את כתובת ה-IP והמיקום המשוער הנגזר ממנה, מידע על המכשיר והחיבור, צפיות ואינטראקציות עם פרסומות, ומידע על ביצועים, כדי להציג ולמדוד פרסומות ולמנוע הונאות, לפי מדיניות הפרטיות שלהם.</p>
+      <ul>
+        <li><strong>אייפון:</strong> FUTCHY אינו מציג את בקשת ההרשאה למעקב של Apple (App Tracking Transparency), ולכן רכיב הפרסום אינו יכול להשתמש במזהה הפרסום של המכשיר.</li>
+        <li><strong>אנדרואיד:</strong> רכיב הפרסום יכול לקרוא את מזהה הפרסום של המכשיר. אפשר לאפס או למחוק אותו בכל עת בהגדרות הטלפון (<bdi>הגדרות ← פרטיות ← מודעות</bdi>, או <bdi>Google ← מודעות</bdi>, לפי הטלפון).</li>
+      </ul>
 
       <h3 id="he-planned" class="doc-h">8. תכונות מתוכננות (לא בגרסאות הנוכחיות)</h3>
       <p>אנחנו עובדים על התכונות הבאות. הן <strong>אינן</strong> בגרסאות שהמדיניות מתארת היום; נעדכן את המדיניות לכל המאוחר כשיגיעו:</p>
@@ -207,7 +214,6 @@
         <li><strong>משחקים אונליין</strong> מול שחקנים אחרים. כדי לחבר בין השחקנים, שירות משחק מקוון (Photon, של Exit Games) והמכשירים של השחקנים האחרים מקבלים את כתובת ה-IP של המכשיר שלך ומזהה שחקן במשחק; שחקנים אחרים רואים את שם המשתמש והדמות שלך.</li>
         <li><strong>התחברות עם Google</strong> באנדרואיד (ובאייפון): Google תמסור לנו את כתובת האימייל ואת שמך.</li>
         <li><strong>חבילות מטבעות ב-Google Play</strong>, באותו אופן כמו ב-App Store (סעיף 6).</li>
-        <li><strong>פרסום מתגמל באנדרואיד</strong>, עם אותה שאלת הסכמה כמו באייפון.</li>
         <li>הגדרה <strong>לכיבוי סטטיסטיקות השימוש</strong>, ומחיקת סטטיסטיקות שימוש מפורטות אחרי 90 יום.</li>
       </ul>
 
