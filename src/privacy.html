@@ -7,12 +7,12 @@
 {{> header}}
 
 <!--
-  DRAFT for Chen's approval (2026-11-04) - branch privacy/android-testing-2026-11-04, NOT deployed.
-  Describes the released iPhone game (store 1.0.2) and the Android testing version (the same 1.0.2, Google Play testing),
-  and marks planned features as planned. Based on docs/android/PRIVACY_POLICY_1_0_2_PUBLISH.md in the game repository.
-  Ads: the rewarded "double coins" video on iPhone and on Android (Chen, 2026-11-04: Android has it from the first
-  testing build). Consent as the code does it: AdsConsentConfig.AskEveryone = false (owner, 2026-10-21) - asked only
-  where the device points to the EEA, the UK or Switzerland, or where nothing can be read (ConsentRegion).
+  REVIEW DRAFT (2026-11-04) - branch privacy/review-2026-11-04, NOT deployed (only main deploys; publishing is Chen's).
+  Supersedes privacy/android-testing-2026-11-04 and privacy/android-google-signin (its Google sign-in text is folded in,
+  checked against the code). Describes: iPhone store 1.0.2 (c4ddcf4a) and Android 1.0.2 (origin/android/1.0.2, Google
+  sign-in on since 4a2cdb20). The Google sign-in parts are written for "Android versions that offer it", so the page
+  stays true for an Android build without it. Evidence and open gaps: Deliverables/privacy_review_2026-11-04/ in the
+  game repository (CHANGES.md, ISSUES.md).
 -->
 
 <main id="main" class="doc">
@@ -27,7 +27,7 @@
       <p class="meta">Last updated: {{updated}}</p>
 
       <div class="box">
-        <p><strong>In short.</strong> You can play FUTCHY without an account. The game sends us usage statistics so we can improve it; they contain no name or email address. On iPhone you can sign in with Apple: your progress, player name and place on the leaderboards are then kept with your account, and you can delete it in the game. The only advertising is an optional rewarded video you choose to watch for a coin bonus. Payments go through Apple or Google; we never see your card. The Android version is in testing: it has no sign-in and no purchases yet. This website sets no cookies and has no analytics.</p>
+        <p><strong>In short.</strong> You can play FUTCHY without an account. The game sends us usage statistics so we can improve it; they contain no name or email address. You can sign in - with Apple on iPhone, and with Google in the Android versions that offer it: your progress, player name and place on the leaderboards are then kept with your account, and you can delete it in the game or by writing to us. The only advertising is an optional rewarded video you choose to watch for a coin bonus; the advertising software runs in the background so that an ad is ready. Payments go through Apple; we never see your card. The Android version is in testing and has no purchases yet. The public pages of this website set no cookies and have no analytics.</p>
       </div>
 
       <nav class="toc" aria-label="On this page">
@@ -55,32 +55,34 @@
       <p>FUTCHY is a general-audience beach footvolley game for iPhone and, in testing, for Android. This policy covers the FUTCHY app on both and the website at <a href="{{siteUrl}}/">futchy.co</a>. For any privacy question, write to <a href="mailto:{{email}}">{{email}}</a>.</p>
 
       <h2 id="device">2. Playing without an account</h2>
-      <p>You need no account to play. Your progress, character and settings are saved on your device. Deleting the app removes them from the device; copies in your device's own backups follow your device settings. On Android every player plays this way, because the Android version has no sign-in yet.</p>
+      <p>You need no account to play. Your progress, character and settings are saved on your device. Deleting the app removes them from the device; copies in your device's own backups follow your device settings. In Android versions without the Google sign-in option, every player plays this way.</p>
 
       <h2 id="stats">3. Usage statistics</h2>
       <p>On iPhone and Android the app sends us:</p>
       <ul>
         <li>a random identifier the app creates on its first launch (not your device's advertising identifier) and a session identifier;</li>
-        <li>game events, such as starting and finishing a mode, results, levels reached, screens and shops opened, purchases started, sign-in steps, ad offers, and error and performance reports;</li>
-        <li>the app version, the device model, the operating system version and the country of your device's region setting (not your location: the app does not use GPS or look up your IP address).</li>
+        <li>game events, such as starting and finishing a mode, results, levels reached, coins earned and spent, screens and shops opened, purchases started, sign-in steps and ad offers;</li>
+        <li>error and performance reports: error messages from the game's code, and - when the app closed unexpectedly or ran low on memory - where in the game it was, how long it had run and how much memory it used;</li>
+        <li>the app version, the device model, the operating system version and the country of your device's region setting (not your location: the app does not use GPS).</li>
       </ul>
-      <p>The statistics contain no name or email address. If you are signed in, they are linked to your account. This version has no setting to turn them off; you can ask us to delete the statistics linked to your device or account (section 13).</p>
+      <p>The statistics contain no name or email address. If you are signed in, they are linked to your account. Like any internet service, our server receives your device's IP address when the app connects; we do not store it with the statistics or use it to locate you, and our hosting provider's technical logs keep it for a short time (no more than 7 days). This version has no setting to turn the statistics off; you can ask us to delete the statistics linked to your device or account (section 13).</p>
 
-      <h2 id="accounts">4. Accounts (optional, iPhone)</h2>
-      <p>On iPhone you can sign in with Apple. Signing in creates a FUTCHY account that keeps:</p>
+      <h2 id="accounts">4. Accounts (optional)</h2>
+      <p>On iPhone you can sign in with Apple. On Android, the versions of the game that show a "Sign in with Google" option let you sign in with Google. Signing in creates a FUTCHY account that keeps:</p>
       <ul>
-        <li>your progress, character, settings and game statistics (a cloud copy, so you can continue on another device), with an identifier of the device that saved them;</li>
+        <li>your progress, character, settings and game statistics (a cloud copy, so you can continue on another device), with an identifier of the device that saved them (on iPhone Apple's identifier for vendor, on Android a scrambled form of the device's Android ID);</li>
         <li>the name and flag you give your player in the profile, and your username - other players can see and search them;</li>
         <li>your portrait picture - the round picture of your in-game character - which other players can see;</li>
         <li>your coins, purchases and items;</li>
-        <li>the email address Apple gives us when you sign in, often a private relay address that Apple forwards to you. We do not keep the name Apple may share, and we never receive your password.</li>
+        <li>your sign-in details and when you signed in. <strong>With Apple:</strong> the email address Apple gives us, often a private relay address that Apple forwards to you. Apple may also share your first name the first time you sign in; the game keeps it only on your device and does not send it to us. <strong>With Google</strong> (Android): your email address, your name and a link to your Google profile picture, kept with the sign-in record and not shown in the game. We never receive your password.</li>
       </ul>
+      <p>If you sign in with Google using the same email address as an account you already have (for example one made with Sign in with Apple where you shared your real address), you get that same account - the same progress, coins, name and leaderboard place. If you used Apple's "Hide My Email", the addresses differ, so a Google sign-in opens a separate account.</p>
 
       <h2 id="leaderboards">5. Leaderboards</h2>
-      <p>If you take part (signed in, on iPhone), your player name, username, portrait and results are shown to other players. On Android the leaderboards can be viewed; Android players do not appear on them yet.</p>
+      <p>If you are signed in and take part, your player name, username, portrait and results are shown to other players. Players who are not signed in can view the leaderboards but do not appear on them.</p>
 
       <h2 id="purchases">6. Purchases</h2>
-      <p>On iPhone, coin packs are sold through the App Store. Apple takes the payment; we never receive your card or payment details. To deliver your coins and prevent abuse, we receive and keep the store's confirmation of the purchase (its identifier, the product and the time). In the Android testing version coin packs are not available: coins are earned by playing.</p>
+      <p>On iPhone, where coin packs are offered, they are sold through the App Store. Apple takes the payment; we never receive your card or payment details. If you are signed in, we receive and keep the store's confirmation of the purchase (its identifier, the product, the time and Apple's signed record of the transaction) with your account, to deliver your coins and prevent abuse. Apple keeps its own record of your purchases. In the Android version coin packs are not available: coins are earned by playing.</p>
 
       <h2 id="ads">7. Advertising and consent</h2>
       <p>On iPhone and Android the only advertising is an <strong>optional rewarded video</strong>: you may choose to watch a short ad to receive the ×2 coin bonus. Ads are never required to play. They are provided by two services, both operated by Unity Technologies, each under its own privacy policy:</p>
@@ -88,8 +90,9 @@
         <li><strong>Unity LevelPlay (ironSource)</strong>, an ad mediation service. See the <a href="https://docs.unity.com/en-us/grow/levelplay/platform/legal-resources/ironsource-gdpr-compliance" rel="noopener">LevelPlay GDPR compliance page</a> and the <a href="https://docs.unity.com/en-us/grow/levelplay/platform/legal-resources/ironsource-us-state-privacy-laws" rel="noopener">LevelPlay US state privacy laws page</a>.</li>
         <li><strong>Unity Ads</strong>, an ad network. See the <a href="https://unity.com/legal/game-player-and-app-user-privacy-faq" rel="noopener">Unity Game Player and App User Privacy FAQ</a> and the <a href="https://unity.com/legal/privacy-policy" rel="noopener">Unity Privacy Policy</a>.</li>
       </ul>
-      <p><strong>Consent.</strong> If your device's time zone or region setting points to the European Economic Area, the United Kingdom or Switzerland - or neither can be read - you see our consent question before any advertising software starts. If you decline, or do not answer, no advertising software is started and the whole game stays playable; you can change your choice at any time in Settings → About → Privacy options. Elsewhere the advertising service starts without this question while you play, and an ad is still shown only when you choose to watch one.</p>
-      <p>When advertising is on, these services may process identifiers available to the advertising software, your IP address and the approximate location derived from it, device and connection information, ad views and interactions, and performance information, to show and measure ads and to prevent fraud, under their own privacy policies.</p>
+      <p><strong>Consent.</strong> If your device's time zone or region setting (on iPhone, also its App Store country) points to the European Economic Area, the United Kingdom or Switzerland - or none of them can be read - you see our consent question on the beach before any advertising software is started. If you decline, or do not answer, the advertising software is not started and the whole game stays playable; without an answer you are asked again later. You can change your choice at any time in Settings → About → Privacy options: if you withdraw consent, no further ad is offered and the advertising software is told of your choice.</p>
+      <p><strong>Everywhere else</strong>, the advertising software is started without this question, a few moments after the home screen or the beach appears, so that an ad is ready if you want one - not only when you watch an ad. An ad is still shown only when you choose to watch one. In these places the game has no setting to switch the advertising software off; you can limit the use of your device's advertising identifier as described below.</p>
+      <p>When advertising is on, these services may process identifiers available to the advertising software, your IP address and the approximate location derived from it, device and connection information, ad views and interactions, information about in-app purchases made on the device, and performance information, to show (including personalised ads) and measure ads and to prevent fraud, under their own privacy policies.</p>
       <ul>
         <li><strong>iPhone:</strong> FUTCHY does not show Apple's App Tracking Transparency prompt, so the advertising software cannot use your device's advertising identifier.</li>
         <li><strong>Android:</strong> the advertising software can read your device's advertising ID. You can reset it or delete it at any time in your phone's settings (Settings → Privacy → Ads, or Google → Ads, depending on the phone).</li>
@@ -99,24 +102,26 @@
       <p>We are working on the following. They are <strong>not</strong> in the versions this policy describes today; we will update this policy no later than when they arrive:</p>
       <ul>
         <li><strong>Online matches</strong> against other players. To connect players, an online-game service (Photon, by Exit Games) and the other players' devices receive your device's IP address and an in-game player identifier; other players see your username and character.</li>
-        <li><strong>Sign in with Google</strong> on Android (and on iPhone): Google would give us your email address and name.</li>
+        <li><strong>Sign in with Google</strong> on iPhone too.</li>
         <li><strong>Coin packs on Google Play</strong>, handled like the App Store's (section 6).</li>
         <li>A setting to <strong>turn usage statistics off</strong>, and deleting detailed usage statistics after 90 days.</li>
       </ul>
 
       <h2 id="retention">9. How long we keep information</h2>
       <ul>
-        <li>Usage statistics: for as long as we need them to understand and improve the game; deleted on request (section 13).</li>
-        <li>Account information (progress, names, portrait, coins, items, leaderboard results): while your account exists.</li>
-        <li>Purchase confirmations: as long as needed to deliver and support purchases and as the law requires for transaction records, also after an account is deleted.</li>
+        <li>Usage statistics: for as long as we need them to understand and improve the game. They are not deleted automatically when you delete your account; you can ask us to delete them (section 13).</li>
+        <li>Account information (sign-in details, progress, names, portrait, coins, items, purchase confirmations, leaderboard results): while your account exists. Deleting the account deletes them (section 11). Apple keeps its own purchase records.</li>
+        <li>Our hosting provider's technical logs, which can include your IP address: no more than 7 days. Our current hosting plan keeps no automatic database backups; if that changes, we will say here how long backups are kept.</li>
         <li>Information on your device: until you delete the app.</li>
       </ul>
 
       <h2 id="where">10. Where it is stored</h2>
-      <p>Our backend runs on Supabase, in the European Union (Frankfurt, Germany). The advertising services process information as described in their own policies, possibly outside your country.</p>
+      <p>Our backend runs on Supabase, in the European Union (Frankfurt, Germany). The advertising services process information as described in their own policies, possibly outside your country. This website is hosted by GitHub Pages.</p>
 
       <h2 id="delete">11. Deleting your account</h2>
-      <p>In the game: Settings → Account → Delete account. This deletes your account and what is kept with it - progress, names, portrait, coins, items and leaderboard results. Purchase confirmations are kept as section 9 says; usage statistics linked to the account can be deleted on request (section 13). Android players have no account; to delete the statistics of an Android device, write to us.</p>
+      <p><strong>In the game</strong> (iPhone, and Android where you can sign in): open your Profile, tap the account button (it shows your username), then <em>Delete account</em>, and confirm. This deletes, on our server, your account and what is kept with it: your sign-in details, progress, names, portrait, coins, items, purchase confirmations and leaderboard results.</p>
+      <p><strong>Without the app:</strong> write to <a href="mailto:{{email}}">{{email}}</a> from the email address of your account (or tell us your username) and ask us to delete your FUTCHY account. We delete it within 30 days and confirm by email.</p>
+      <p>Deleting the account does not delete the progress saved on the device you use, which stays on it as a guest's until you delete the app, nor your usage statistics (section 3), which we delete on request. The <em>Delete account</em> item under Settings → Account starts the game over on that device; it does not delete your account on our server. Players without an account who want their device's statistics deleted can write to us. More details: <a href="/delete-account">futchy.co/delete-account</a>.</p>
 
       <h2 id="children">12. Children</h2>
       <p>FUTCHY is a general-audience game and is not directed to children. If you believe a child has given us information, contact us and we will delete it.</p>
@@ -125,7 +130,8 @@
       <p>Depending on where you live, you may have the right to access, correct or delete your information, to object to or restrict its use, and to withdraw consent. To use them - including deleting usage statistics linked to your device or account - write to <a href="mailto:{{email}}">{{email}}</a>. Information processed by the advertising partners is governed by their policies (section 7).</p>
 
       <h2 id="website">14. This website</h2>
-      <p>futchy.co is a static website. It sets no cookies, uses no analytics or advertising tools, and does not load third-party scripts, fonts or media. The company that hosts it may keep standard server logs (such as IP address and requested page) for security and operation.</p>
+      <p>The public pages of futchy.co are a static website. They set no cookies, use no analytics or advertising tools, and load no third-party scripts, fonts or media: the fonts and the trailer come from futchy.co itself. The links to Instagram and TikTok take you to those services, under their own policies. GitHub, which hosts the site, may keep standard server logs (such as IP address and requested page) for security and operation.</p>
+      <p>futchy.co/admin is a private page for the game's team only. Signing in there goes through Google and our backend, and keeps the sign-in in that browser's local storage. Players have no reason to use it.</p>
 
       <h2 id="changes">15. Changes to this policy</h2>
       <p>If the game or the website changes in a way that affects your privacy, we update this page and the "Last updated" date above. Privacy questions: <a href="mailto:{{email}}">{{email}}</a>. For gameplay help or to report an inappropriate advertisement, see <a href="/support">Support</a>.</p>
@@ -140,7 +146,7 @@
       <p class="meta">עודכן לאחרונה: {{updatedHe}}</p>
 
       <div class="box">
-        <p><strong>בקצרה.</strong> אפשר לשחק ב-FUTCHY בלי חשבון. המשחק שולח לנו סטטיסטיקות שימוש כדי שנוכל לשפר אותו; אין בהן שם או כתובת אימייל. באייפון אפשר להתחבר עם Apple: ההתקדמות, שם השחקן והמקום שלך בדירוג נשמרים אז עם החשבון, ואפשר למחוק אותו מתוך המשחק. הפרסום היחיד הוא סרטון מתגמל אופציונלי שבוחרים לצפות בו תמורת בונוס מטבעות. התשלומים עוברים דרך Apple או Google; איננו רואים את פרטי הכרטיס שלך. גרסת האנדרואיד נמצאת בבדיקות: אין בה עדיין התחברות או רכישות. האתר אינו משתמש בעוגיות ואין בו אנליטיקה.</p>
+        <p><strong>בקצרה.</strong> אפשר לשחק ב-FUTCHY בלי חשבון. המשחק שולח לנו סטטיסטיקות שימוש כדי שנוכל לשפר אותו; אין בהן שם או כתובת אימייל. אפשר להתחבר - עם Apple באייפון, ועם Google בגרסאות האנדרואיד שמציעות זאת: ההתקדמות, שם השחקן והמקום שלך בדירוג נשמרים אז עם החשבון, ואפשר למחוק אותו מתוך המשחק או בפנייה אלינו. הפרסום היחיד הוא סרטון מתגמל אופציונלי שבוחרים לצפות בו תמורת בונוס מטבעות; רכיב הפרסום פועל ברקע כדי שפרסומת תהיה מוכנה. התשלומים עוברים דרך Apple; איננו רואים את פרטי הכרטיס שלך. גרסת האנדרואיד נמצאת בבדיקות ואין בה עדיין רכישות. העמודים הציבוריים של האתר אינם משתמשים בעוגיות ואין בהם אנליטיקה.</p>
       </div>
 
       <nav class="toc" aria-label="בעמוד זה">
@@ -168,32 +174,34 @@
       <p>FUTCHY הוא משחק פוצ׳יוולי חופים לקהל הרחב לאייפון, ובשלב בדיקות גם לאנדרואיד. המדיניות חלה על אפליקציית FUTCHY בשתי הפלטפורמות ועל האתר <a href="{{siteUrl}}/">futchy.co</a>. לכל שאלה בנושא פרטיות: <a href="mailto:{{email}}" dir="ltr">{{email}}</a>.</p>
 
       <h3 id="he-device" class="doc-h">2. משחק בלי חשבון</h3>
-      <p>אין צורך בחשבון כדי לשחק. ההתקדמות, הדמות וההגדרות נשמרים במכשיר. מחיקת האפליקציה מוחקת אותם מהמכשיר; עותקים בגיבויי המכשיר כפופים להגדרות המכשיר שלך. באנדרואיד כל השחקנים משחקים כך, כי בגרסת האנדרואיד עדיין אין התחברות.</p>
+      <p>אין צורך בחשבון כדי לשחק. ההתקדמות, הדמות וההגדרות נשמרים במכשיר. מחיקת האפליקציה מוחקת אותם מהמכשיר; עותקים בגיבויי המכשיר כפופים להגדרות המכשיר שלך. בגרסאות אנדרואיד שאין בהן אפשרות התחברות עם Google, כל השחקנים משחקים כך.</p>
 
       <h3 id="he-stats" class="doc-h">3. סטטיסטיקות שימוש</h3>
       <p>באייפון ובאנדרואיד האפליקציה שולחת אלינו:</p>
       <ul>
         <li>מזהה אקראי שהאפליקציה יוצרת בהפעלה הראשונה (לא מזהה הפרסום של המכשיר) ומזהה הפעלה;</li>
-        <li>אירועים מהמשחק, כמו התחלה וסיום של מצב משחק, תוצאות, עליית רמה, מסכים וחנויות שנפתחו, רכישות שהתחילו, שלבי התחברות, הצעות פרסום, ודיווחי שגיאות וביצועים;</li>
-        <li>גרסת האפליקציה, דגם המכשיר, גרסת מערכת ההפעלה והמדינה שבהגדרת האזור של המכשיר (לא המיקום שלך: האפליקציה אינה משתמשת ב-GPS ואינה מאתרת לפי כתובת IP).</li>
+        <li>אירועים מהמשחק, כמו התחלה וסיום של מצב משחק, תוצאות, עליית רמה, מטבעות שהורווחו והוצאו, מסכים וחנויות שנפתחו, רכישות שהתחילו, שלבי התחברות והצעות פרסום;</li>
+        <li>דיווחי שגיאות וביצועים: הודעות שגיאה מהקוד של המשחק, וכשהאפליקציה נסגרה באופן לא צפוי או כשנגמר לה הזיכרון - איפה במשחק זה קרה, כמה זמן היא פעלה וכמה זיכרון היא צרכה;</li>
+        <li>גרסת האפליקציה, דגם המכשיר, גרסת מערכת ההפעלה והמדינה שבהגדרת האזור של המכשיר (לא המיקום שלך: האפליקציה אינה משתמשת ב-GPS).</li>
       </ul>
-      <p>הסטטיסטיקות אינן כוללות שם או כתובת אימייל. אם התחברת, הן מקושרות לחשבון שלך. בגרסה הזו אין הגדרה לכיבוי שלהן; אפשר לבקש מאיתנו למחוק סטטיסטיקות המקושרות למכשיר או לחשבון שלך (סעיף 13).</p>
+      <p>הסטטיסטיקות אינן כוללות שם או כתובת אימייל. אם התחברת, הן מקושרות לחשבון שלך. כמו כל שירות באינטרנט, השרת שלנו מקבל את כתובת ה-IP של המכשיר כשהאפליקציה מתחברת אליו; איננו שומרים אותה עם הסטטיסטיקות ואיננו משתמשים בה כדי לאתר אותך, ויומני המערכת של ספק האחסון שלנו שומרים אותה לזמן קצר (לא יותר מ-7 ימים). בגרסה הזו אין הגדרה לכיבוי הסטטיסטיקות; אפשר לבקש מאיתנו למחוק סטטיסטיקות המקושרות למכשיר או לחשבון שלך (סעיף 13).</p>
 
-      <h3 id="he-accounts" class="doc-h">4. חשבון (אופציונלי, באייפון)</h3>
-      <p>באייפון אפשר להתחבר עם Apple. ההתחברות יוצרת חשבון FUTCHY שבו נשמרים:</p>
+      <h3 id="he-accounts" class="doc-h">4. חשבון (אופציונלי)</h3>
+      <p>באייפון אפשר להתחבר עם Apple. באנדרואיד, גרסאות המשחק שמציגות אפשרות "התחברות עם Google" מאפשרות להתחבר עם Google. ההתחברות יוצרת חשבון FUTCHY שבו נשמרים:</p>
       <ul>
-        <li>ההתקדמות, הדמות, ההגדרות וסטטיסטיקות המשחק שלך (עותק בענן, כדי להמשיך במכשיר אחר), עם מזהה של המכשיר ששמר אותם;</li>
+        <li>ההתקדמות, הדמות, ההגדרות וסטטיסטיקות המשחק שלך (עותק בענן, כדי להמשיך במכשיר אחר), עם מזהה של המכשיר ששמר אותם (באייפון מזהה הספק של Apple, באנדרואיד גרסה מוצפנת חד-כיוונית של מזהה Android של המכשיר);</li>
         <li>השם והדגל שנתת לשחקן שלך בפרופיל, ושם המשתמש שלך - ששחקנים אחרים יכולים לראות ולחפש;</li>
         <li>תמונת הדיוקן שלך - התמונה העגולה של הדמות שלך במשחק - ששחקנים אחרים יכולים לראות;</li>
         <li>המטבעות, הרכישות והפריטים שלך;</li>
-        <li>כתובת האימייל ש-Apple מוסרת לנו בהתחברות, לרוב כתובת ממסר פרטית ש-Apple מעבירה אליך. איננו שומרים את השם ש-Apple עשויה לשתף, ולעולם איננו מקבלים את הסיסמה שלך.</li>
+        <li>פרטי ההתחברות שלך ומועדי ההתחברות. <strong>ב-Apple:</strong> כתובת האימייל ש-Apple מוסרת לנו, לרוב כתובת ממסר פרטית ש-Apple מעבירה אליך. Apple עשויה גם לשתף את שמך הפרטי בהתחברות הראשונה; המשחק שומר אותו רק במכשיר שלך ואינו שולח אותו אלינו. <strong>ב-Google</strong> (אנדרואיד): כתובת האימייל, השם שלך וקישור לתמונת הפרופיל שלך ב-Google, שנשמרים עם פרטי ההתחברות ואינם מוצגים במשחק. לעולם איננו מקבלים את הסיסמה שלך.</li>
       </ul>
+      <p>אם התחברת עם Google עם אותה כתובת אימייל של חשבון שכבר יש לך (למשל חשבון שנוצר בהתחברות עם Apple שבה שיתפת את הכתובת האמיתית), תגיע לאותו חשבון - אותה התקדמות, מטבעות, שם ומקום בדירוג. אם השתמשת ב"הסתר את הדוא״ל שלי" של Apple, הכתובות שונות, ולכן התחברות עם Google פותחת חשבון נפרד.</p>
 
       <h3 id="he-leaderboards" class="doc-h">5. דירוג</h3>
-      <p>אם השתתפת בדירוג (מחובר, באייפון), שם השחקן, שם המשתמש, הדיוקן והתוצאות שלך מוצגים לשחקנים אחרים. באנדרואיד אפשר לצפות בדירוג; שחקני אנדרואיד עדיין אינם מופיעים בו.</p>
+      <p>אם התחברת והשתתפת בדירוג, שם השחקן, שם המשתמש, הדיוקן והתוצאות שלך מוצגים לשחקנים אחרים. שחקנים שלא התחברו יכולים לצפות בדירוג אך אינם מופיעים בו.</p>
 
       <h3 id="he-purchases" class="doc-h">6. רכישות</h3>
-      <p>באייפון חבילות מטבעות נמכרות דרך ה-App Store. Apple גובה את התשלום; איננו מקבלים את פרטי הכרטיס או התשלום. כדי למסור את המטבעות ולמנוע ניצול לרעה, אנו מקבלים ושומרים את אישור הרכישה של החנות (המזהה, המוצר והשעה). בגרסת הבדיקות לאנדרואיד חבילות המטבעות אינן זמינות: את המטבעות מרוויחים במשחק.</p>
+      <p>באייפון, כשחבילות מטבעות מוצעות, הן נמכרות דרך ה-App Store. Apple גובה את התשלום; איננו מקבלים את פרטי הכרטיס או התשלום. אם התחברת, אנו מקבלים ושומרים עם החשבון שלך את אישור הרכישה של החנות (המזהה, המוצר, השעה והרשומה החתומה של Apple על העסקה), כדי למסור את המטבעות ולמנוע ניצול לרעה. Apple שומרת רשומה משלה של הרכישות שלך. בגרסת האנדרואיד חבילות המטבעות אינן זמינות: את המטבעות מרוויחים במשחק.</p>
 
       <h3 id="he-ads" class="doc-h">7. פרסום והסכמה</h3>
       <p>באייפון ובאנדרואיד הפרסום היחיד הוא <strong>סרטון מתגמל אופציונלי</strong>: אפשר לבחור לצפות בפרסומת קצרה תמורת בונוס ×2 מטבעות. פרסומות אינן תנאי למשחק. הן מסופקות על ידי שני שירותים, ששניהם בבעלות Unity Technologies, כל אחד לפי מדיניות הפרטיות שלו:</p>
@@ -201,8 +209,9 @@
         <li><strong>Unity LevelPlay (ironSource)</strong>, שירות תיווך פרסום. ראו את <a href="https://docs.unity.com/en-us/grow/levelplay/platform/legal-resources/ironsource-gdpr-compliance" rel="noopener">עמוד ה-GDPR של LevelPlay</a> ואת <a href="https://docs.unity.com/en-us/grow/levelplay/platform/legal-resources/ironsource-us-state-privacy-laws" rel="noopener">עמוד חוקי הפרטיות של מדינות ארה״ב</a>.</li>
         <li><strong>Unity Ads</strong>, רשת פרסום. ראו את <a href="https://unity.com/legal/game-player-and-app-user-privacy-faq" rel="noopener">שאלות ותשובות על פרטיות שחקנים ומשתמשים של Unity</a> ואת <a href="https://unity.com/legal/privacy-policy" rel="noopener">מדיניות הפרטיות של Unity</a>.</li>
       </ul>
-      <p><strong>הסכמה.</strong> אם אזור הזמן או הגדרת האזור של המכשיר שלך מצביעים על האזור הכלכלי האירופי, הממלכה המאוחדת או שווייץ - או שלא ניתן לקרוא אף אחד מהם - תוצג לך שאלת ההסכמה שלנו לפני שמופעל רכיב פרסום כלשהו. אם סירבת, או שלא ענית, שום רכיב פרסום לא מופעל והמשחק כולו נשאר זמין; אפשר לשנות את הבחירה בכל עת ב<bdi>הגדרות ← אודות ← אפשרויות פרטיות</bdi>. במקומות אחרים שירות הפרסום מופעל בלי השאלה הזו בזמן המשחק, ופרסומת מוצגת רק כשבוחרים לצפות בה.</p>
-      <p>כשהפרסום מופעל, השירותים האלה עשויים לעבד מזהים הזמינים לרכיב הפרסום, את כתובת ה-IP והמיקום המשוער הנגזר ממנה, מידע על המכשיר והחיבור, צפיות ואינטראקציות עם פרסומות, ומידע על ביצועים, כדי להציג ולמדוד פרסומות ולמנוע הונאות, לפי מדיניות הפרטיות שלהם.</p>
+      <p><strong>הסכמה.</strong> אם אזור הזמן או הגדרת האזור של המכשיר שלך (באייפון, גם מדינת ה-App Store) מצביעים על האזור הכלכלי האירופי, הממלכה המאוחדת או שווייץ - או שלא ניתן לקרוא אף אחד מהם - תוצג לך שאלת ההסכמה שלנו על החוף לפני שמופעל רכיב פרסום כלשהו. אם סירבת, או שלא ענית, רכיב הפרסום לא מופעל והמשחק כולו נשאר זמין; אם לא ענית, נשאל שוב מאוחר יותר. אפשר לשנות את הבחירה בכל עת ב<bdi>הגדרות ← אודות ← אפשרויות פרטיות</bdi>: אם ביטלת את ההסכמה, לא תוצע עוד פרסומת ורכיב הפרסום מקבל הודעה על הבחירה שלך.</p>
+      <p><strong>בכל מקום אחר</strong> רכיב הפרסום מופעל בלי השאלה הזו, רגעים ספורים אחרי שמסך הבית או החוף מופיעים, כדי שפרסומת תהיה מוכנה אם תרצה בה - לא רק כשצופים בפרסומת. פרסומת מוצגת רק כשבוחרים לצפות בה. במקומות האלה אין במשחק הגדרה לכיבוי רכיב הפרסום; אפשר להגביל את השימוש במזהה הפרסום של המכשיר כמתואר בהמשך.</p>
+      <p>כשהפרסום מופעל, השירותים האלה עשויים לעבד מזהים הזמינים לרכיב הפרסום, את כתובת ה-IP והמיקום המשוער הנגזר ממנה, מידע על המכשיר והחיבור, צפיות ואינטראקציות עם פרסומות, מידע על רכישות באפליקציה שבוצעו במכשיר, ומידע על ביצועים, כדי להציג פרסומות (כולל פרסומות מותאמות אישית) ולמדוד אותן ולמנוע הונאות, לפי מדיניות הפרטיות שלהם.</p>
       <ul>
         <li><strong>אייפון:</strong> FUTCHY אינו מציג את בקשת ההרשאה למעקב של Apple (App Tracking Transparency), ולכן רכיב הפרסום אינו יכול להשתמש במזהה הפרסום של המכשיר.</li>
         <li><strong>אנדרואיד:</strong> רכיב הפרסום יכול לקרוא את מזהה הפרסום של המכשיר. אפשר לאפס או למחוק אותו בכל עת בהגדרות הטלפון (<bdi>הגדרות ← פרטיות ← מודעות</bdi>, או <bdi>Google ← מודעות</bdi>, לפי הטלפון).</li>
@@ -212,24 +221,26 @@
       <p>אנחנו עובדים על התכונות הבאות. הן <strong>אינן</strong> בגרסאות שהמדיניות מתארת היום; נעדכן את המדיניות לכל המאוחר כשיגיעו:</p>
       <ul>
         <li><strong>משחקים אונליין</strong> מול שחקנים אחרים. כדי לחבר בין השחקנים, שירות משחק מקוון (Photon, של Exit Games) והמכשירים של השחקנים האחרים מקבלים את כתובת ה-IP של המכשיר שלך ומזהה שחקן במשחק; שחקנים אחרים רואים את שם המשתמש והדמות שלך.</li>
-        <li><strong>התחברות עם Google</strong> באנדרואיד (ובאייפון): Google תמסור לנו את כתובת האימייל ואת שמך.</li>
+        <li><strong>התחברות עם Google</strong> גם באייפון.</li>
         <li><strong>חבילות מטבעות ב-Google Play</strong>, באותו אופן כמו ב-App Store (סעיף 6).</li>
         <li>הגדרה <strong>לכיבוי סטטיסטיקות השימוש</strong>, ומחיקת סטטיסטיקות שימוש מפורטות אחרי 90 יום.</li>
       </ul>
 
       <h3 id="he-retention" class="doc-h">9. כמה זמן אנו שומרים מידע</h3>
       <ul>
-        <li>סטטיסטיקות שימוש: כל עוד הן נחוצות לנו כדי להבין ולשפר את המשחק; נמחקות לפי בקשה (סעיף 13).</li>
-        <li>מידע החשבון (התקדמות, שמות, דיוקן, מטבעות, פריטים, תוצאות דירוג): כל עוד החשבון קיים.</li>
-        <li>אישורי רכישה: ככל שנדרש למסירת הרכישות ולתמיכה בהן ולפי מה שהחוק מחייב לגבי רשומות עסקאות, גם לאחר מחיקת חשבון.</li>
+        <li>סטטיסטיקות שימוש: כל עוד הן נחוצות לנו כדי להבין ולשפר את המשחק. הן אינן נמחקות אוטומטית כשמוחקים את החשבון; אפשר לבקש מאיתנו למחוק אותן (סעיף 13).</li>
+        <li>מידע החשבון (פרטי התחברות, התקדמות, שמות, דיוקן, מטבעות, פריטים, אישורי רכישה, תוצאות דירוג): כל עוד החשבון קיים. מחיקת החשבון מוחקת אותם (סעיף 11). Apple שומרת רשומות רכישה משלה.</li>
+        <li>יומני המערכת של ספק האחסון שלנו, שעשויים לכלול את כתובת ה-IP שלך: לא יותר מ-7 ימים. תוכנית האחסון הנוכחית שלנו אינה שומרת גיבויים אוטומטיים של מסד הנתונים; אם זה ישתנה, נפרט כאן כמה זמן נשמרים הגיבויים.</li>
         <li>מידע במכשיר: עד שמוחקים את האפליקציה.</li>
       </ul>
 
       <h3 id="he-where" class="doc-h">10. היכן המידע נשמר</h3>
-      <p>השרת שלנו פועל על Supabase, באיחוד האירופי (פרנקפורט, גרמניה). שירותי הפרסום מעבדים מידע כמתואר במדיניות שלהם, ייתכן מחוץ למדינה שלך.</p>
+      <p>השרת שלנו פועל על Supabase, באיחוד האירופי (פרנקפורט, גרמניה). שירותי הפרסום מעבדים מידע כמתואר במדיניות שלהם, ייתכן מחוץ למדינה שלך. האתר מתארח ב-GitHub Pages.</p>
 
       <h3 id="he-delete" class="doc-h">11. מחיקת החשבון</h3>
-      <p>במשחק: <bdi>הגדרות ← חשבון ← מחיקת חשבון</bdi>. הפעולה מוחקת את החשבון ואת מה שנשמר בו - התקדמות, שמות, דיוקן, מטבעות, פריטים ותוצאות דירוג. אישורי רכישה נשמרים כאמור בסעיף 9; סטטיסטיקות שימוש המקושרות לחשבון אפשר למחוק לפי בקשה (סעיף 13). לשחקני אנדרואיד אין חשבון; למחיקת הסטטיסטיקות של מכשיר אנדרואיד, כתבו אלינו.</p>
+      <p><strong>במשחק</strong> (באייפון, ובאנדרואיד במקום שאפשר להתחבר): פותחים את הפרופיל, מקישים על כפתור החשבון (מופיע בו שם המשתמש שלך), ואז על <bdi>מחיקת החשבון</bdi>, ומאשרים. הפעולה מוחקת מהשרת שלנו את החשבון ואת מה שנשמר בו: פרטי ההתחברות, ההתקדמות, השמות, הדיוקן, המטבעות, הפריטים, אישורי הרכישה ותוצאות הדירוג.</p>
+      <p><strong>בלי האפליקציה:</strong> כתבו אל <a href="mailto:{{email}}" dir="ltr">{{email}}</a> מכתובת האימייל של החשבון (או ציינו את שם המשתמש), ובקשו למחוק את חשבון FUTCHY שלכם. נמחק אותו בתוך 30 יום ונאשר באימייל.</p>
+      <p>מחיקת החשבון אינה מוחקת את ההתקדמות השמורה במכשיר שבו אתם משחקים, שנשארת בו כשל שחקן אורח עד שמוחקים את האפליקציה, וגם לא את סטטיסטיקות השימוש (סעיף 3), שאותן נמחק לפי בקשה. הפריט <bdi>מחיקת חשבון</bdi> שב<bdi>הגדרות ← חשבון</bdi> מתחיל את המשחק מחדש במכשיר הזה; הוא אינו מוחק את החשבון שלך בשרת שלנו. שחקנים בלי חשבון שרוצים למחוק את הסטטיסטיקות של המכשיר שלהם יכולים לכתוב אלינו. פרטים נוספים: <a href="/delete-account">futchy.co/delete-account</a>.</p>
 
       <h3 id="he-children" class="doc-h">12. ילדים</h3>
       <p>FUTCHY הוא משחק לקהל הרחב ואינו מכוון לילדים. אם לדעתכם ילד מסר לנו מידע, פנו אלינו ונמחק אותו.</p>
@@ -238,7 +249,8 @@
       <p>בהתאם למקום מגוריך, ייתכן שיש לך זכות לעיין במידע, לתקנו או למחקו, להתנגד לשימוש בו או להגבילו, ולבטל הסכמה. כדי לממש אותן - כולל מחיקת סטטיסטיקות שימוש המקושרות למכשיר או לחשבון שלך - כתבו אל <a href="mailto:{{email}}" dir="ltr">{{email}}</a>. מידע שמעבדים שותפי הפרסום כפוף למדיניות שלהם (סעיף 7).</p>
 
       <h3 id="he-website" class="doc-h">14. האתר</h3>
-      <p>futchy.co הוא אתר סטטי. הוא אינו משתמש בעוגיות, באנליטיקה או בכלי פרסום, ואינו טוען סקריפטים, גופנים או מדיה של צד שלישי. חברת האחסון עשויה לשמור יומני שרת רגילים (כמו כתובת IP והעמוד שהתבקש) לצורכי אבטחה ותפעול.</p>
+      <p>העמודים הציבוריים של futchy.co הם אתר סטטי. הם אינם משתמשים בעוגיות, באנליטיקה או בכלי פרסום, ואינם טוענים סקריפטים, גופנים או מדיה של צד שלישי: הגופנים והטריילר מגיעים מ-futchy.co עצמו. הקישורים לאינסטגרם ולטיקטוק מובילים לשירותים האלה, לפי המדיניות שלהם. GitHub, שמארחת את האתר, עשויה לשמור יומני שרת רגילים (כמו כתובת IP והעמוד שהתבקש) לצורכי אבטחה ותפעול.</p>
+      <p>futchy.co/admin הוא עמוד פרטי לצוות המשחק בלבד. הכניסה אליו עוברת דרך Google והשרת שלנו, ופרטי הכניסה נשמרים באחסון המקומי של הדפדפן. אין לשחקנים סיבה להשתמש בו.</p>
 
       <h3 id="he-changes" class="doc-h">15. שינויים במדיניות</h3>
       <p>אם המשחק או האתר ישתנו באופן שמשפיע על הפרטיות שלך, נעדכן את הדף הזה ואת תאריך העדכון שלמעלה. שאלות פרטיות: <a href="mailto:{{email}}" dir="ltr">{{email}}</a>. לעזרה במשחק או לדיווח על פרסומת לא הולמת, ראו <a href="/support">תמיכה</a>.</p>
