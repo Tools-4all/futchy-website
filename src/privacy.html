@@ -7,7 +7,8 @@
 {{> header}}
 
 <!--
-  Approved by Chen and published, 2026-11-04.
+  Approved by Chen and published, 2026-11-04. Branch privacy/android-google-signin (2026-11-04): Google sign-in on
+  Android added - to go live only with the Android build that has it (Chen's word). Not deployed.
   Describes the released iPhone game (store 1.0.2) and the Android testing version (the same 1.0.2, Google Play testing),
   and marks planned features as planned. Based on docs/android/PRIVACY_POLICY_1_0_2_PUBLISH.md in the game repository.
   Ads: the rewarded "double coins" video on iPhone and on Android (Chen, 2026-11-04: Android has it from the first
@@ -27,7 +28,7 @@
       <p class="meta">Last updated: {{updated}}</p>
 
       <div class="box">
-        <p><strong>In short.</strong> You can play FUTCHY without an account. The game sends us usage statistics so we can improve it; they contain no name or email address. On iPhone you can sign in with Apple: your progress, player name and place on the leaderboards are then kept with your account, and you can delete it in the game. The only advertising is an optional rewarded video you choose to watch for a coin bonus. Payments go through Apple or Google; we never see your card. The Android version is in testing: it has no sign-in and no purchases yet. This website sets no cookies and has no analytics.</p>
+        <p><strong>In short.</strong> You can play FUTCHY without an account. The game sends us usage statistics so we can improve it; they contain no name or email address. You can sign in - with Apple on iPhone, with Google on Android: your progress, player name and place on the leaderboards are then kept with your account, and you can delete it in the game or by writing to us. The only advertising is an optional rewarded video you choose to watch for a coin bonus. Payments go through Apple or Google; we never see your card. The Android version is in testing: it has no purchases yet. This website sets no cookies and has no analytics.</p>
       </div>
 
       <nav class="toc" aria-label="On this page">
@@ -55,7 +56,7 @@
       <p>FUTCHY is a general-audience beach footvolley game for iPhone and, in testing, for Android. This policy covers the FUTCHY app on both and the website at <a href="{{siteUrl}}/">futchy.co</a>. For any privacy question, write to <a href="mailto:{{email}}">{{email}}</a>.</p>
 
       <h2 id="device">2. Playing without an account</h2>
-      <p>You need no account to play. Your progress, character and settings are saved on your device. Deleting the app removes them from the device; copies in your device's own backups follow your device settings. On Android every player plays this way, because the Android version has no sign-in yet.</p>
+      <p>You need no account to play. Your progress, character and settings are saved on your device. Deleting the app removes them from the device; copies in your device's own backups follow your device settings.</p>
 
       <h2 id="stats">3. Usage statistics</h2>
       <p>On iPhone and Android the app sends us:</p>
@@ -66,18 +67,19 @@
       </ul>
       <p>The statistics contain no name or email address. If you are signed in, they are linked to your account. This version has no setting to turn them off; you can ask us to delete the statistics linked to your device or account (section 13).</p>
 
-      <h2 id="accounts">4. Accounts (optional, iPhone)</h2>
-      <p>On iPhone you can sign in with Apple. Signing in creates a FUTCHY account that keeps:</p>
+      <h2 id="accounts">4. Accounts (optional)</h2>
+      <p>You can sign in with Apple on iPhone and with Google on Android. Signing in creates a FUTCHY account that keeps:</p>
       <ul>
         <li>your progress, character, settings and game statistics (a cloud copy, so you can continue on another device), with an identifier of the device that saved them;</li>
         <li>the name and flag you give your player in the profile, and your username - other players can see and search them;</li>
         <li>your portrait picture - the round picture of your in-game character - which other players can see;</li>
         <li>your coins, purchases and items;</li>
-        <li>the email address Apple gives us when you sign in, often a private relay address that Apple forwards to you. We do not keep the name Apple may share, and we never receive your password.</li>
+        <li>the email address Apple or Google gives us when you sign in. With Apple this is often a private relay address that Apple forwards to you; we do not keep the name Apple may share. With Google we also receive your name and the link to your Google profile picture, kept with the account and not shown in the game. We never receive your password.</li>
       </ul>
+      <p>If you sign in with Google using the same email address as an account you already have (for example from Sign in with Apple), you get that same account - the same progress, coins, name and leaderboard place. If you used Apple's "Hide My Email", the two addresses differ, so a Google sign-in opens a separate account.</p>
 
       <h2 id="leaderboards">5. Leaderboards</h2>
-      <p>If you take part (signed in, on iPhone), your player name, username, portrait and results are shown to other players. On Android the leaderboards can be viewed; Android players do not appear on them yet.</p>
+      <p>If you take part (signed in), your player name, username, portrait and results are shown to other players.</p>
 
       <h2 id="purchases">6. Purchases</h2>
       <p>On iPhone, coin packs are sold through the App Store. Apple takes the payment; we never receive your card or payment details. To deliver your coins and prevent abuse, we receive and keep the store's confirmation of the purchase (its identifier, the product and the time). In the Android testing version coin packs are not available: coins are earned by playing.</p>
@@ -99,7 +101,7 @@
       <p>We are working on the following. They are <strong>not</strong> in the versions this policy describes today; we will update this policy no later than when they arrive:</p>
       <ul>
         <li><strong>Online matches</strong> against other players. To connect players, an online-game service (Photon, by Exit Games) and the other players' devices receive your device's IP address and an in-game player identifier; other players see your username and character.</li>
-        <li><strong>Sign in with Google</strong> on Android (and on iPhone): Google would give us your email address and name.</li>
+        <li><strong>Sign in with Google</strong> on iPhone too.</li>
         <li><strong>Coin packs on Google Play</strong>, handled like the App Store's (section 6).</li>
         <li>A setting to <strong>turn usage statistics off</strong>, and deleting detailed usage statistics after 90 days.</li>
       </ul>
@@ -116,7 +118,8 @@
       <p>Our backend runs on Supabase, in the European Union (Frankfurt, Germany). The advertising services process information as described in their own policies, possibly outside your country.</p>
 
       <h2 id="delete">11. Deleting your account</h2>
-      <p>In the game: Settings → Account → Delete account. This deletes your account and what is kept with it - progress, names, portrait, coins, items and leaderboard results. Purchase confirmations are kept as section 9 says; usage statistics linked to the account can be deleted on request (section 13). Android players have no account; to delete the statistics of an Android device, write to us.</p>
+      <p>In the game, on iPhone or Android: Settings → Account → Delete account. This deletes your account and what is kept with it - progress, names, portrait, coins, items and leaderboard results. Purchase confirmations are kept as section 9 says; usage statistics linked to the account can be deleted on request (section 13).</p>
+      <p><strong>Without the app:</strong> write to <a href="mailto:{{email}}">{{email}}</a> from the email address of your account (or tell us your username), asking to delete your FUTCHY account. We delete it and confirm by email.</p>
 
       <h2 id="children">12. Children</h2>
       <p>FUTCHY is a general-audience game and is not directed to children. If you believe a child has given us information, contact us and we will delete it.</p>
@@ -140,7 +143,7 @@
       <p class="meta">עודכן לאחרונה: {{updatedHe}}</p>
 
       <div class="box">
-        <p><strong>בקצרה.</strong> אפשר לשחק ב-FUTCHY בלי חשבון. המשחק שולח לנו סטטיסטיקות שימוש כדי שנוכל לשפר אותו; אין בהן שם או כתובת אימייל. באייפון אפשר להתחבר עם Apple: ההתקדמות, שם השחקן והמקום שלך בדירוג נשמרים אז עם החשבון, ואפשר למחוק אותו מתוך המשחק. הפרסום היחיד הוא סרטון מתגמל אופציונלי שבוחרים לצפות בו תמורת בונוס מטבעות. התשלומים עוברים דרך Apple או Google; איננו רואים את פרטי הכרטיס שלך. גרסת האנדרואיד נמצאת בבדיקות: אין בה עדיין התחברות או רכישות. האתר אינו משתמש בעוגיות ואין בו אנליטיקה.</p>
+        <p><strong>בקצרה.</strong> אפשר לשחק ב-FUTCHY בלי חשבון. המשחק שולח לנו סטטיסטיקות שימוש כדי שנוכל לשפר אותו; אין בהן שם או כתובת אימייל. אפשר להתחבר - עם Apple באייפון, עם Google באנדרואיד: ההתקדמות, שם השחקן והמקום שלך בדירוג נשמרים אז עם החשבון, ואפשר למחוק אותו מתוך המשחק או בפנייה אלינו. הפרסום היחיד הוא סרטון מתגמל אופציונלי שבוחרים לצפות בו תמורת בונוס מטבעות. התשלומים עוברים דרך Apple או Google; איננו רואים את פרטי הכרטיס שלך. גרסת האנדרואיד נמצאת בבדיקות: אין בה עדיין רכישות. האתר אינו משתמש בעוגיות ואין בו אנליטיקה.</p>
       </div>
 
       <nav class="toc" aria-label="בעמוד זה">
@@ -168,7 +171,7 @@
       <p>FUTCHY הוא משחק פוצ׳יוולי חופים לקהל הרחב לאייפון, ובשלב בדיקות גם לאנדרואיד. המדיניות חלה על אפליקציית FUTCHY בשתי הפלטפורמות ועל האתר <a href="{{siteUrl}}/">futchy.co</a>. לכל שאלה בנושא פרטיות: <a href="mailto:{{email}}" dir="ltr">{{email}}</a>.</p>
 
       <h3 id="he-device" class="doc-h">2. משחק בלי חשבון</h3>
-      <p>אין צורך בחשבון כדי לשחק. ההתקדמות, הדמות וההגדרות נשמרים במכשיר. מחיקת האפליקציה מוחקת אותם מהמכשיר; עותקים בגיבויי המכשיר כפופים להגדרות המכשיר שלך. באנדרואיד כל השחקנים משחקים כך, כי בגרסת האנדרואיד עדיין אין התחברות.</p>
+      <p>אין צורך בחשבון כדי לשחק. ההתקדמות, הדמות וההגדרות נשמרים במכשיר. מחיקת האפליקציה מוחקת אותם מהמכשיר; עותקים בגיבויי המכשיר כפופים להגדרות המכשיר שלך.</p>
 
       <h3 id="he-stats" class="doc-h">3. סטטיסטיקות שימוש</h3>
       <p>באייפון ובאנדרואיד האפליקציה שולחת אלינו:</p>
@@ -179,18 +182,19 @@
       </ul>
       <p>הסטטיסטיקות אינן כוללות שם או כתובת אימייל. אם התחברת, הן מקושרות לחשבון שלך. בגרסה הזו אין הגדרה לכיבוי שלהן; אפשר לבקש מאיתנו למחוק סטטיסטיקות המקושרות למכשיר או לחשבון שלך (סעיף 13).</p>
 
-      <h3 id="he-accounts" class="doc-h">4. חשבון (אופציונלי, באייפון)</h3>
-      <p>באייפון אפשר להתחבר עם Apple. ההתחברות יוצרת חשבון FUTCHY שבו נשמרים:</p>
+      <h3 id="he-accounts" class="doc-h">4. חשבון (אופציונלי)</h3>
+      <p>אפשר להתחבר עם Apple באייפון ועם Google באנדרואיד. ההתחברות יוצרת חשבון FUTCHY שבו נשמרים:</p>
       <ul>
         <li>ההתקדמות, הדמות, ההגדרות וסטטיסטיקות המשחק שלך (עותק בענן, כדי להמשיך במכשיר אחר), עם מזהה של המכשיר ששמר אותם;</li>
         <li>השם והדגל שנתת לשחקן שלך בפרופיל, ושם המשתמש שלך - ששחקנים אחרים יכולים לראות ולחפש;</li>
         <li>תמונת הדיוקן שלך - התמונה העגולה של הדמות שלך במשחק - ששחקנים אחרים יכולים לראות;</li>
         <li>המטבעות, הרכישות והפריטים שלך;</li>
-        <li>כתובת האימייל ש-Apple מוסרת לנו בהתחברות, לרוב כתובת ממסר פרטית ש-Apple מעבירה אליך. איננו שומרים את השם ש-Apple עשויה לשתף, ולעולם איננו מקבלים את הסיסמה שלך.</li>
+        <li>כתובת האימייל ש-Apple או Google מוסרות לנו בהתחברות. ב-Apple זו לרוב כתובת ממסר פרטית ש-Apple מעבירה אליך; איננו שומרים את השם ש-Apple עשויה לשתף. ב-Google אנו מקבלים גם את שמך ואת הקישור לתמונת הפרופיל שלך ב-Google, שנשמרים עם החשבון ואינם מוצגים במשחק. לעולם איננו מקבלים את הסיסמה שלך.</li>
       </ul>
+      <p>אם התחברת עם Google עם אותה כתובת אימייל של חשבון שכבר יש לך (למשל מהתחברות עם Apple), תגיע לאותו חשבון - אותה התקדמות, מטבעות, שם ומקום בדירוג. אם השתמשת ב"הסתר את הדוא״ל שלי" של Apple, הכתובות שונות, ולכן התחברות עם Google פותחת חשבון נפרד.</p>
 
       <h3 id="he-leaderboards" class="doc-h">5. דירוג</h3>
-      <p>אם השתתפת בדירוג (מחובר, באייפון), שם השחקן, שם המשתמש, הדיוקן והתוצאות שלך מוצגים לשחקנים אחרים. באנדרואיד אפשר לצפות בדירוג; שחקני אנדרואיד עדיין אינם מופיעים בו.</p>
+      <p>אם השתתפת בדירוג (מחובר), שם השחקן, שם המשתמש, הדיוקן והתוצאות שלך מוצגים לשחקנים אחרים.</p>
 
       <h3 id="he-purchases" class="doc-h">6. רכישות</h3>
       <p>באייפון חבילות מטבעות נמכרות דרך ה-App Store. Apple גובה את התשלום; איננו מקבלים את פרטי הכרטיס או התשלום. כדי למסור את המטבעות ולמנוע ניצול לרעה, אנו מקבלים ושומרים את אישור הרכישה של החנות (המזהה, המוצר והשעה). בגרסת הבדיקות לאנדרואיד חבילות המטבעות אינן זמינות: את המטבעות מרוויחים במשחק.</p>
@@ -212,7 +216,7 @@
       <p>אנחנו עובדים על התכונות הבאות. הן <strong>אינן</strong> בגרסאות שהמדיניות מתארת היום; נעדכן את המדיניות לכל המאוחר כשיגיעו:</p>
       <ul>
         <li><strong>משחקים אונליין</strong> מול שחקנים אחרים. כדי לחבר בין השחקנים, שירות משחק מקוון (Photon, של Exit Games) והמכשירים של השחקנים האחרים מקבלים את כתובת ה-IP של המכשיר שלך ומזהה שחקן במשחק; שחקנים אחרים רואים את שם המשתמש והדמות שלך.</li>
-        <li><strong>התחברות עם Google</strong> באנדרואיד (ובאייפון): Google תמסור לנו את כתובת האימייל ואת שמך.</li>
+        <li><strong>התחברות עם Google</strong> גם באייפון.</li>
         <li><strong>חבילות מטבעות ב-Google Play</strong>, באותו אופן כמו ב-App Store (סעיף 6).</li>
         <li>הגדרה <strong>לכיבוי סטטיסטיקות השימוש</strong>, ומחיקת סטטיסטיקות שימוש מפורטות אחרי 90 יום.</li>
       </ul>
@@ -229,7 +233,8 @@
       <p>השרת שלנו פועל על Supabase, באיחוד האירופי (פרנקפורט, גרמניה). שירותי הפרסום מעבדים מידע כמתואר במדיניות שלהם, ייתכן מחוץ למדינה שלך.</p>
 
       <h3 id="he-delete" class="doc-h">11. מחיקת החשבון</h3>
-      <p>במשחק: <bdi>הגדרות ← חשבון ← מחיקת חשבון</bdi>. הפעולה מוחקת את החשבון ואת מה שנשמר בו - התקדמות, שמות, דיוקן, מטבעות, פריטים ותוצאות דירוג. אישורי רכישה נשמרים כאמור בסעיף 9; סטטיסטיקות שימוש המקושרות לחשבון אפשר למחוק לפי בקשה (סעיף 13). לשחקני אנדרואיד אין חשבון; למחיקת הסטטיסטיקות של מכשיר אנדרואיד, כתבו אלינו.</p>
+      <p>במשחק, באייפון או באנדרואיד: <bdi>הגדרות ← חשבון ← מחיקת חשבון</bdi>. הפעולה מוחקת את החשבון ואת מה שנשמר בו - התקדמות, שמות, דיוקן, מטבעות, פריטים ותוצאות דירוג. אישורי רכישה נשמרים כאמור בסעיף 9; סטטיסטיקות שימוש המקושרות לחשבון אפשר למחוק לפי בקשה (סעיף 13).</p>
+      <p><strong>בלי האפליקציה:</strong> כתבו אל <a href="mailto:{{email}}" dir="ltr">{{email}}</a> מכתובת האימייל של החשבון (או ציינו את שם המשתמש), ובקשו למחוק את חשבון FUTCHY. נמחק אותו ונאשר באימייל.</p>
 
       <h3 id="he-children" class="doc-h">12. ילדים</h3>
       <p>FUTCHY הוא משחק לקהל הרחב ואינו מכוון לילדים. אם לדעתכם ילד מסר לנו מידע, פנו אלינו ונמחק אותו.</p>
