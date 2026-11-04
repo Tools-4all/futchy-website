@@ -18,9 +18,15 @@ const PAGES = [
     description: "FUTCHY is a mobile beach footvolley game for iPhone: circles, footvolley and competition on the sand.",
   },
   {
-    file: "privacy.html", out: "privacy.html", path: "/privacy", index: true, lastmod: "2026-10-21",
+    file: "privacy.html", out: "privacy.html", path: "/privacy", index: true, lastmod: "2026-11-04",
     title: "Privacy Policy — FUTCHY",
-    description: "How the FUTCHY iOS game and futchy.co handle data: local progress, rewarded ads, consent and your choices.",
+    description: "How the FUTCHY game for iPhone and Android and futchy.co handle data: usage statistics, accounts, rewarded ads, consent and your choices.",
+  },
+  {
+    // Google Play's account-deletion web resource (and the same answer for iPhone players): how to delete, what goes, what stays.
+    file: "delete-account.html", out: "delete-account.html", path: "/delete-account", index: true, lastmod: "2026-11-04",
+    title: "Delete your FUTCHY account — FUTCHY",
+    description: "How to delete your FUTCHY account and its data, in the game or by email, what is deleted and what is kept.",
   },
   {
     file: "support.html", out: "support.html", path: "/support", index: true, lastmod: "2026-10-21",

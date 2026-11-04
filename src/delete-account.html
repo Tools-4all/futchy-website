@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+{{> head}}
+</head>
+<body class="doc-page">
+{{> header}}
+
+<!--
+  Approved by Chen and published, 2026-11-04.
+  resource for FUTCHY (app name as on the store listing), and the same answer for iPhone players. Every statement is
+  checked against the code: AccountScreen -> AuthService.DeleteAccount (the portrait through the Storage API, then
+  public.delete_my_account(): delete from auth.users -> ON DELETE CASCADE through public.players and every table that
+  references it, iap_transactions included); analytics.events / analytics.installs have no foreign key and are not
+  deleted. Gaps: Deliverables/privacy_review_2026-11-04/ISSUES.md in the game repository.
+-->
+
+<main id="main" class="doc">
+  <div class="doc__in">
+
+    <p class="langswitch" aria-label="Language"><a href="#en" lang="en">English</a><a href="#he" lang="he" hreflang="he">עברית</a></p>
+
+    <!-- ============================== ENGLISH ============================== -->
+    <section id="en" lang="en" aria-labelledby="en-title">
+      <h1 id="en-title" class="doc-title">Delete your FUTCHY account</h1>
+      <p class="lede">How to delete your account in the FUTCHY game (iPhone and Android) and the information kept with it, what is deleted, and what is kept.</p>
+      <p class="meta">Last updated: {{updated}}</p>
+
+      <h2 id="how">How to ask for deletion</h2>
+      <ul>
+        <li><strong>In the game:</strong> open your Profile, tap the account button (it shows your username), then <em>Delete account</em>, and confirm. Your account is deleted from our server straight away.</li>
+        <li><strong>Without the app:</strong> email <a href="mailto:{{email}}?subject=FUTCHY%20account%20deletion">{{email}}</a> from the email address of your account, or tell us your username, and ask us to delete your FUTCHY account. We may ask you to confirm that the account is yours. We delete it within 30 days and confirm by email.</li>
+      </ul>
+      <p>Note: the <em>Delete account</em> item under Settings → Account in the game starts the game over on that device. It does not delete your account on our server; use one of the two ways above.</p>
+      <p>If you play without an account, there is no account to delete. You can ask by email for the usage statistics of your device to be deleted.</p>
+
+      <h2 id="deleted">What is deleted</h2>
+      <p>Deleting your account deletes, from our server:</p>
+      <ul>
+        <li>your sign-in details: your email address, and with Google sign-in also your name and the link to your Google profile picture;</li>
+        <li>your cloud save: progress, character, settings and game statistics, with the identifier of the devices that saved them;</li>
+        <li>your player name, flag, username and portrait picture;</li>
+        <li>your coins, items and the record of how you earned and spent coins;</li>
+        <li>your purchase confirmations;</li>
+        <li>your leaderboard results.</li>
+      </ul>
+
+      <h2 id="kept">What is kept, and for how long</h2>
+      <ul>
+        <li><strong>The progress saved on your device</strong> stays on that device as a guest's, until you delete the app (or start over in Settings → Account).</li>
+        <li><strong>Usage statistics</strong> (section 3 of the <a href="/privacy#stats">Privacy Policy</a>): they are not deleted with the account. They contain no name or email address, only random identifiers, and after the account is deleted nothing on our server connects them to you. We keep them for as long as we need them to improve the game; ask us and we delete the statistics of your device or former account within 30 days.</li>
+        <li><strong>Our hosting provider's technical logs</strong>, which can include your IP address: no more than 7 days. Our current hosting plan keeps no automatic database backups.</li>
+        <li><strong>Security records of sign-ins</strong> that our hosting provider's sign-in service keeps (for example the time of a sign-in) may remain for a limited time after the account is deleted.</li>
+        <li><strong>Purchase records at Apple</strong> (and Google, once purchases exist on Android) are kept by the store under its own terms; deleting your FUTCHY account does not delete them.</li>
+        <li><strong>Information held by the advertising partners</strong> (Unity LevelPlay / ironSource and Unity Ads) is governed by their own policies; see section 7 of the <a href="/privacy#ads">Privacy Policy</a> for links. On Android you can also reset or delete your device's advertising ID in the phone's settings.</li>
+        <li><strong>Emails you send us</strong>, including a deletion request, stay in our mailbox for as long as we need them to handle your request and to show that we did.</li>
+      </ul>
+      <p>If you signed in with Apple, you can also remove FUTCHY from the apps that use your Apple ID, in your Apple ID settings. Questions: <a href="mailto:{{email}}">{{email}}</a>.</p>
+    </section>
+
+    <hr class="doc-rule">
+
+    <!-- ============================== HEBREW ============================== -->
+    <section id="he" lang="he" dir="rtl" aria-labelledby="he-title">
+      <h2 id="he-title" class="doc-title">מחיקת חשבון FUTCHY</h2>
+      <p class="lede">איך מוחקים את החשבון במשחק FUTCHY (אייפון ואנדרואיד) ואת המידע שנשמר בו, מה נמחק ומה נשמר.</p>
+      <p class="meta">עודכן לאחרונה: {{updatedHe}}</p>
+
+      <h3 id="he-how" class="doc-h">איך מבקשים מחיקה</h3>
+      <ul>
+        <li><strong>במשחק:</strong> פותחים את הפרופיל, מקישים על כפתור החשבון (מופיע בו שם המשתמש שלך), ואז על <bdi>מחיקת החשבון</bdi>, ומאשרים. החשבון נמחק מהשרת שלנו מיד.</li>
+        <li><strong>בלי האפליקציה:</strong> כתבו אל <a href="mailto:{{email}}?subject=FUTCHY%20account%20deletion" dir="ltr">{{email}}</a> מכתובת האימייל של החשבון, או ציינו את שם המשתמש, ובקשו למחוק את חשבון FUTCHY שלכם. ייתכן שנבקש לאשר שהחשבון שלכם. נמחק אותו בתוך 30 יום ונאשר באימייל.</li>
+      </ul>
+      <p>שימו לב: הפריט <bdi>מחיקת חשבון</bdi> שב<bdi>הגדרות ← חשבון</bdi> במשחק מתחיל את המשחק מחדש במכשיר הזה. הוא אינו מוחק את החשבון שלכם בשרת שלנו; לשם כך השתמשו באחת משתי הדרכים שלמעלה.</p>
+      <p>אם אתם משחקים בלי חשבון, אין חשבון למחוק. אפשר לבקש באימייל למחוק את סטטיסטיקות השימוש של המכשיר שלכם.</p>
+
+      <h3 id="he-deleted" class="doc-h">מה נמחק</h3>
+      <p>מחיקת החשבון מוחקת מהשרת שלנו:</p>
+      <ul>
+        <li>את פרטי ההתחברות: כתובת האימייל, ובהתחברות עם Google גם את השם ואת הקישור לתמונת הפרופיל ב-Google;</li>
+        <li>את השמירה בענן: ההתקדמות, הדמות, ההגדרות וסטטיסטיקות המשחק, עם מזהה המכשירים ששמרו אותן;</li>
+        <li>את שם השחקן, הדגל, שם המשתמש ותמונת הדיוקן;</li>
+        <li>את המטבעות, הפריטים והרישום של המטבעות שהרווחתם והוצאתם;</li>
+        <li>את אישורי הרכישה;</li>
+        <li>את תוצאות הדירוג.</li>
+      </ul>
+
+      <h3 id="he-kept" class="doc-h">מה נשמר, ולכמה זמן</h3>
+      <ul>
+        <li><strong>ההתקדמות השמורה במכשיר</strong> נשארת בו כשל שחקן אורח, עד שמוחקים את האפליקציה (או מתחילים מחדש ב<bdi>הגדרות ← חשבון</bdi>).</li>
+        <li><strong>סטטיסטיקות השימוש</strong> (סעיף 3 ב<a href="/privacy#he-stats">מדיניות הפרטיות</a>): אינן נמחקות עם החשבון. אין בהן שם או כתובת אימייל, רק מזהים אקראיים, ואחרי מחיקת החשבון שום דבר בשרת שלנו אינו מקשר אותן אליכם. אנו שומרים אותן כל עוד הן נחוצות לנו לשיפור המשחק; לפי בקשה נמחק בתוך 30 יום את הסטטיסטיקות של המכשיר או של החשבון שנמחק.</li>
+        <li><strong>יומני המערכת של ספק האחסון שלנו</strong>, שעשויים לכלול את כתובת ה-IP: לא יותר מ-7 ימים. תוכנית האחסון הנוכחית שלנו אינה שומרת גיבויים אוטומטיים של מסד הנתונים.</li>
+        <li><strong>רשומות אבטחה של התחברויות</strong> ששירות ההתחברות של ספק האחסון שלנו שומר (למשל מועד ההתחברות) עשויות להישאר לזמן מוגבל אחרי מחיקת החשבון.</li>
+        <li><strong>רשומות הרכישה ב-Apple</strong> (וב-Google, כשיהיו רכישות באנדרואיד) נשמרות בחנות לפי התנאים שלה; מחיקת חשבון FUTCHY אינה מוחקת אותן.</li>
+        <li><strong>מידע אצל שותפי הפרסום</strong> (Unity LevelPlay / ironSource ו-Unity Ads) כפוף למדיניות שלהם; קישורים בסעיף 7 ב<a href="/privacy#he-ads">מדיניות הפרטיות</a>. באנדרואיד אפשר גם לאפס או למחוק את מזהה הפרסום של המכשיר בהגדרות הטלפון.</li>
+        <li><strong>אימיילים ששלחתם אלינו</strong>, כולל בקשת מחיקה, נשארים בתיבת הדואר שלנו כל עוד הם נחוצים לטיפול בבקשה ולהוכחה שטיפלנו בה.</li>
+      </ul>
+      <p>אם התחברתם עם Apple, אפשר גם להסיר את FUTCHY מרשימת האפליקציות שמשתמשות ב-Apple ID שלכם, בהגדרות ה-Apple ID. שאלות: <a href="mailto:{{email}}" dir="ltr">{{email}}</a>.</p>
+    </section>
+
+  </div>
+</main>
+
+{{> footer}}
+<script src="{{js}}" defer></script>
+</body>
+</html>
