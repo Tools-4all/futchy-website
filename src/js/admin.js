@@ -111,7 +111,7 @@ function gate(note) {
 
 // ---- Data ----------------------------------------------------------------------------------------------------
 
-let days = 7, timer = 0, loading = false;
+let days = 7, timer = 0, loading = false, retried = false;
 
 async function load() {
   if (loading) return;
@@ -134,8 +134,17 @@ async function load() {
     render(j);
     $("status").textContent = "";
     $("stamp").textContent = `עודכן ${new Date(j.generated_at).toLocaleTimeString("he-IL", { hour: "2-digit", minute: "2-digit" })}`;
+    retried = false;
   } catch (e) {
-    $("status").textContent = `לא הצלחנו לטעון: ${e.message}. מנסים שוב בעוד דקה.`;
+    // A timeout from a cold server cache: the first try warms it, so a second one a few seconds later loads.
+    if (!retried && /timeout/i.test(e.message || "")) {
+      retried = true;
+      $("status").textContent = "טוענים…";
+      setTimeout(load, 3000);
+    } else {
+      retried = false;
+      $("status").textContent = `לא הצלחנו לטעון: ${e.message}. מנסים שוב בעוד דקה.`;
+    }
   } finally { loading = false; }
 }
 
