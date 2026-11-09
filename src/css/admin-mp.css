@@ -70,6 +70,7 @@ h2.group { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-
 }
 .notice:empty { display: none; }
 .notice--warn { background: rgba(255, 179, 71, 0.09); border-color: rgba(255, 179, 71, 0.45); color: var(--text); }
+.notice--ok { background: rgba(78, 227, 138, 0.09); border-color: rgba(78, 227, 138, 0.45); color: var(--text); }
 .notice--err { background: rgba(255, 93, 108, 0.1); border-color: rgba(255, 93, 108, 0.45); color: var(--text); }
 .more { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 10px 0 4px; color: var(--faint); font-size: 13px; }
 a.lnk { color: var(--aqua); text-decoration: none; overflow-wrap: anywhere; }

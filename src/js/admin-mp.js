@@ -107,7 +107,7 @@ function failed(e, what) {
 let signedIn = false;
 const DATA = ["ov-server", "ov-client", "ov-cards", "live", "matches", "v-match", "issue-one", "issues", "reports",
               "alerts", "builds", "cfg", "rcp"];
-const TEXTS = ["ov-meta", "live-stamp", "builds-meta", "cfg-meta", "alerts-note", "stamp"];
+const TEXTS = ["ov-meta", "live-stamp", "builds-meta", "cfg-meta", "alerts-note", "stamp", "set-mail-note"];
 
 function gate(note) {
   signedIn = false;
@@ -858,7 +858,7 @@ const CFG_LABELS = {
   perf_interval_s: "מרווח ביצועים, שנ׳ (0–600)", trace_on_critical: "trace בחריגה קריטית", max_traces_per_session: "traces לסשן (0–20)",
   thresholds: "ספים (מתי זו חריגה)", ball_snap_cm: "קפיצת כדור, ס״מ", body_snap_cm: "קפיצת גוף, ס״מ", ball_pause_ms: "עצירת כדור, ms (10–10000)",
   rtt_p95_ms: "RTT p95, ms (10–5000)", fps_low: "FPS נמוך (5–120)", fps_low_s: "FPS נמוך לאורך, שנ׳ (1–120)",
-  alerts: "התראות", email_enabled: "שליחת מיילים (כבוי עד שהמייל מוגדר)", mail: "מייל", daily_cap: "מקס׳ מיילים ביום (0–300)",
+  alerts: "התראות", email_enabled: "שליחת מיילים", mail: "מייל", daily_cap: "מקס׳ מיילים ביום (0–300)",
   cooldown_min: "הפסקה בין התראות זהות, דק׳ (5–1440)", window_min: "חלון בדיקה, דק׳ (5–120)", baseline_days: "ימי בסיס (1–30)",
   daily_summary_hour_local: "שעת הסיכום היומי, ישראל (0–23)", envs: "סביבות שמתריעות", rules: "כללים",
   mm_join_fail: "שידוך/הצטרפות נכשלו", disconnect: "ניתוקים", unclean_exit: "יציאות לא נקיות (קריסות)", new_critical: "תקלה קריטית חדשה",
@@ -879,6 +879,13 @@ async function loadSettings() {
 
 function drawConfig(value, msg) {
   const f = $("cfg");
+  // the e-mail state as the server holds it now, not a fixed text
+  const mailOn = obj(obj(value).alerts).email_enabled === true;
+  const note = $("set-mail-note");
+  note.className = mailOn ? "notice notice--ok" : "notice notice--warn";
+  note.textContent = mailOn
+    ? `מיילים פעילים: התראות קריטיות וסיכום יומי ב-${str(obj(obj(value).alerts).daily_summary_hour_local ?? 8)}:00 נשלחים לנמענים הפעילים. כל התראה מופיעה גם בלשונית "התראות", עם סטטוס המייל שלה.`
+    : `מיילים כבויים. ההתראות נרשמות ומופיעות בלשונית "התראות", אבל שום מייל לא נשלח עד שמדליקים את "שליחת מיילים" כאן.`;
   $("cfg-meta").textContent = state.cfg?.stored_valid === false
     ? "הערך השמור חסר או לא תקין, לכן השרת משתמש עכשיו בברירות המחדל (מוצגות כאן). שמירה תקבע אותן."
     : "הערך בתוקף בשרת. המשחק קורא רק את הפרופיל של הסביבה שלו.";
