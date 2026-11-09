@@ -64,6 +64,13 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .seg button[aria-pressed="true"] { background: var(--aqua); color: var(--ink); }
 .stamp { color: var(--faint); font-size: 13px; }
 .ghost { border: 1px solid var(--edge); background: transparent; padding: 6px 14px; border-radius: 999px; color: var(--muted); }
+/* The way to the other admin pages (/admin <-> /admin/multiplayer). */
+.navlink {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px;
+  border: 1px solid rgba(39, 217, 212, 0.55); background: var(--aqua-soft); color: var(--aqua);
+  font-weight: 700; text-decoration: none; white-space: nowrap;
+}
+.navlink:hover { background: rgba(39, 217, 212, 0.26); color: var(--text); }
 .ghost:hover { color: var(--text); border-color: rgba(255, 255, 255, 0.25); }
 
 main { max-width: 1380px; margin: 0 auto; padding: 22px var(--gutter) calc(48px + env(safe-area-inset-bottom)); }
