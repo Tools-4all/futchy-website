@@ -40,6 +40,19 @@ const PAGES = [
     description: "FUTCHY's private dashboard.",
   },
   {
+    // The multiplayer diagnostics (same sign-in, same rules: admin_mp_* answer only the owners). Never indexed.
+    file: "admin-multiplayer.html", out: "admin/multiplayer.html", path: "/admin/multiplayer", index: false, admin: true,
+    title: "Multiplayer — FUTCHY",
+    description: "FUTCHY's private multiplayer diagnostics.",
+  },
+  {
+    // The dashboard again at /admin/ - only so that /admin still opens it if the host prefers the admin/ folder
+    // (above) over admin.html. Same page, same files.
+    file: "admin.html", out: "admin/index.html", path: "/admin", index: false, admin: true,
+    title: "Dashboard — FUTCHY",
+    description: "FUTCHY's private dashboard.",
+  },
+  {
     file: "404.html", out: "404.html", path: "/404", index: false,
     title: "Page not found — FUTCHY",
     description: "This page does not exist.",
@@ -67,7 +80,9 @@ export function build() {
   // hashed css / js so returning visitors never get stale code
   const assets = {};
   for (const [key, from, ext] of [["css", "css/main.css", "css"], ["js", "js/main.js", "js"],
-                                  ["adminCss", "css/admin.css", "css"], ["adminJs", "js/admin.js", "js"]]) {
+                                  ["adminCss", "css/admin.css", "css"], ["adminJs", "js/admin.js", "js"],
+                                  ["adminAuthJs", "js/admin-auth.js", "js"],
+                                  ["mpCss", "css/admin-mp.css", "css"], ["mpJs", "js/admin-mp.js", "js"]]) {
     const buf = readFileSync(join(src, from));
     const name = `assets/${from.split("/")[1].split(".")[0]}.${hash(buf)}.${ext}`;
     writeFileSync(join(dist, name), buf);
@@ -149,6 +164,9 @@ export function build() {
       csp: page.admin ? adminCsp : csp,
       adminCss: assets.adminCss,
       adminJs: assets.adminJs,
+      adminAuthJs: assets.adminAuthJs,
+      mpCss: assets.mpCss,
+      mpJs: assets.mpJs,
       css: assets.css,
       js: assets.js,
       email: cfg.email,
@@ -165,6 +183,7 @@ export function build() {
 
   for (const page of PAGES) {
     const html = render(readFileSync(join(src, page.file), "utf8"), page);
+    mkdirSync(dirname(join(dist, page.out)), { recursive: true });
     writeFileSync(join(dist, page.out), html);
   }
 

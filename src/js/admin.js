@@ -1,11 +1,8 @@
 // FUTCHY's private dashboard (futchy.co/admin). Signs in with Google through Supabase (OAuth + PKCE, no
-// library), then asks the server for public.admin_dashboard - which answers only for the two owners' verified
-// emails (analytics.admins). The key below is the project's PUBLIC anon key: it lets nobody read anything.
+// library - the shared admin-auth.js), then asks the server for public.admin_dashboard - which answers only for the
+// two owners' verified emails (analytics.admins). The key is the project's PUBLIC anon key: it lets nobody read anything.
 // Everything from the server is written as text (textContent), never as HTML.
-const BACKEND = "https://hfclcxosyzjgjyxsgzec.supabase.co";
-const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhmY2xjeG9zeXpqZ2p5eHNnemVjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3NTk1OTAsImV4cCI6MjEwODMzNTU5MH0.CpUo16XuknUBMbAx6oG6ulmiVyJCZ92QupYOh7QxASw";
-const KEY = "futchy.admin.session", VERIFIER = "futchy.admin.verifier";
-const REDIRECT = location.origin + "/admin";
+const { BACKEND, ANON, KEY, stored, token } = window.FutchyAuth;
 
 const $ = (id) => document.getElementById(id);
 const nf = new Intl.NumberFormat("he-IL");
@@ -43,62 +40,19 @@ const MODES = { circle: "מעגלים", footvolley: "פוצ׳יוולי" };
 const SHOPS = { Clothes: "בגדים", Balls: "כדורים", Sandy: "Sandy", Shoes: "נעליים", Accessories: "אביזרים" };
 const country = (c) => { if (!c || c === "?") return "לא ידוע"; try { return regions?.of(c) || c; } catch { return c; } };
 
-// ---- Sign-in (Supabase Google OAuth, PKCE) ------------------------------------------------------------------
+// ---- Sign-in (shared: admin-auth.js) -------------------------------------------------------------------------
 
-const b64url = (bytes) => btoa(String.fromCharCode(...new Uint8Array(bytes))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+const signIn = () => window.FutchyAuth.signIn();
 
-async function signIn() {
-  const verifier = b64url(crypto.getRandomValues(new Uint8Array(32)));
-  sessionStorage.setItem(VERIFIER, verifier);
-  const challenge = b64url(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier)));
-  location.href = `${BACKEND}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(REDIRECT)}` +
-                  `&code_challenge=${challenge}&code_challenge_method=s256`;
-}
-
-async function auth(path, body) {
-  const r = await fetch(`${BACKEND}/auth/v1/${path}`, {
-    method: "POST", headers: { apikey: ANON, "Content-Type": "application/json" }, body: JSON.stringify(body) });
-  const j = await r.json().catch(() => ({}));
-  if (!r.ok) throw new Error(j.error_description || j.msg || j.message || `שגיאה ${r.status}`);
-  return j;
-}
-
-function keep(s) {
-  const session = { access: s.access_token, refresh: s.refresh_token, email: s.user?.email,
-                    expires: s.expires_at || Math.floor(Date.now() / 1000) + (s.expires_in || 3600) };
-  localStorage.setItem(KEY, JSON.stringify(session));
-  return session;
-}
-
-const stored = () => { try { return JSON.parse(localStorage.getItem(KEY) || "null"); } catch { return null; } };
-
-async function token() {
-  let s = stored();
-  if (!s) return null;
-  if (s.expires - Date.now() / 1000 < 60) {
-    try { s = keep(await auth("token?grant_type=refresh_token", { refresh_token: s.refresh })); }
-    catch { localStorage.removeItem(KEY); return null; }
-  }
-  return s.access;
-}
-
+// Back from Google: a failure shows on the gate; a sign-in started on /admin/multiplayer goes back there.
 async function finishSignIn() {
-  const q = new URLSearchParams(location.search);
-  const err = q.get("error_description") || q.get("error");
-  const code = q.get("code");
-  if (!code && !err) return;
-  history.replaceState(null, "", "/admin");
-  if (err) { gate(`ההתחברות לא הצליחה: ${err}`); return; }
-  const verifier = sessionStorage.getItem(VERIFIER);
-  sessionStorage.removeItem(VERIFIER);
-  try { keep(await auth("token?grant_type=pkce", { auth_code: code, code_verifier: verifier })); }
-  catch (e) { gate(`ההתחברות לא הצליחה: ${e.message}`); }
+  const r = await window.FutchyAuth.finishSignIn();
+  if (r.error) gate(`ההתחברות לא הצליחה: ${r.error}`);
+  return r;
 }
 
 function signOut() {
-  const s = stored();
-  localStorage.removeItem(KEY);
-  if (s) fetch(`${BACKEND}/auth/v1/logout`, { method: "POST", headers: { apikey: ANON, Authorization: `Bearer ${s.access}` } }).catch(() => {});
+  window.FutchyAuth.signOut();
   gate("");
 }
 
@@ -413,10 +367,11 @@ function demo() {
   if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname) && new URLSearchParams(location.search).has("demo")) {
     $("gate").hidden = true; $("board").hidden = false; $("tools").hidden = false;
     $("stamp").textContent = "נתוני דוגמה";
+    document.querySelector(".navlink").search = "?demo";   // the multiplayer page's own demo
     render(demo());
     return;
   }
-  await finishSignIn();
+  if ((await finishSignIn()).redirect) return;
   if (!stored()) { if ($("gate").hidden) gate(""); return; }
   $("status").textContent = "טוען...";
   await load();
