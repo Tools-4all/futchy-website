@@ -177,3 +177,6 @@ pre.json {
   .mhead .actions { margin-inline-start: 0; width: 100%; }
   .cfg .fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* a card straight after the cards grid (the live matches) keeps the grid's own gap above it */
+.view > .card { margin-top: 14px; }
