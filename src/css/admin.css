@@ -194,3 +194,19 @@ td:first-child { max-width: 360px; overflow-wrap: anywhere; }
   .gate { margin-top: 8vh; }
   .google { min-width: 0; width: 100%; }
 }
+
+/* ---- real-money purchases (/admin#purchases) ---- */
+.purchases { scroll-margin-top: 84px; }
+.purchases h3 { margin: 14px 0 6px; font-size: 13px; color: var(--muted); font-weight: 600; }
+.buy-sum { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 0 0 12px; color: var(--muted); font-size: 13px; }
+.buy-sum__v { font-family: var(--display); font-size: 30px; color: var(--live); letter-spacing: .5px; }
+.buy-sum__all { color: var(--faint); }
+.buys { list-style: none; margin: 0; padding: 0; }
+.buys li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 10px; padding: 7px 0; border-top: 1px solid var(--edge); font-size: 13.5px; }
+.buys__who { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.buys__what { color: var(--muted); grid-column: 1; }
+.buys__at { color: var(--faint); grid-column: 2; grid-row: 1 / span 2; align-self: center; font-variant-numeric: tabular-nums; }
+.buy-note { margin: 10px 0 4px; color: var(--faint); font-size: 12.5px; line-height: 1.5; }
+.buy-note--warn { color: var(--warn); }
+.buy-note--test { color: var(--muted); padding: 8px 10px; border: 1px dashed var(--edge); border-radius: 12px; }
+.tag { display: inline-block; padding: 1px 8px; border-radius: 999px; background: rgba(255, 179, 71, 0.16); color: var(--sun); font-weight: 700; font-size: 11.5px; }
