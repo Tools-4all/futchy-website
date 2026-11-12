@@ -136,7 +136,6 @@ function trio(label, parts) {
 
 function renderTiles(d) {
   const o = d.overview || {}, u = d.unfinished || {}, iap = d.iap || {};
-  const bought = Object.values(iap.succeeded || {}).reduce((a, b) => a + b, 0);
   const real = iap.real, all = iap.real_all_time || {};
   const cut = u.sessions ? 100 * u.unfinished / u.sessions : null;
   const box = $("tiles");
@@ -153,8 +152,8 @@ function renderTiles(d) {
     tile("שגיאות", num(d.errors_total), "שגיאות שהמשחק רשם בתקופה"),
     real
       ? tile("רכישות בכסף אמיתי", num(real.count), `${ils(real.ils)} בתקופה · ${num(all.count)} מאז ההשקה (${ils(all.ils)})`,
-             { hint: "עסקאות של Apple שהשרת אימת, בגרסת החנות בלבד: בלי TestFlight, בלי החזרים, כל עסקה פעם אחת." })
-      : tile("דיווחי רכישה", num(bought), "לפי האפליקציה, כולל בדיקות - לא מאומת")
+             { hint: "עסקאות של Apple שהשרת אימת, בגרסת החנות בלבד: בלי רכישות בדיקה, בלי החזרים, כל עסקה פעם אחת." })
+      : tile("רכישות בכסף אמיתי", "–", "ממתין לעדכון השרת")
   );
 }
 
@@ -243,17 +242,15 @@ function table(title, sub, cols, rows, empty = "אין עדיין נתונים."
 }
 
 // Real money: one row per App Store transaction the server verified (public.iap_transactions, Production, not
-// refunded) - never the apps' own reports, which repeat after a reinstall and include TestFlight. The tests, the
-// refunds and the reported attempts are separate, labelled lines.
-function purchases(iap, per, iapRows) {
-  if (!iap.real) {   // a server before 20261113100000_purchase_alerts: only the apps' reports
-    const c = table("רכישות בכסף (דיווחי האפליקציה)", `${per} · לא מאומת: כולל TestFlight, ורכישה יכולה להיספר שוב אחרי התקנה מחדש`, [
-      { label: "חבילה", get: r => pack(r.product) },
-      { label: "דיווחו הצלחה", get: r => r.n, num: true, bar: true }], iapRows);
+// refunded) - never the apps' own reports, which repeat after a reinstall and include TestFlight. Test purchases
+// (TestFlight / Sandbox) do not appear at all (Chen); refunds are a separate line.
+function purchases(iap, per) {
+  if (!iap.real) {   // a server before 20261113100000_purchase_alerts: the apps' reports mix in tests - nothing shown
+    const c = table("רכישות בכסף אמיתי", per, [], [], "ממתין לעדכון השרת.");
     c.id = "purchases";
     return c;
   }
-  const r = iap.real, t = iap.tests || {}, f = iap.refunded || {}, all = iap.real_all_time || {};
+  const r = iap.real, f = iap.refunded || {}, all = iap.real_all_time || {};
   const card = table("רכישות בכסף אמיתי", `${per} · עסקאות של Apple שהשרת אימת, בגרסת החנות בלבד`, [
     { label: "חבילה", get: x => pack(x.product) },
     { label: "רכישות", get: x => x.count, num: true, bar: true },
@@ -280,11 +277,6 @@ function purchases(iap, per, iapRows) {
     card.append(ul);
   }
   if (f.count > 0) card.append(el("p", "buy-note buy-note--warn", `החזרים בתקופה: ${num(f.count)} (${ils(f.ils)}) - לא נספרו למעלה.`));
-  const test = el("p", "buy-note buy-note--test");
-  test.append(el("span", "tag", "בדיקה"),
-              document.createTextNode(` TestFlight / Sandbox, בלי כסף: ${num(t.count)} רכישות של ${num(t.players)} שחקנים`));
-  card.append(test);
-  card.append(el("p", "buy-note", `ניסיונות לפי האפליקציה (לא כסף, כולל בדיקות): התחילו ${num(iap.started)} · דיווחו הצלחה ${num(Object.values(iap.succeeded || {}).reduce((a, b) => a + b, 0))} · נכשלו ${num(iap.failed)}. אותה רכישה יכולה להיות מדווחת יותר מפעם אחת (התקנה מחדש, מכשיר נוסף).`));
   return card;
 }
 
@@ -292,7 +284,6 @@ function renderTables(d) {
   const per = days === 1 ? "היום האחרון" : `${days} הימים האחרונים`;
   const modes = (d.modes || []).filter(m => m.event !== "mode_start");
   const started = Object.fromEntries((d.modes || []).filter(m => m.event === "mode_start").map(m => [m.mode, m.plays]));
-  const iapRows = Object.entries(d.iap?.succeeded || {}).map(([product, n]) => ({ product, n }));
   const ads = Object.entries(d.ads || {}).map(([k, n]) => ({ k, n }));
   const ret = (d.retention || []).filter(r => r.installs > 0).slice(0, 14);
   const econ = d.economy || [];
@@ -321,7 +312,7 @@ function renderTables(d) {
       { label: "פריט", get: r => r.item },
       { label: "רכישות", get: r => r.purchases, num: true, bar: true },
       { label: "מטבעות", get: r => r.coins, num: true }], d.items),
-    purchases(d.iap || {}, per, iapRows),
+    purchases(d.iap || {}, per),
     table("פרסומות", per, [
       { label: "", get: r => ADS[r.k] || r.k },
       { label: "פעמים", get: r => r.n, num: true, bar: true }], ads),
@@ -411,7 +402,7 @@ function demo() {
                    recent: [{ at: new Date(Date.now() - 36e5).toISOString(), product: "com.Maagalim.MaagalimBeach.coins2500", ils: 4.9, price: 4.9, currency: "ILS", storefront: "ISR", username: "sandy_king" },
                             { at: new Date(Date.now() - 9e6).toISOString(), product: "com.Maagalim.MaagalimBeach.coins6000", ils: 9.9, price: 2.99, currency: "USD", storefront: "USA", username: "rio_volley" },
                             { at: new Date(Date.now() - 2e7).toISOString(), product: "com.Maagalim.MaagalimBeach.coins2500", ils: 4.9, price: 4.9, currency: "ILS", storefront: "ISR", username: null }] },
-           refunded: { count: 1, ils: 4.9 }, tests: { count: 6, players: 2, by_product: [] }, real_all_time: { count: 41, ils: 402.6, buyers: 30 } },
+           refunded: { count: 1, ils: 4.9 }, real_all_time: { count: 41, ils: 402.6, buyers: 30 } },
     ads: { ad_requested: 930, ad_unavailable: 40, ad_completed: 801, ad_not_completed: 66, ad_failed: 23, double_coins_paid: 790 },
     countries: [{ value: "IL", installs: 2900 }, { value: "BR", installs: 410 }, { value: "US", installs: 260 }, { value: "FR", installs: 90 }],
     devices: [{ value: "iPhone16,2", installs: 900 }, { value: "iPhone15,3", installs: 700 }, { value: "iPhone14,5", installs: 520 }],
