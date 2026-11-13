@@ -208,3 +208,16 @@ td:first-child { max-width: 360px; overflow-wrap: anywhere; }
 .buys__at { color: var(--faint); grid-column: 2; grid-row: 1 / span 2; align-self: center; font-variant-numeric: tabular-nums; }
 .buy-note { margin: 10px 0 4px; color: var(--faint); font-size: 12.5px; line-height: 1.5; }
 .buy-note--warn { color: var(--warn); }
+
+/* the competition's participants (Chen, 2026-11-13) */
+.comp-form { display: flex; gap: 8px; flex-wrap: wrap; margin: 4px 0 6px; }
+.comp-form input { flex: 1 1 200px; min-width: 0; font: inherit; color: var(--text); background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--edge); border-radius: 10px; padding: 9px 12px; }
+.comp-form input:focus { outline: none; border-color: var(--aqua); }
+.comp-btn { border: 0; border-radius: 999px; padding: 8px 18px; background: var(--aqua); color: var(--ink); font-weight: 700; }
+.comp-btn--off { background: transparent; border: 1px solid rgba(255, 120, 110, 0.6); color: #ff9a90; }
+.comp-btn:disabled { opacity: 0.5; cursor: default; }
+.comp-msg { min-height: 1.4em; margin: 2px 0 8px; color: var(--muted); font-size: 13.5px; }
+.comp-msg--bad { color: var(--warn); }
+.comp-h { margin: 16px 0 6px; font-size: 14px; color: var(--muted); }
+.comp-yes { color: var(--live); font-weight: 700; }

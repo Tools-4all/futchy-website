@@ -89,6 +89,7 @@ async function load() {
     if (!r.ok || !j) throw new Error(j?.message || `שגיאה ${r.status}`);
     $("gate").hidden = true; $("board").hidden = false; $("tools").hidden = false;
     render(j);
+    compStart();
     $("status").textContent = "";
     $("stamp").textContent = `עודכן ${new Date(j.generated_at).toLocaleTimeString("he-IL", { hour: "2-digit", minute: "2-digit" })}`;
     retried = false;
@@ -357,6 +358,109 @@ function render(d) {
   if (!jumped && location.hash === "#purchases") { jumped = true; setTimeout(() => $("purchases")?.scrollIntoView({ block: "start" }), 60); }
 }
 
+
+// ---- The competition's participants (Chen, 2026-11-13) ---------------------------------------------------------
+// The 1,000 ₪ board lists only registered participants; a player registers by writing to @futchy_game on Instagram
+// and an owner adds them here by their username in the game. public.admin_competition_* answer only for admins.
+
+let compReady = false;
+async function rpc(name, body) {
+  const t = await token();
+  if (!t) throw new Error("לא מחובר");
+  const r = await fetch(`${BACKEND}/rest/v1/rpc/${name}`, {
+    method: "POST", headers: { apikey: ANON, Authorization: `Bearer ${t}`, "Content-Type": "application/json" },
+    body: JSON.stringify(body || {}) });
+  const j = await r.json().catch(() => null);
+  if (r.status === 404 || (j && /Could not find the function/i.test(j.message || ""))) { const e = new Error("pending"); e.pending = true; throw e; }
+  if (!r.ok || !j) throw new Error(j?.message || `שגיאה ${r.status}`);
+  return j;
+}
+
+function compMsg(text, bad = false) {
+  const m = $("comp-msg");
+  m.textContent = text || "";
+  m.classList.toggle("comp-msg--bad", !!bad);
+}
+
+const when = (t) => t ? new Date(t).toLocaleString("he-IL", { day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit" }) : "–";
+
+// One table of players, each with its add or remove button.
+function compTable(rows, empty) {
+  if (!rows?.length) return el("p", "empty", empty);
+  const t = el("table");
+  const head = el("tr");
+  for (const h of ["שחקן", "רשום", "מקום", "ניקוד", "משחקים", "נרשם", "הערה", ""]) head.append(el("th", null, h));
+  const thead = el("thead"); thead.append(head); t.append(thead);
+  const body = el("tbody");
+  for (const r of rows) {
+    const tr = el("tr");
+    tr.append(el("td", null, r.username || "–"));
+    tr.append(el("td", r.registered ? "comp-yes" : null, r.registered ? "כן" : "לא"));
+    tr.append(el("td", "n", r.place ?? "–"), el("td", "n", r.score ?? "–"), el("td", "n", r.matches ?? "–"));
+    tr.append(el("td", null, r.registered ? `${when(r.added_at)} · ${r.added_by || ""}` : "–"));
+    tr.append(el("td", null, r.note || ""));
+    const cell = el("td");
+    const b = el("button", r.registered ? "comp-btn comp-btn--off" : "comp-btn", r.registered ? "הסרה" : "הוספה");
+    b.type = "button";
+    b.addEventListener("click", () => compToggle(r, b));
+    cell.append(b); tr.append(cell);
+    body.append(tr);
+  }
+  t.append(body);
+  const wrap = el("div", "scroll"); wrap.append(t);
+  return wrap;
+}
+
+async function compToggle(r, button) {
+  const add = !r.registered;
+  if (!add && !confirm(`להסיר את ${r.username} מהתחרות? התוצאות שלו יורדו מהטבלה.`)) return;
+  button.disabled = true;
+  try {
+    const j = add
+      ? await rpc("admin_competition_participant_add", { p_player: r.player, p_note: $("comp-note").value.trim() || null })
+      : await rpc("admin_competition_participant_remove", { p_player: r.player });
+    if (j.ok === false) throw new Error(j.error === "unknown_player" ? "אין שחקן כזה" : j.error);
+    compMsg(add ? `${r.username} נרשם לתחרות.` : `${r.username} הוסר מהתחרות.`);
+    $("comp-note").value = "";
+    await compRefresh();
+  } catch (e) { compMsg(`לא הצליח: ${e.message}`, true); button.disabled = false; }
+}
+
+async function compSearch(q) {
+  const box = $("comp-found");
+  box.replaceChildren();
+  if (!q) return;
+  try {
+    const j = await rpc("admin_competition_players", { p_query: q });
+    box.append(compTable(j.players, `אין שחקן ששם המשתמש שלו מתחיל ב-"${q}".`));
+  } catch (e) { compMsg(e.pending ? "ממתין לעדכון השרת." : `החיפוש לא הצליח: ${e.message}`, !e.pending); }
+}
+
+async function compRefresh() {
+  try {
+    const j = await rpc("admin_competition_players", {});
+    if (j.ok === false) { $("comp-list").replaceChildren(el("p", "empty", "אין עונת תחרות בשרת.")); return; }
+    $("comp-sub").textContent = `רק משתתפים רשומים מופיעים בטבלת התחרות · ${nf.format(j.participants)} רשומים · ` +
+      `נספר ${j.count_from === "season" ? "מתחילת העונה" : "מרגע ההרשמה"} · עונה ${j.season}`;
+    $("comp-list").replaceChildren(compTable(j.players, "עוד אין משתתפים רשומים."));
+    const q = $("comp-q").value.trim();
+    if (q) await compSearch(q);
+  } catch (e) {
+    $("comp-list").replaceChildren(el("p", "empty", e.pending ? "ממתין לעדכון השרת (התחרות עוד לא הוחלה)." : `לא הצלחנו לטעון: ${e.message}`));
+  }
+}
+
+function compStart() {
+  if (compReady) return;
+  compReady = true;
+  $("comp-form").addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    compMsg("");
+    compSearch($("comp-q").value.trim());
+  });
+  compRefresh();
+}
+
 // ---- Start ---------------------------------------------------------------------------------------------------
 
 $("signin").addEventListener("click", () => signIn().catch(e => gate(e.message)));
@@ -422,6 +526,11 @@ function demo() {
     $("stamp").textContent = "נתוני דוגמה";
     document.querySelector(".navlink").search = "?demo";   // the multiplayer page's own demo
     render(demo());
+    compReady = true;
+    $("comp-list").replaceChildren(compTable([
+      { player: "1", username: "Rafa_BR", registered: true, place: 1, score: 1486, matches: 77, added_at: new Date(Date.now() - 864e5 * 9).toISOString(), added_by: "chen.mishani@gmail.com", note: "@rafa.fv" },
+      { player: "2", username: "Beni_10", registered: true, place: 2, score: 1450, matches: 114, added_at: new Date(Date.now() - 864e5 * 6).toISOString(), added_by: "beniter7@gmail.com", note: "" },
+      { player: "3", username: "noa_beach", registered: true, place: null, score: null, matches: null, added_at: new Date().toISOString(), added_by: "chen.mishani@gmail.com", note: "story ✓" }], ""));
     return;
   }
   if ((await finishSignIn()).redirect) return;
