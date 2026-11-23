@@ -138,7 +138,7 @@ function table(title, sub, cols, rows, opts = {}) {
   const t = el("table");
   const head = el("tr");
   const cls = (c) => [c.num ? "n" : "", c.wideOnly ? "ph-hide" : ""].filter(Boolean).join(" ") || null;
-  for (const c of cols) head.append(el("th", cls(c), c.label));
+  for (const c of cols) { const th = el("th", cls(c), c.label); if (c.short) th.dataset.short = c.short; head.append(th); }
   const thead = el("thead"); thead.append(head); t.append(thead);
   const body = el("tbody");
   const maxes = cols.map(c => c.bar ? Math.max(1, ...rows.map(r => +c.get(r) || 0)) : 0);
@@ -323,7 +323,7 @@ function drawInstallTables(d) {
       { label: "מדינה", get: r => countryName(r.country), raw: r => r.country === "?" ? null : r.country },
       { label: "סך הכול", get: r => r.total, num: true, bar: true },
       { label: per, get: r => r.period, num: true, wideOnly: true },
-      { label: "מחוברים", get: r => share(r.signed_in, r.period), fmt: pct, num: true },
+      { label: "מחוברים", short: "חשבון", get: r => share(r.signed_in, r.period), fmt: pct, num: true },
       { label: "למחרת", get: r => share(r.d1, r.d1_base), fmt: pct, num: true },
       { label: "אחרי שבוע", get: r => share(r.d7, r.d7_base), fmt: pct, num: true, wideOnly: true }],
       d.countries, { wide: true, onRow: (r) => { setFilter(r.country); document.querySelector(".card.wide").scrollIntoView({ behavior: "smooth", block: "start" }); } }),
@@ -331,7 +331,7 @@ function drawInstallTables(d) {
       { label: "יום", get: r => shortDate(r.day) },
       { label: "התקנות", get: r => r.installs, num: true, bar: true },
       { label: "למחרת", get: r => r.d1_base ? share(r.d1, r.d1_base) : null, fmt: pct, num: true },
-      { label: "אחרי שבוע", get: r => r.d7_base ? share(r.d7, r.d7_base) : null, fmt: pct, num: true },
+      { label: "אחרי שבוע", short: "שבוע", get: r => r.d7_base ? share(r.d7, r.d7_base) : null, fmt: pct, num: true },
       { label: "חזרו", get: r => share(r.returned, r.installs), fmt: pct, num: true }], cohorts),
     table("סוג טלפון", null, [
       { label: "סוג", get: r => L.platform(r.value), raw: r => r.value },
@@ -421,7 +421,7 @@ function drawDayTables(d) {
       { label: "סיימו", get: r => r.plays, num: true },
       { label: "שחקנים", get: r => r.players, num: true, wideOnly: true },
       { label: "משך", get: r => r.avg, fmt: duration, num: true },
-      { label: "ניצחונות", get: r => r.wins, num: true }], [...modes.values()].sort((a, b) => (b.starts + b.plays) - (a.starts + a.plays)), { wide: true }),
+      { label: "ניצחונות", short: "ניצ׳", get: r => r.wins, num: true }], [...modes.values()].sort((a, b) => (b.starts + b.plays) - (a.starts + a.plays)), { wide: true }),
     table("מדינות", "לפי הגדרת האזור בטלפון", [
       { label: "מדינה", get: r => countryName(r.country) },
       { label: "שחקנים", get: r => r.players, num: true, bar: true },

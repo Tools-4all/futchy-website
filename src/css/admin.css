@@ -219,3 +219,16 @@ a.tile--link:hover { border-color: rgba(39, 217, 212, 0.55); background: linear-
 a.tile--link:active { transform: scale(0.985); }
 .tile__go { position: absolute; top: 14px; inset-inline-end: 14px; font-size: 11.5px; font-weight: 700; color: var(--aqua);
             padding: 2px 8px; border-radius: 999px; background: var(--aqua-soft); }
+
+/* ---- tables at phone width (375-430 px): names never wrap, the numbers get tighter and shorter headers ---- */
+@media (max-width: 560px) {
+  table { font-size: 12.5px; }
+  th { padding: 6px 4px; font-size: 11.5px; }
+  td { padding: 7px 4px; }
+  td:first-child { white-space: nowrap; overflow-wrap: normal; max-width: none; }
+  .wraps td:first-child { white-space: normal; overflow-wrap: anywhere; }
+  td.has-meter { min-width: 58px; }
+  td .raw { white-space: normal; }   /* the small raw id may break; the name above it does not */
+  th[data-short] { font-size: 0; }
+  th[data-short]::after { content: attr(data-short); font-size: 11.5px; }
+}

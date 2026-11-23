@@ -134,7 +134,7 @@ window.FutchyLabels = (() => {
   const PROGRESS = { TrainingMatchWon: "ניצחו משחק אימון", PracticeMatchWon: "ניצחו משחק תרגול", CompetitiveMatchWon: "ניצחו משחק תחרותי",
     CoachTestPassed: "עברו מבחן של המאמן", LeagueChampionship: "זכו באליפות הליגה", CircleChallengeCompleted: "השלימו אתגר מעגלים",
     CourtMatchPlayed: "שיחקו משחק במגרש", CourtMatchWon: "ניצחו משחק במגרש", ItemBought: "קנו פריט" };
-  const VENUES = { Competitive: "משחק תחרותי", Training: "אימון" };
+  const VENUES = { Competitive: "תחרותי", Training: "אימון" };
   /** A mode (+ the court's role) -> "פוצ׳יוולי · אימון". */
   function mode(m, venue) {
     if (m === "circle" || m === "circles") return "מעגלים";

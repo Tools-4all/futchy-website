@@ -30,7 +30,7 @@ const hebrew = (t) => /[\u0590-\u05FF]/.test(t);
 
 const STEPS = { first_launch: "התקנה ראשונה", sign_in_shown: "ראו את מסך ההתחברות", sign_in_success: "התחברו",
   username_created: "בחרו שם משתמש", mode_start: "התחילו לשחק", match_end: "סיימו משחק פוצ׳יוולי",
-  coins_spent: "קנו משהו בכסף של המשחק", iap_succeeded: "קנו בכסף אמיתי (לפי המשחק, כולל קניות בדיקה)" };
+  coins_spent: "קנו בכסף של המשחק", iap_succeeded: "קנו בכסף אמיתי (כולל בדיקות)" };
 const ADS = { ad_requested: "ביקשו פרסומת", ad_unavailable: "לא הייתה פרסומת", ad_completed: "צפו עד הסוף",
   ad_not_completed: "סגרו לפני הסוף", ad_failed: "הפרסומת נכשלה", double_coins_paid: "הכפילו את הכסף בפרסומת" };
 // ₪ with agorot (4.90); a pack by its name in the game's store (com.Maagalim.MaagalimBeach.coins2500 -> 2,500 כסף).
@@ -209,7 +209,7 @@ function table(title, sub, cols, rows, empty = "אין עדיין נתונים."
   if (!rows?.length) { card.append(el("p", "empty", empty)); return card; }
   const t = el("table");
   const head = el("tr");
-  for (const c of cols) head.append(el("th", c.num ? "n" : null, c.label));
+  for (const c of cols) { const th = el("th", c.num ? "n" : null, c.label); if (c.short) th.dataset.short = c.short; head.append(th); }
   const thead = el("thead"); thead.append(head); t.append(thead);
   const body = el("tbody");
   const maxes = cols.map(c => c.bar ? Math.max(1, ...rows.map(r => +c.get(r) || 0)) : 0);
@@ -294,11 +294,11 @@ function renderTables(d) {
   $("tables").replaceChildren(
     table("מצבי משחק", per, [
       { label: "מצב", get: r => L.mode(r.mode) },
-      { label: "התחילו", get: r => started[r.mode], num: true },
+      { label: "התחילו", short: "התחילו", get: r => started[r.mode], num: true },
       { label: "סיימו", get: r => r.plays, num: true, bar: true },
-      { label: "שחקנים", get: r => r.installs, num: true },
-      { label: "משך ממוצע", get: r => r.avg_seconds, fmt: duration, num: true },
-      { label: "ניצחונות", get: r => r.mode === "footvolley" ? r.wins : null, num: true }], modes),
+      { label: "שחקנים", short: "שחקנים", get: r => r.installs, num: true },
+      { label: "משך ממוצע", short: "משך", get: r => r.avg_seconds, fmt: duration, num: true },
+      { label: "ניצחונות", short: "ניצ׳", get: r => r.mode === "footvolley" ? r.wins : null, num: true }], modes),
     table("משפך", `מהתקנות של ${per}: כמה הגיעו לכל שלב`, [
       { label: "שלב", get: r => STEPS[r.event] || L.event(r.event), raw: r => r.event },
       { label: "התקנות", get: r => r.installs, num: true, bar: true }], d.funnel),
@@ -350,6 +350,8 @@ function renderTables(d) {
   );
   // The wide cards: many columns, or long words.
   for (const c of $("tables").children) if (c.querySelectorAll("th").length > 4 || /שגיאות נפוצות/.test(c.textContent)) c.classList.add("wide");
+  // long free text (error messages) may wrap; every other name column stays on one line (styles: .wraps)
+  for (const c of $("tables").children) if (/שגיאות נפוצות/.test(c.querySelector("h2")?.textContent || "")) c.classList.add("wraps");
 }
 
 let jumped = false;
