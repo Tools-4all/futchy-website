@@ -1,5 +1,5 @@
 // FUTCHY admin: every raw identifier the server sends, in the game's own Hebrew (Chen, 2026-11-23) - ONE place for all
-// the admin pages (/admin, /admin/installs, /admin/today, /admin/multiplayer). The wording is the game's: the store's
+// the admin pages (/admin, /admin/installs, /admin/today, /admin/live, /admin/multiplayer). The wording is the game's: the store's
 // packs and boxes (Assets/Scripts/Purchasing/CoinPacks.cs, Localization/strings_99_store_box.txt - the game's money is
 // "כסף", the friends-room currency is "מטבעות"), the moves (UI/HebrewStrings.cs), the shops' signs, the screens.
 // Anything unknown comes back as itself, so a new id is never hidden - the pages show the raw id small beside a name.
@@ -149,6 +149,19 @@ window.FutchyLabels = (() => {
     if (ev === "online_end") return venue && venue !== "online" ? `אונליין · ${mode(venue)}` : "אונליין";
     return event(ev);
   }
+  const ONLINE_VENUES = { stadium: "האצטדיון", favela: "פאבלה", maincourt: "המגרש הראשי", mirante: "מיראנטה (מעגלים)" };
+  /** What a connected player is doing now (public.admin_live_now: activity + its detail). */
+  function activity(a, detail) {
+    if (a === "online") return detail ? `משחק אונליין · ${ONLINE_VENUES[detail] || detail}` : "משחק אונליין";
+    if (a === "circle") return "מעגלים";
+    if (a === "footvolley") return mode("footvolley", detail);
+    if (a === "beach") return "החוף החופשי";
+    if (a === "screen") return `בתפריטים · ${SCREENS[detail] || detail || "לא ידוע"}`;
+    if (a === "left") return "יצאו מהמשחק עכשיו";
+    return "לא ידוע (גרסה ישנה או ברקע)";
+  }
+  const SESSION_BUCKETS = { "0-5": "עד 5 דקות", "5-15": "5 עד 15 דקות", "15-30": "רבע שעה עד חצי שעה",
+    "30-60": "חצי שעה עד שעה", "60+": "יותר משעה", unknown: "לא ידוע (נכנסו לפני יותר מ-12 שעות או גרסה ישנה)" };
   const PLATFORMS = { iOS: "אייפון", "iOS-dev": "אייפון · גרסת פיתוח", Android: "אנדרואיד", "Android-dev": "אנדרואיד · גרסת פיתוח",
     IPhonePlayer: "אייפון", OSXEditor: "מחשב (עורך)", "OSXEditor-dev": "מחשב (עורך)", "?": "לא ידוע" };
   const platform = (p) => PLATFORMS[p] || p || "לא ידוע";
@@ -198,5 +211,6 @@ window.FutchyLabels = (() => {
   }
 
   return { product, source, item, groupBy, event, screen: (s) => SCREENS[s] || s || "לא ידוע", shop: (s) => SHOPS[s] || s || "לא ידוע",
-           progress: (t) => PROGRESS[t] || t || "לא ידוע", mode, ended, platform, env, country, flag, device, os, venue: (v) => VENUES[v] || v };
+           progress: (t) => PROGRESS[t] || t || "לא ידוע", mode, ended, activity,
+           sessionBucket: (b) => SESSION_BUCKETS[b] || b, platform, env, country, flag, device, os, venue: (v) => VENUES[v] || v };
 })();

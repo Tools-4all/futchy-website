@@ -1,0 +1,349 @@
+{
+ "os": [
+  {
+   "value": "iOS 18.1",
+   "players": 21
+  },
+  {
+   "value": "Android OS 14",
+   "players": 20
+  },
+  {
+   "value": "iOS 17.6",
+   "players": 18
+  },
+  {
+   "value": "iOS 26.0.1",
+   "players": 18
+  }
+ ],
+ "tz": "Asia/Jerusalem",
+ "envs": [
+  {
+   "value": "production",
+   "players": 70
+  },
+  {
+   "value": "testflight",
+   "players": 6
+  },
+  {
+   "value": "?",
+   "players": 1
+  }
+ ],
+ "totals": {
+  "new": 21,
+  "online": 4,
+  "in_game": 57,
+  "playing": 58,
+  "connected": 77,
+  "returning": 56,
+  "signed_in": 43,
+  "sessions_known": 72,
+  "avg_session_seconds": 4469,
+  "median_session_seconds": 4560
+ },
+ "devices": [
+  {
+   "value": "iPhone15,3",
+   "players": 19
+  },
+  {
+   "value": "SM-A055F",
+   "players": 12
+  },
+  {
+   "value": "iPhone14,5",
+   "players": 11
+  },
+  {
+   "value": "iPhone16,2",
+   "players": 11
+  },
+  {
+   "value": "iPhone13,2",
+   "players": 9
+  },
+  {
+   "value": "iPhone17,3",
+   "players": 7
+  },
+  {
+   "value": "SM-A156B",
+   "players": 6
+  },
+  {
+   "value": "SM-S921B",
+   "players": 2
+  }
+ ],
+ "minutes": [
+  {
+   "players": 1,
+   "minutes_ago": 9
+  },
+  {
+   "players": 1,
+   "minutes_ago": 8
+  },
+  {
+   "players": 1,
+   "minutes_ago": 7
+  },
+  {
+   "players": 1,
+   "minutes_ago": 6
+  },
+  {
+   "players": 0,
+   "minutes_ago": 5
+  },
+  {
+   "players": 1,
+   "minutes_ago": 4
+  },
+  {
+   "players": 2,
+   "minutes_ago": 3
+  },
+  {
+   "players": 75,
+   "minutes_ago": 2
+  },
+  {
+   "players": 4,
+   "minutes_ago": 1
+  },
+  {
+   "players": 71,
+   "minutes_ago": 0
+  }
+ ],
+ "versions": [
+  {
+   "players": 64,
+   "app_version": "1.0.3",
+   "build_number": "26"
+  },
+  {
+   "players": 11,
+   "app_version": "1.0.2",
+   "build_number": "12"
+  },
+  {
+   "players": 1,
+   "app_version": "1.0.1",
+   "build_number": ""
+  },
+  {
+   "players": 1,
+   "app_version": "1.0.3",
+   "build_number": "27"
+  }
+ ],
+ "countries": [
+  {
+   "new": 4,
+   "country": "IL",
+   "players": 24,
+   "playing": 19,
+   "signed_in": 14
+  },
+  {
+   "new": 9,
+   "country": "BR",
+   "players": 15,
+   "playing": 9,
+   "signed_in": 9
+  },
+  {
+   "new": 4,
+   "country": "DE",
+   "players": 9,
+   "playing": 4,
+   "signed_in": 6
+  },
+  {
+   "new": 0,
+   "country": "FR",
+   "players": 7,
+   "playing": 7,
+   "signed_in": 4
+  },
+  {
+   "new": 2,
+   "country": "PT",
+   "players": 7,
+   "playing": 6,
+   "signed_in": 5
+  },
+  {
+   "new": 1,
+   "country": "US",
+   "players": 6,
+   "playing": 5,
+   "signed_in": 2
+  },
+  {
+   "new": 1,
+   "country": "?",
+   "players": 5,
+   "playing": 4,
+   "signed_in": 0
+  },
+  {
+   "new": 0,
+   "country": "AR",
+   "players": 4,
+   "playing": 4,
+   "signed_in": 3
+  }
+ ],
+ "platforms": [
+  {
+   "new": 15,
+   "value": "iOS",
+   "players": 57
+  },
+  {
+   "new": 6,
+   "value": "Android",
+   "players": 20
+  }
+ ],
+ "activities": [
+  {
+   "new": 2,
+   "detail": "",
+   "players": 19,
+   "playing": 19,
+   "activity": "beach",
+   "avg_session_seconds": 4767
+  },
+  {
+   "new": 2,
+   "detail": "",
+   "players": 18,
+   "playing": 18,
+   "activity": "circle",
+   "avg_session_seconds": 4350
+  },
+  {
+   "new": 12,
+   "detail": "MainMenu",
+   "players": 13,
+   "playing": 0,
+   "activity": "screen",
+   "avg_session_seconds": 3923
+  },
+  {
+   "new": 1,
+   "detail": "Training",
+   "players": 10,
+   "playing": 10,
+   "activity": "footvolley",
+   "avg_session_seconds": 5898
+  },
+  {
+   "new": 0,
+   "detail": "Competitive",
+   "players": 6,
+   "playing": 6,
+   "activity": "footvolley",
+   "avg_session_seconds": 2400
+  },
+  {
+   "new": 1,
+   "detail": "",
+   "players": 3,
+   "playing": 2,
+   "activity": "left",
+   "avg_session_seconds": 1000
+  },
+  {
+   "new": 2,
+   "detail": "CharacterEditor",
+   "players": 2,
+   "playing": 0,
+   "activity": "screen",
+   "avg_session_seconds": 5040
+  },
+  {
+   "new": 0,
+   "detail": "favela",
+   "players": 1,
+   "playing": 1,
+   "activity": "online",
+   "avg_session_seconds": 3540
+  },
+  {
+   "new": 0,
+   "detail": "maincourt",
+   "players": 1,
+   "playing": 1,
+   "activity": "online",
+   "avg_session_seconds": 5340
+  },
+  {
+   "new": 0,
+   "detail": "mirante",
+   "players": 1,
+   "playing": 1,
+   "activity": "online",
+   "avg_session_seconds": 6540
+  },
+  {
+   "new": 0,
+   "detail": "stadium",
+   "players": 1,
+   "playing": 0,
+   "activity": "online",
+   "avg_session_seconds": 1500
+  },
+  {
+   "new": 1,
+   "detail": "BeachSelect",
+   "players": 1,
+   "playing": 0,
+   "activity": "screen",
+   "avg_session_seconds": 6300
+  },
+  {
+   "new": 0,
+   "detail": "",
+   "players": 1,
+   "playing": 0,
+   "activity": "unknown",
+   "avg_session_seconds": null
+  }
+ ],
+ "generated_at": "2026-11-23T20:45:45.523+00:00",
+ "window_minutes": 5,
+ "session_lengths": [
+  {
+   "bucket": "0-5",
+   "players": 1
+  },
+  {
+   "bucket": "5-15",
+   "players": 2
+  },
+  {
+   "bucket": "15-30",
+   "players": 6
+  },
+  {
+   "bucket": "30-60",
+   "players": 17
+  },
+  {
+   "bucket": "60+",
+   "players": 46
+  },
+  {
+   "bucket": "unknown",
+   "players": 2
+  }
+ ]
+}

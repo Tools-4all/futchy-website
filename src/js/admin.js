@@ -136,7 +136,7 @@ function renderTiles(d) {
   const cut = u.sessions ? 100 * u.unfinished / u.sessions : null;
   const box = $("tiles");
   box.replaceChildren(
-    tile("משחקים עכשיו", num(d.playing_now), `${num(o.live_5m)} פעילים ב-5 הדקות האחרונות`, { live: true }),
+    tile("משחקים עכשיו", num(d.playing_now), `${num(o.live_5m)} פעילים ב-5 הדקות האחרונות`, { live: true, href: "/admin/live" }),
     tile("התקנות", num(o.installs_total), `${num(o.new_today)} חדשות היום`, { href: "/admin/installs" }),
     tile("פעילים היום", num(o.today), `${num(o.sessions_today)} סשנים היום`, { href: "/admin/today" }),
     trio("שחקנים פעילים", [["יום", o.dau], ["שבוע", o.wau], ["חודש", o.mau]]),

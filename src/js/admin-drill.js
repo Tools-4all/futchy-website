@@ -1,6 +1,6 @@
-// FUTCHY's dashboard drill-downs (Chen, 2026-11-23): /admin/installs (the installs tile) and /admin/today (the "played
-// today" tile). The same sign-in as /admin (admin-auth.js); the numbers come from public.admin_installs(p_days) and
-// public.admin_played_day(p_day), which answer only the owners (analytics.is_admin, else 'forbidden'). Every raw id is
+// FUTCHY's dashboard drill-downs (Chen, 2026-11-23): /admin/installs (the installs tile), /admin/today (the "played
+// today" tile) and /admin/live (the "playing now" tile: who is connected right now, refreshed every 30 seconds). The same sign-in as /admin (admin-auth.js); the numbers come from public.admin_installs(p_days) and
+// public.admin_played_day(p_day) / public.admin_live_now(), which answer only the owners (analytics.is_admin, else 'forbidden'). Every raw id is
 // shown in the game's own Hebrew (admin-labels.js). Everything from the server is written as text, never as HTML.
 // On the local preview only (localhost/admin/installs?demo): the fixtures in tools/fixtures - the real functions' output
 // on a synthetic database - served by tools/serve.mjs at /__mock/.
@@ -77,17 +77,18 @@ async function rpc(fn, args) {
   if (!r.ok || !j) throw new Error(j?.message || `שגיאה ${r.status}`);
   return j;
 }
-async function load(fn, args, draw) {
+async function load(fn, args, draw, quiet = false) {
   if (loading) return;
   loading = true;
-  $("status").textContent = "טוען…";
+  if (!quiet) $("status").textContent = "טוען…";
   try {
     const d = await rpc(fn, args);
     if (!d) return;
     $("gate").hidden = true; $("board").hidden = false; $("tools").hidden = false;
     draw(d);
     $("status").textContent = "";
-    $("stamp").textContent = DEMO ? "נתוני דוגמה" : `עודכן ${new Date(d.generated_at).toLocaleTimeString("he-IL", { hour: "2-digit", minute: "2-digit" })}`;
+    const at = new Date(d.generated_at).toLocaleTimeString("he-IL", PAGE === "live" ? { hour: "2-digit", minute: "2-digit", second: "2-digit" } : { hour: "2-digit", minute: "2-digit" });
+    $("stamp").textContent = DEMO ? "נתוני דוגמה" : PAGE === "live" ? `עודכן ${at} · מתרענן כל 30 שניות` : `עודכן ${at}`;
     retried = false;
   } catch (e) {
     if (!retried && /timeout/i.test(e.message || "")) {   // a cold server cache: the second try loads
@@ -106,6 +107,7 @@ let demoToday = null;
 async function demo(fn, args) {
   const get = async (name) => (await fetch(`/__mock/${name}.json`)).json();
   if (fn === "admin_installs") return get(`admin_installs_${args.p_days >= 90 ? 90 : 30}`);
+  if (fn === "admin_live_now") return { ...(await get("admin_live_now")), generated_at: new Date().toISOString() };
   if (!demoToday) demoToday = (await get("admin_played_day_0")).today;
   const want = args.p_day || demoToday;
   const back = Math.round((dayOf(demoToday) - dayOf(want)) / 864e5);
@@ -463,10 +465,74 @@ function goDay(target) {
   load("admin_played_day", { p_day: target }, drawDay);
 }
 
+// ================================================================================================================
+// /admin/live
+// ================================================================================================================
+
+let live = null;
+const MINUTES = [{ key: "players", label: "מחוברים", cls: "s-ios" }];
+
+function drawLive(d) {
+  live = d;
+  const t = d.totals;
+  const med = clock(t.median_session_seconds), avg = clock(t.avg_session_seconds);
+  $("tiles").replaceChildren(
+    tile("מחוברים עכשיו", num(t.connected), `שלחו משהו מהמשחק ב-${num(d.window_minutes)} הדקות האחרונות`, { accent: true, live: true }),
+    tile("משחקים עכשיו", num(t.playing), "במסך המשחק ב-3 הדקות האחרונות", { meter: share(t.playing, t.connected) }),
+    tile("באמצע משחק", num(t.in_game), `${num(t.online)} מהם באונליין · חוף, מעגלים, פוצ׳יוולי`, { meter: share(t.in_game, t.connected) }),
+    tile("חדשים היום", num(t.new), `${pct(share(t.new, t.connected))} מהמחוברים · ${num(t.returning)} חוזרים`, { meter: share(t.new, t.connected) }),
+    tile("מחוברים לחשבון", pct(share(t.signed_in, t.connected)), `${num(t.signed_in)} מתוך ${num(t.connected)}`, { meter: share(t.signed_in, t.connected) }),
+    tile("כמה זמן בפנים", med[0], `${med[1]} · חציון הכניסה הנוכחית · ממוצע ${avg[0]} ${avg[1]}`,
+         { hint: `מתחילת הכניסה הנוכחית למשחק (ידוע ל-${num(t.sessions_known)} מהמחוברים)` }));
+
+  const rows = d.minutes.map(m => ({ ...m, label: m.minutes_ago === 0 ? "עכשיו" : `לפני ${m.minutes_ago}` }));
+  stacked($("minutes"), rows, MINUTES, {
+    aria: "מחוברים בכל דקה", height: 170, every: 1, label: (r) => r.minutes_ago === 0 ? "עכשיו" : `-${r.minutes_ago}`,
+    mark: (r) => r.minutes_ago === 0,
+    tip: (r) => [r.minutes_ago === 0 ? "הדקה הנוכחית" : `לפני ${r.minutes_ago} דקות`, `${num(r.players)} מחוברים`],
+  });
+
+  const os = L.groupBy(d.os, r => L.os(r.value), ["players"]).sort((a, b) => b.players - a.players);
+  const rawOf = (r) => r.raws.length === 1 ? r.raws[0].value : `${r.raws.length} גרסאות: ${r.raws.slice(0, 3).map(x => x.value).join(", ")}${r.raws.length > 3 ? "…" : ""}`;
+  const known = d.session_lengths.filter(b => b.bucket !== "unknown" || b.players > 0);
+  $("tables").replaceChildren(
+    table("מה עושים עכשיו", "לפי האירועים האחרונים של כל שחקן · משך = מתחילת הכניסה הנוכחית", [
+      { label: "פעילות", get: r => L.activity(r.activity, r.detail), raw: r => r.detail || null },
+      { label: "שחקנים", get: r => r.players, num: true, bar: true },
+      { label: "במסך המשחק", short: "במשחק", get: r => r.playing, num: true, wideOnly: true },
+      { label: "חדשים", get: r => r.new, num: true, wideOnly: true },
+      { label: "בפנים", get: r => r.avg_session_seconds, fmt: duration, num: true }], d.activities, { wide: true, empty: "אף אחד לא מחובר עכשיו." }),
+    table("כמה זמן בפנים", "מתחילת הכניסה הנוכחית למשחק", [
+      { label: "", get: r => L.sessionBucket(r.bucket) },
+      { label: "שחקנים", get: r => r.players, num: true, bar: true }], known, { empty: "אף אחד לא מחובר עכשיו." }),
+    table("מדינות", "לפי הגדרת האזור בטלפון", [
+      { label: "מדינה", get: r => countryName(r.country), raw: r => r.country === "?" ? null : r.country },
+      { label: "מחוברים", get: r => r.players, num: true, bar: true },
+      { label: "במשחק", get: r => r.playing, num: true, wideOnly: true },
+      { label: "חדשים", get: r => r.new, num: true },
+      { label: "חשבון", get: r => share(r.signed_in, r.players), fmt: pct, num: true }], d.countries, { empty: "אף אחד לא מחובר עכשיו." }),
+    table("סוג טלפון", null, [
+      { label: "סוג", get: r => L.platform(r.value), raw: r => r.value },
+      { label: "מחוברים", get: r => r.players, num: true, bar: true },
+      { label: "חדשים", get: r => r.new, num: true }], d.platforms, { empty: "אף אחד לא מחובר עכשיו." }),
+    table("גרסת מערכת", null, [
+      { label: "מערכת", get: r => r.label, raw: rawOf },
+      { label: "מחוברים", get: r => r.players, num: true, bar: true }], os, { empty: "אף אחד לא מחובר עכשיו." }),
+    table("מכשירים", null, [
+      { label: "דגם", get: r => L.device(r.value), raw: r => r.value },
+      { label: "מחוברים", get: r => r.players, num: true, bar: true }], d.devices, { empty: "אף אחד לא מחובר עכשיו." }),
+    table("גרסאות", "גרסה ובילד, כפי שהמשחק דיווח עכשיו", [
+      { label: "גרסה", get: r => version(r.app_version, r.build_number) },
+      { label: "מחוברים", get: r => r.players, num: true, bar: true }], d.versions, { empty: "אף אחד לא מחובר עכשיו." }),
+    table("מאיפה הורידו", "חנות, בדיקה (TestFlight) או פיתוח", [
+      { label: "", get: r => L.env(r.value) },
+      { label: "מחוברים", get: r => r.players, num: true, bar: true }], d.envs, { empty: "אף אחד לא מחובר עכשיו." }));
+}
+
 let resizeTimer;
 addEventListener("resize", () => {
   clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => { if (PAGE === "installs" && inst) drawDaily(); else if (dayInfo) drawDay(dayInfo); }, 150);
+  resizeTimer = setTimeout(() => { if (PAGE === "installs" && inst) drawDaily(); else if (PAGE === "live" && live) drawLive(live); else if (dayInfo) drawDay(dayInfo); }, 150);
 });
 
 // ---- start ------------------------------------------------------------------------------------------------------
@@ -483,6 +549,12 @@ addEventListener("resize", () => {
       });
     }
     await load("admin_installs", { p_days: days }, drawInstalls);
+  } else if (PAGE === "live") {
+    // every 30 seconds while the page is in front; at once when it comes back to the front
+    const refresh = () => { if (document.visibilityState === "visible") load("admin_live_now", {}, drawLive, true); };
+    setInterval(refresh, 30000);
+    document.addEventListener("visibilitychange", refresh);
+    await load("admin_live_now", {}, drawLive);
   } else {
     $("prev").addEventListener("click", () => day && goDay(addDays(day, -1)));
     $("next").addEventListener("click", () => day && goDay(addDays(day, 1)));

@@ -58,6 +58,12 @@ const PAGES = [
     description: "FUTCHY's private dashboard: who played on a day.",
   },
   {
+    // The "playing now" tile's drill-down: who is connected right now (public.admin_live_now - the owners only).
+    file: "admin-live.html", out: "admin/live.html", path: "/admin/live", index: false, admin: true,
+    title: "מחוברים עכשיו — FUTCHY",
+    description: "FUTCHY's private dashboard: who is connected right now.",
+  },
+  {
     // The dashboard again at /admin/ - only so that /admin still opens it if the host prefers the admin/ folder
     // (above) over admin.html. Same page, same files.
     file: "admin.html", out: "admin/index.html", path: "/admin", index: false, admin: true,
