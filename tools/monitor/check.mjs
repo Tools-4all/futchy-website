@@ -64,7 +64,7 @@ async function mail(subject, lines) {
 const SUPA = "https://supabase.com/dashboard/project/hfclcxosyzjgjyxsgzec";
 
 async function main() {
-  if (!HEALTH_URL) throw new Error("HEALTH_URL secret is missing");
+  if (!HEALTH_URL) { console.log("not set up yet: the HEALTH_URL secret is missing"); return; }
   if (TEST_MAIL === "1") {
     const ok = await mail("Futchy · בדיקה: התראות השרת עובדות",
       ["זה מייל בדיקה ממערכת הניטור החיצונית של השרת (GitHub Actions).",
