@@ -23,8 +23,19 @@ watch(join(root, "src"), { recursive: true }, () => {
   timer = setTimeout(() => { try { build(); } catch (e) { console.error(e.message); } }, 150);
 });
 
+// The admin pages' mock data (localhost/admin/...?demo): tools/fixtures/*.json, the real SQL functions' output on a
+// synthetic local database. Served by this preview only - never built into dist/, never on futchy.co.
+const fixtures = join(root, "tools", "fixtures");
+
 createServer((req, res) => {
   let p = decodeURIComponent(new URL(req.url, "http://x").pathname);
+  const mock = /^\/__mock\/([a-z0-9_]+\.json)$/.exec(p);
+  if (mock) {
+    const f = join(fixtures, mock[1]);
+    res.writeHead(existsSync(f) ? 200 : 404, { "Content-Type": "application/json", "Cache-Control": "no-store" });
+    res.end(existsSync(f) ? readFileSync(f) : "{}");
+    return;
+  }
   if (p.endsWith("/") && p !== "/") p = p.slice(0, -1);
   const tries = p === "/" ? ["index.html"] : [p, p + ".html", p + "/index.html"];
   const hit = tries.map((t) => join(dist, t)).find((f) => f.startsWith(dist) && existsSync(f) && statSync(f).isFile());

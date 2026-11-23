@@ -46,6 +46,18 @@ const PAGES = [
     description: "FUTCHY's private multiplayer diagnostics.",
   },
   {
+    // The dashboard's drill-downs: the installs tile and the "played today" tile open these (same sign-in, same rules:
+    // admin_installs / admin_played_day answer only the owners). Never indexed.
+    file: "admin-installs.html", out: "admin/installs.html", path: "/admin/installs", index: false, admin: true,
+    title: "התקנות — FUTCHY",
+    description: "FUTCHY's private dashboard: installs.",
+  },
+  {
+    file: "admin-today.html", out: "admin/today.html", path: "/admin/today", index: false, admin: true,
+    title: "שיחקו היום — FUTCHY",
+    description: "FUTCHY's private dashboard: who played on a day.",
+  },
+  {
     // The dashboard again at /admin/ - only so that /admin still opens it if the host prefers the admin/ folder
     // (above) over admin.html. Same page, same files.
     file: "admin.html", out: "admin/index.html", path: "/admin", index: false, admin: true,
@@ -82,7 +94,9 @@ export function build() {
   for (const [key, from, ext] of [["css", "css/main.css", "css"], ["js", "js/main.js", "js"],
                                   ["adminCss", "css/admin.css", "css"], ["adminJs", "js/admin.js", "js"],
                                   ["adminAuthJs", "js/admin-auth.js", "js"],
-                                  ["mpCss", "css/admin-mp.css", "css"], ["mpJs", "js/admin-mp.js", "js"]]) {
+                                  ["mpCss", "css/admin-mp.css", "css"], ["mpJs", "js/admin-mp.js", "js"],
+                                  ["adminLabelsJs", "js/admin-labels.js", "js"],
+                                  ["drillCss", "css/admin-drill.css", "css"], ["drillJs", "js/admin-drill.js", "js"]]) {
     const buf = readFileSync(join(src, from));
     const name = `assets/${from.split("/")[1].split(".")[0]}.${hash(buf)}.${ext}`;
     writeFileSync(join(dist, name), buf);
@@ -167,6 +181,9 @@ export function build() {
       adminAuthJs: assets.adminAuthJs,
       mpCss: assets.mpCss,
       mpJs: assets.mpJs,
+      adminLabelsJs: assets.adminLabelsJs,
+      drillCss: assets.drillCss,
+      drillJs: assets.drillJs,
       css: assets.css,
       js: assets.js,
       email: cfg.email,

@@ -56,7 +56,7 @@
     <!-- Overview + live -->
     <div class="view" id="v-overview" hidden>
       <form class="filters" id="f-overview" autocomplete="off">
-        <label>env<select name="env"><option value="">הכל</option><option>production</option><option>testflight</option><option>dev</option></select></label>
+        <label>סביבה<select name="env"><option value="">הכל</option><option value="production">חנות</option><option value="testflight">בדיקה (TestFlight)</option><option value="dev">פיתוח</option></select></label>
         <label>build<input name="build" inputmode="numeric" maxlength="40" placeholder="הכל"></label>
         <label>תקופה<select name="hours"><option value="1">שעה</option><option value="24" selected>24 שעות</option><option value="168">7 ימים</option></select></label>
         <button type="submit" class="btn">הצג</button>
@@ -81,7 +81,7 @@
     <!-- Matches -->
     <div class="view" id="v-matches" hidden>
       <form class="filters" id="f-matches" autocomplete="off">
-        <label>env<select name="env"><option value="">הכל</option><option>production</option><option>testflight</option><option>dev</option></select></label>
+        <label>סביבה<select name="env"><option value="">הכל</option><option value="production">חנות</option><option value="testflight">בדיקה (TestFlight)</option><option value="dev">פיתוח</option></select></label>
         <label>build<input name="build_number" maxlength="40" placeholder="הכל"></label>
         <label>מצב<input name="mode" maxlength="40" placeholder="הכל" list="dl-modes"></label>
         <label>מקום<input name="venue" maxlength="40" placeholder="הכל" list="dl-venues"></label>
@@ -108,7 +108,7 @@
       <form class="filters" id="f-issues" autocomplete="off">
         <label>סטטוס<select name="status"><option value="open" selected>open</option><option value="ack">ack</option><option value="resolved">resolved</option><option value="">הכל</option></select></label>
         <label>חומרה<select name="severity"><option value="">הכל</option><option>critical</option><option>warning</option><option>info</option></select></label>
-        <label>env<select name="env"><option value="">הכל</option><option>production</option><option>testflight</option><option>dev</option></select></label>
+        <label>סביבה<select name="env"><option value="">הכל</option><option value="production">חנות</option><option value="testflight">בדיקה (TestFlight)</option><option value="dev">פיתוח</option></select></label>
         <label>build<input name="build_number" maxlength="40" placeholder="הכל"></label>
         <label>kind<input name="kind" maxlength="40" placeholder="ball_snap" list="dl-kinds"></label>
         <label>match_id<input name="match_id" maxlength="80" dir="ltr"></label>
@@ -120,7 +120,7 @@
     <!-- Player reports -->
     <div class="view" id="v-reports" hidden>
       <form class="filters" id="f-reports" autocomplete="off">
-        <label>env<select name="env"><option value="">הכל</option><option>production</option><option>testflight</option><option>dev</option></select></label>
+        <label>סביבה<select name="env"><option value="">הכל</option><option value="production">חנות</option><option value="testflight">בדיקה (TestFlight)</option><option value="dev">פיתוח</option></select></label>
         <label>build<input name="build_number" maxlength="40" placeholder="הכל"></label>
         <label>ref<input name="ref" maxlength="8" placeholder="R-XXXXXX" dir="ltr"></label>
         <label>match_id<input name="match_id" maxlength="80" dir="ltr"></label>
@@ -139,7 +139,7 @@
     <!-- Build comparison -->
     <div class="view" id="v-builds" hidden>
       <form class="filters" id="f-builds" autocomplete="off">
-        <label>env<select name="env"><option value="production" selected>production</option><option>testflight</option><option>dev</option><option value="">הכל</option></select></label>
+        <label>סביבה<select name="env"><option value="production" selected>חנות</option><option value="testflight">בדיקה (TestFlight)</option><option value="dev">פיתוח</option><option value="">הכל</option></select></label>
         <label>ימים<select name="days"><option value="7">7</option><option value="30" selected>30</option><option value="90">90</option></select></label>
         <button type="submit" class="btn">הצג</button>
       </form>
@@ -170,6 +170,7 @@
 </main>
 
 <script src="{{adminAuthJs}}" defer></script>
+<script src="{{adminLabelsJs}}" defer></script>
 <script src="{{mpJs}}" defer></script>
 </body>
 </html>

@@ -208,3 +208,14 @@ td:first-child { max-width: 360px; overflow-wrap: anywhere; }
 .buys__at { color: var(--faint); grid-column: 2; grid-row: 1 / span 2; align-self: center; font-variant-numeric: tabular-nums; }
 .buy-note { margin: 10px 0 4px; color: var(--faint); font-size: 12.5px; line-height: 1.5; }
 .buy-note--warn { color: var(--warn); }
+
+/* ---- a raw id, small, under its Hebrew name (admin-labels.js) ---- */
+.raw { display: block; color: var(--faint); font-size: 11px; line-height: 1.3; direction: ltr; text-align: right;
+       unicode-bidi: plaintext; overflow-wrap: anywhere; opacity: .8; }
+
+/* ---- a tile that opens its own page (/admin/installs, /admin/today) ---- */
+a.tile--link { display: block; color: inherit; text-decoration: none; transition: border-color .15s, transform .12s, background .15s; }
+a.tile--link:hover { border-color: rgba(39, 217, 212, 0.55); background: linear-gradient(160deg, rgba(39, 217, 212, 0.10), var(--panel) 60%); }
+a.tile--link:active { transform: scale(0.985); }
+.tile__go { position: absolute; top: 14px; inset-inline-end: 14px; font-size: 11.5px; font-weight: 700; color: var(--aqua);
+            padding: 2px 8px; border-radius: 999px; background: var(--aqua-soft); }

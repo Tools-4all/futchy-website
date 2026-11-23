@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="{{csp}}">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#06141d">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="preload" href="/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{adminCss}}">
+<link rel="stylesheet" href="{{drillCss}}">
+</head>
+<body data-page="installs">
+<header class="bar">
+  <div class="bar__in">
+    <a class="back" href="/admin" id="back" aria-label="חזרה ללוח הראשי"><span aria-hidden="true">→</span> לוח ראשי</a>
+    <span class="bar__title">התקנות</span>
+    <div class="bar__tools" id="tools" hidden>
+      <div class="seg" role="group" aria-label="תקופה">
+        <button type="button" data-days="30" aria-pressed="true">30 ימים</button>
+        <button type="button" data-days="90">90 ימים</button>
+      </div>
+      <span class="stamp" id="stamp"></span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="gate" id="gate" hidden>
+    <h1>לוח הנתונים של FUTCHY</h1>
+    <p>הכניסה רק לבעלי המשחק.</p>
+    <button type="button" class="google" id="signin"><span>התחברות עם Google</span></button>
+    <p class="note" id="gate-note"></p>
+  </section>
+  <section id="board" hidden>
+    <div class="tiles" id="tiles"></div>
+    <p class="footnote" id="estimate"></p>
+
+    <article class="card wide">
+      <div class="card__head">
+        <div>
+          <h2>התקנות חדשות בכל יום</h2>
+          <p class="sub" id="daily-sub">לפי יום בשעון ישראל, לפי סוג הטלפון</p>
+        </div>
+        <label class="pick"><span>מדינה</span><select id="country"></select></label>
+      </div>
+      <div class="chips" id="chips"></div>
+      <div class="legend" id="legend"></div>
+      <div class="chart chart--tall" id="daily"></div>
+    </article>
+
+    <div class="grid" id="tables"></div>
+  </section>
+
+  <p class="status" id="status" role="status"></p>
+</main>
+
+<script src="{{adminAuthJs}}" defer></script>
+<script src="{{adminLabelsJs}}" defer></script>
+<script src="{{drillJs}}" defer></script>
+</body>
+</html>

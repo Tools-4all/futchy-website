@@ -2,6 +2,8 @@
 // number comes from public.admin_mp_* - which answer only the owners (analytics.is_admin, else 'forbidden') - and
 // nothing is ever written into the page itself. Most of it is what the devices reported (client telemetry, delayed,
 // untrusted): every value is written as text (textContent), never as HTML, and links are built only from ids we encode.
+// dev / testflight / production in the game's words (admin-labels.js: one map for all the admin pages).
+const envName = (e) => (e === null || e === undefined || e === "") ? "–" : (window.FutchyLabels ? window.FutchyLabels.env(e) : e);
 const { BACKEND, ANON, stored, token, forget } = window.FutchyAuth;
 
 const $ = (id) => document.getElementById(id);
@@ -245,7 +247,7 @@ async function loadOverview() {
 
 function renderOverview(d) {
   const s = obj(d.server), c = obj(d.client), rtt = obj(c.rtt), rl = obj(c.rate_limited), oi = obj(c.open_issues);
-  const scope = [d.env ? `env ${d.env}` : "כל הסביבות", d.build_number ? `build ${d.build_number}` : "כל הבילדים"].join(" · ");
+  const scope = [d.env ? envName(d.env) : "כל הסביבות", d.build_number ? `build ${d.build_number}` : "כל הבילדים"].join(" · ");
   $("ov-meta").textContent = `עודכן ${clock(d.updated_at)} · ${scope} · טלמטריה מאז ${when(d.since)} (${num(d.hours)} שע׳)`;
   $("ov-server").replaceChildren(
     tile("מחוברים עכשיו", num(s.online_now), "שחקנים שהשרת ראה לאחרונה", { src: "server", live: true }),
@@ -285,7 +287,7 @@ async function loadLive() {
       table([
         { label: "match_id", get: (r) => matchLink(r.match_id) },
         { label: "מצב", get: (r) => r.mode }, { label: "מקום", get: (r) => r.venue },
-        { label: "env · build", get: (r) => ltr(`${str(r.env)} · ${str(r.build_number)}`) },
+        { label: "סביבה · בילד", get: (r) => `${envName(r.env)} · ${str(r.build_number)}` },
         { label: "מכשירים", get: (r) => r.players, num: true },
         { label: "host", get: (r) => obj(r.host).model },
         { label: "משך", get: (r) => r.duration_s, fmt: duration, num: true },
@@ -343,7 +345,7 @@ function renderMatches() {
       { label: "אחרון", get: (r) => r.last_at, fmt: when },
       { label: "match_id", get: (r) => matchLink(r.match_id) },
       { label: "מצב", get: (r) => r.mode }, { label: "מקום", get: (r) => r.venue },
-      { label: "env", get: (r) => r.env }, { label: "build", get: (r) => r.build_number },
+      { label: "סביבה", get: (r) => envName(r.env) }, { label: "בילד", get: (r) => r.build_number },
       { label: "מכשירים", get: (r) => r.players, num: true },
       { label: "משך", get: (r) => r.duration_s, fmt: duration, num: true },
       { label: "תוצאה", get: (r) => scoreText(r.score) }, { label: "סיום", get: (r) => r.outcome },
@@ -415,7 +417,7 @@ function renderMatch() {
 
   const grid = el("div", "grid");
   grid.append(card("המשחק", "מה שהמכשירים דיווחו", d.match ? kv([
-    ["מצב", m.mode], ["מקום", m.venue], ["env", m.env], ["build", m.build_number],
+    ["מצב", m.mode], ["מקום", m.venue], ["סביבה", envName(m.env)], ["בילד", m.build_number],
     ["התחלה", when(m.first_at)], ["אחרון", when(m.last_at)], ["משך", duration(m.duration_s)],
     ["תוצאה", scoreText(m.score)], ["סיום", m.outcome], ["מכשירים", num(m.players)],
     ["host", (() => { const h = byId.get(String(m.host_install)); return h ? chip(h, devName(h)) : str(m.host_install); })()],
@@ -635,7 +637,7 @@ function issuesTable(rows, actions = true) {
     { label: "#", get: (r) => issueLink(r.id) },
     { label: "חומרה", get: (r) => sev(r.severity) }, { label: "סטטוס", get: (r) => statusBadge(r.status) },
     { label: "kind", get: (r) => ltr(str(r.kind)) }, { label: "כותרת", get: (r) => r.title, clip: true },
-    { label: "env", get: (r) => r.env }, { label: "build", get: (r) => r.build_number },
+    { label: "סביבה", get: (r) => envName(r.env) }, { label: "build", get: (r) => r.build_number },
     { label: "פעמים", get: (r) => r.count, num: true },
     { label: "ראשון", get: (r) => r.first_seen, fmt: when }, { label: "אחרון", get: (r) => r.last_seen, fmt: when },
     { label: "משחק", get: (r) => r.match_id ? matchLink(r.match_id) : (arr(r.sample_matches)[0] ? matchLink(arr(r.sample_matches)[0]) : "–") },
@@ -713,7 +715,7 @@ function renderOneIssue() {
   const title = el("p", "issue-title", str(r.title)); title.dir = "auto";
   c.append(h, title);
   const samples = el("span"); arr(r.sample_matches).forEach((m, i) => { if (i) samples.append(document.createTextNode(", ")); samples.append(matchLink(m)); });
-  c.append(kv([["מקור", r.source], ["env", r.env], ["build", r.build_number], ["פעמים", num(r.count)],
+  c.append(kv([["מקור", r.source], ["סביבה", envName(r.env)], ["בילד", r.build_number], ["פעמים", num(r.count)],
     ["ראשון", when(r.first_seen)], ["אחרון", when(r.last_seen)], ["משחק", r.match_id ? matchLink(r.match_id) : "–"],
     ["משחקים לדוגמה", arr(r.sample_matches).length ? samples : "–"], ["רגרסיה של", r.regression_of ? issueLink(r.regression_of) : "–"],
     ["עודכן על ידי", r.updated_by], ["עודכן", when(r.updated_at)], ["טופל", when(r.resolved_at)]]));
@@ -744,7 +746,7 @@ function renderReports() {
     const c = el("article", "card report");
     const h = el("div", "card__head");
     const t = el("h2"); t.append(ltr(str(r.ref)), document.createTextNode(` · ${when(r.created_at)}`));
-    h.append(t, badge(str(r.env)));
+    h.append(t, badge(envName(r.env)));
     const who = el("div", "meta");
     who.append(ltr(r.username ? `@${r.username}` : `player ${String(r.player_id ?? "").slice(0, 8)}`));
     const os = String(r.os_version ?? ""), plat = String(r.platform ?? "");
@@ -794,7 +796,7 @@ async function loadAlerts(more) {
       table([
         { label: "מתי", get: (r) => r.created_at, fmt: when }, { label: "חומרה", get: (r) => sev(r.severity) },
         { label: "מייל", get: (r) => emailBadge(r.email_status) },
-        { label: "rule", get: (r) => ltr(str(r.rule)) }, { label: "env", get: (r) => r.env },
+        { label: "rule", get: (r) => ltr(str(r.rule)) }, { label: "סביבה", get: (r) => envName(r.env) },
         { label: "כותרת", get: (r) => r.title, clip: true },
         { label: "קישור", get: (r) => alertLink(r.link_path) },
         { label: "שגיאת מייל", get: (r) => r.email_error, clip: true },
@@ -817,7 +819,7 @@ async function loadBuilds() {
     if (!signedIn) return;
     loaded.builds = true;
     const rows = arr(d.builds);
-    $("builds-meta").textContent = `${d.env ? L("env " + d.env) : "כל הסביבות"} · ${num(d.days)} ימים + היום · עודכן ${clock(d.updated_at)}`;
+    $("builds-meta").textContent = `${d.env ? envName(d.env) : "כל הסביבות"} · ${num(d.days)} ימים + היום · עודכן ${clock(d.updated_at)}`;
     const max = Object.fromEntries(PER.map(([k]) => [k, Math.max(0.0001, ...rows.map((r) => +obj(r.per_100)[k] || 0))]));
     const bars = (r) => {
       const b = el("div", "bars");
@@ -853,7 +855,7 @@ $("f-builds").addEventListener("change", () => loadBuilds());
 // ---- Settings ---------------------------------------------------------------------------------------------------
 
 const CFG_LABELS = {
-  profiles: "פרופילי דגימה (מה המשחק שולח)", dev: "dev", testflight: "testflight", production: "production",
+  profiles: "פרופילי דגימה (מה המשחק שולח)", dev: "פיתוח", testflight: "בדיקה (TestFlight)", production: "חנות",
   detail_sample: "דגימת פירוט (0–1)", net_sample: "דגימת רשת (0–1)", net_interval_s: "מרווח רשת, שנ׳ (10–600)",
   perf_interval_s: "מרווח ביצועים, שנ׳ (0–600)", trace_on_critical: "trace בחריגה קריטית", max_traces_per_session: "traces לסשן (0–20)",
   thresholds: "ספים (מתי זו חריגה)", ball_snap_cm: "קפיצת כדור, ס״מ", body_snap_cm: "קפיצת גוף, ס״מ", ball_pause_ms: "עצירת כדור, ms (10–10000)",
@@ -901,7 +903,7 @@ function drawConfig(value, msg) {
       const lab = el("div", "check"); lab.dataset.path = path;
       const t = el("label", null, CFG_LABELS[key]); t.append(el("span", "key", key)); lab.append(t);
       const row = el("div", "devpick");
-      for (const e of ENVS) { const l = el("label", "check"); const cb = el("input"); cb.type = "checkbox"; cb.checked = v.includes(e); cb.dataset.env = e; cb.dataset.path = path; cb.dataset.type = "envs"; l.append(cb, ltr(e)); row.append(l); }
+      for (const e of ENVS) { const l = el("label", "check"); const cb = el("input"); cb.type = "checkbox"; cb.checked = v.includes(e); cb.dataset.env = e; cb.dataset.path = path; cb.dataset.type = "envs"; l.append(cb, document.createTextNode(envName(e))); row.append(l); }
       lab.append(row);
       return lab;
     }

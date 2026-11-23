@@ -1,0 +1,566 @@
+{
+ "tz": "Asia/Jerusalem",
+ "day": "2026-11-22",
+ "envs": [
+  {
+   "value": "production",
+   "players": 486
+  },
+  {
+   "value": "?",
+   "players": 64
+  },
+  {
+   "value": "testflight",
+   "players": 31
+  },
+  {
+   "value": "dev",
+   "players": 5
+  }
+ ],
+ "coins": {
+  "spent": 142200,
+  "earned": 72437,
+  "spenders": 158
+ },
+ "hours": [
+  {
+   "new": 5,
+   "hour": 0,
+   "players": 24,
+   "sessions": 22
+  },
+  {
+   "new": 1,
+   "hour": 1,
+   "players": 16,
+   "sessions": 16
+  },
+  {
+   "new": 0,
+   "hour": 2,
+   "players": 2,
+   "sessions": 2
+  },
+  {
+   "new": 0,
+   "hour": 3,
+   "players": 0,
+   "sessions": 0
+  },
+  {
+   "new": 0,
+   "hour": 4,
+   "players": 0,
+   "sessions": 0
+  },
+  {
+   "new": 0,
+   "hour": 5,
+   "players": 0,
+   "sessions": 0
+  },
+  {
+   "new": 0,
+   "hour": 6,
+   "players": 0,
+   "sessions": 0
+  },
+  {
+   "new": 5,
+   "hour": 7,
+   "players": 20,
+   "sessions": 15
+  },
+  {
+   "new": 9,
+   "hour": 8,
+   "players": 21,
+   "sessions": 16
+  },
+  {
+   "new": 6,
+   "hour": 9,
+   "players": 23,
+   "sessions": 17
+  },
+  {
+   "new": 7,
+   "hour": 10,
+   "players": 21,
+   "sessions": 14
+  },
+  {
+   "new": 11,
+   "hour": 11,
+   "players": 30,
+   "sessions": 22
+  },
+  {
+   "new": 13,
+   "hour": 12,
+   "players": 32,
+   "sessions": 21
+  },
+  {
+   "new": 19,
+   "hour": 13,
+   "players": 41,
+   "sessions": 27
+  },
+  {
+   "new": 16,
+   "hour": 14,
+   "players": 44,
+   "sessions": 32
+  },
+  {
+   "new": 17,
+   "hour": 15,
+   "players": 42,
+   "sessions": 30
+  },
+  {
+   "new": 18,
+   "hour": 16,
+   "players": 42,
+   "sessions": 33
+  },
+  {
+   "new": 17,
+   "hour": 17,
+   "players": 59,
+   "sessions": 51
+  },
+  {
+   "new": 11,
+   "hour": 18,
+   "players": 59,
+   "sessions": 49
+  },
+  {
+   "new": 14,
+   "hour": 19,
+   "players": 59,
+   "sessions": 52
+  },
+  {
+   "new": 21,
+   "hour": 20,
+   "players": 76,
+   "sessions": 63
+  },
+  {
+   "new": 21,
+   "hour": 21,
+   "players": 67,
+   "sessions": 55
+  },
+  {
+   "new": 16,
+   "hour": 22,
+   "players": 56,
+   "sessions": 45
+  },
+  {
+   "new": 5,
+   "hour": 23,
+   "players": 17,
+   "sessions": 16
+  }
+ ],
+ "shops": [
+  {
+   "shop": "Tattoo",
+   "opens": 22,
+   "players": 22
+  },
+  {
+   "shop": "Optics",
+   "opens": 19,
+   "players": 19
+  },
+  {
+   "shop": "Balls",
+   "opens": 17,
+   "players": 17
+  },
+  {
+   "shop": "Sandy",
+   "opens": 16,
+   "players": 16
+  },
+  {
+   "shop": "WorldCup",
+   "opens": 16,
+   "players": 16
+  },
+  {
+   "shop": "Clothing",
+   "opens": 14,
+   "players": 14
+  },
+  {
+   "shop": "Jewelry",
+   "opens": 11,
+   "players": 11
+  }
+ ],
+ "today": "2026-11-23",
+ "totals": {
+  "new": 118,
+  "events": 5399,
+  "players": 586,
+  "accounts": 300,
+  "sessions": 598,
+  "returning": 468,
+  "signed_in": 300,
+  "sessions_seen": 522,
+  "installs_new_day": 118,
+  "avg_player_seconds": 771,
+  "total_play_seconds": 401643,
+  "avg_session_seconds": 771
+ },
+ "min_day": "2026-08-26",
+ "screens": [
+  {
+   "views": 681,
+   "screen": "Playing",
+   "players": 520
+  },
+  {
+   "views": 520,
+   "screen": "MainMenu",
+   "players": 520
+  },
+  {
+   "views": 281,
+   "screen": "CircleSelect",
+   "players": 281
+  },
+  {
+   "views": 78,
+   "screen": "BeachSelect",
+   "players": 78
+  }
+ ],
+ "is_today": false,
+ "progress": [
+  {
+   "type": "CourtMatchPlayed",
+   "times": 15,
+   "players": 15
+  },
+  {
+   "type": "CourtMatchWon",
+   "times": 15,
+   "players": 15
+  },
+  {
+   "type": "CoachTestPassed",
+   "times": 14,
+   "players": 14
+  },
+  {
+   "type": "ItemBought",
+   "times": 14,
+   "players": 14
+  },
+  {
+   "type": "TrainingMatchWon",
+   "times": 12,
+   "players": 12
+  },
+  {
+   "type": "CircleChallengeCompleted",
+   "times": 10,
+   "players": 10
+  }
+ ],
+ "versions": [
+  {
+   "players": 265,
+   "app_version": "1.0.3",
+   "build_number": "25"
+  },
+  {
+   "players": 143,
+   "app_version": "1.0.2",
+   "build_number": "10"
+  },
+  {
+   "players": 81,
+   "app_version": "1.0.1",
+   "build_number": "5"
+  },
+  {
+   "players": 64,
+   "app_version": "?",
+   "build_number": ""
+  },
+  {
+   "players": 19,
+   "app_version": "1.0.3",
+   "build_number": "26"
+  },
+  {
+   "players": 10,
+   "app_version": "?",
+   "build_number": "25"
+  },
+  {
+   "players": 3,
+   "app_version": "?",
+   "build_number": "10"
+  },
+  {
+   "players": 1,
+   "app_version": "?",
+   "build_number": "5"
+  }
+ ],
+ "countries": [
+  {
+   "new": 71,
+   "country": "IL",
+   "players": 349,
+   "signed_in": 183
+  },
+  {
+   "new": 16,
+   "country": "BR",
+   "players": 63,
+   "signed_in": 32
+  },
+  {
+   "new": 9,
+   "country": "US",
+   "players": 44,
+   "signed_in": 22
+  },
+  {
+   "new": 2,
+   "country": "PT",
+   "players": 17,
+   "signed_in": 11
+  },
+  {
+   "new": 2,
+   "country": "DE",
+   "players": 16,
+   "signed_in": 5
+  },
+  {
+   "new": 4,
+   "country": "ES",
+   "players": 16,
+   "signed_in": 8
+  },
+  {
+   "new": 6,
+   "country": "AR",
+   "players": 14,
+   "signed_in": 6
+  },
+  {
+   "new": 0,
+   "country": "GB",
+   "players": 14,
+   "signed_in": 4
+  },
+  {
+   "new": 1,
+   "country": "FR",
+   "players": 12,
+   "signed_in": 7
+  },
+  {
+   "new": 0,
+   "country": "MX",
+   "players": 9,
+   "signed_in": 3
+  },
+  {
+   "new": 0,
+   "country": "?",
+   "players": 7,
+   "signed_in": 5
+  },
+  {
+   "new": 3,
+   "country": "RU",
+   "players": 7,
+   "signed_in": 5
+  },
+  {
+   "new": 1,
+   "country": "IT",
+   "players": 6,
+   "signed_in": 3
+  },
+  {
+   "new": 3,
+   "country": "UA",
+   "players": 5,
+   "signed_in": 2
+  },
+  {
+   "new": 0,
+   "country": "NL",
+   "players": 4,
+   "signed_in": 2
+  },
+  {
+   "new": 0,
+   "country": "CA",
+   "players": 2,
+   "signed_in": 1
+  },
+  {
+   "new": 0,
+   "country": "AU",
+   "players": 1,
+   "signed_in": 1
+  }
+ ],
+ "mode_ends": [
+  {
+   "wins": 0,
+   "event": "circle_end",
+   "plays": 281,
+   "venue": "circle",
+   "players": 281,
+   "avg_seconds": 221
+  },
+  {
+   "wins": 76,
+   "event": "match_end",
+   "plays": 132,
+   "venue": "Competitive",
+   "players": 132,
+   "avg_seconds": 324
+  },
+  {
+   "wins": 52,
+   "event": "match_end",
+   "plays": 107,
+   "venue": "Training",
+   "players": 107,
+   "avg_seconds": 310
+  },
+  {
+   "wins": 24,
+   "event": "online_end",
+   "plays": 62,
+   "venue": "",
+   "players": 62,
+   "avg_seconds": null
+  }
+ ],
+ "platforms": [
+  {
+   "new": 95,
+   "value": "iOS",
+   "players": 499
+  },
+  {
+   "new": 22,
+   "value": "Android",
+   "players": 82
+  },
+  {
+   "new": 1,
+   "value": "iOS-dev",
+   "players": 5
+  }
+ ],
+ "top_events": [
+  {
+   "event": "screen_view",
+   "events": 1560,
+   "players": 520
+  },
+  {
+   "event": "heartbeat",
+   "events": 627,
+   "players": 447
+  },
+  {
+   "event": "session_start",
+   "events": 598,
+   "players": 584
+  },
+  {
+   "event": "session_end",
+   "events": 521,
+   "players": 521
+  },
+  {
+   "event": "mode_start",
+   "events": 520,
+   "players": 520
+  },
+  {
+   "event": "coins_earned",
+   "events": 520,
+   "players": 520
+  },
+  {
+   "event": "circle_end",
+   "events": 281,
+   "players": 281
+  },
+  {
+   "event": "match_end",
+   "events": 239,
+   "players": 239
+  },
+  {
+   "event": "coins_spent",
+   "events": 158,
+   "players": 158
+  },
+  {
+   "event": "first_launch",
+   "events": 118,
+   "players": 118
+  },
+  {
+   "event": "shop_open",
+   "events": 115,
+   "players": 115
+  },
+  {
+   "event": "progress",
+   "events": 80,
+   "players": 80
+  },
+  {
+   "event": "online_end",
+   "events": 62,
+   "players": 62
+  }
+ ],
+ "mode_starts": [
+  {
+   "mode": "circle",
+   "venue": "",
+   "starts": 281,
+   "players": 281
+  },
+  {
+   "mode": "footvolley",
+   "venue": "Competitive",
+   "starts": 132,
+   "players": 132
+  },
+  {
+   "mode": "footvolley",
+   "venue": "Training",
+   "starts": 107,
+   "players": 107
+  }
+ ],
+ "generated_at": "2026-11-23T15:29:19.91+02:00"
+}

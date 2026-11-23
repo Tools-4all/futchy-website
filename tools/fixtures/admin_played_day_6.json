@@ -1,0 +1,554 @@
+{
+ "tz": "Asia/Jerusalem",
+ "day": "2026-11-17",
+ "envs": [
+  {
+   "value": "production",
+   "players": 337
+  },
+  {
+   "value": "?",
+   "players": 49
+  },
+  {
+   "value": "testflight",
+   "players": 28
+  },
+  {
+   "value": "dev",
+   "players": 6
+  }
+ ],
+ "coins": {
+  "spent": 95400,
+  "earned": 50795,
+  "spenders": 106
+ },
+ "hours": [
+  {
+   "new": 4,
+   "hour": 0,
+   "players": 10,
+   "sessions": 10
+  },
+  {
+   "new": 2,
+   "hour": 1,
+   "players": 14,
+   "sessions": 14
+  },
+  {
+   "new": 0,
+   "hour": 2,
+   "players": 3,
+   "sessions": 2
+  },
+  {
+   "new": 0,
+   "hour": 3,
+   "players": 0,
+   "sessions": 0
+  },
+  {
+   "new": 0,
+   "hour": 4,
+   "players": 0,
+   "sessions": 0
+  },
+  {
+   "new": 0,
+   "hour": 5,
+   "players": 0,
+   "sessions": 0
+  },
+  {
+   "new": 0,
+   "hour": 6,
+   "players": 0,
+   "sessions": 0
+  },
+  {
+   "new": 12,
+   "hour": 7,
+   "players": 20,
+   "sessions": 10
+  },
+  {
+   "new": 4,
+   "hour": 8,
+   "players": 21,
+   "sessions": 19
+  },
+  {
+   "new": 10,
+   "hour": 9,
+   "players": 21,
+   "sessions": 12
+  },
+  {
+   "new": 8,
+   "hour": 10,
+   "players": 14,
+   "sessions": 4
+  },
+  {
+   "new": 5,
+   "hour": 11,
+   "players": 16,
+   "sessions": 15
+  },
+  {
+   "new": 16,
+   "hour": 12,
+   "players": 28,
+   "sessions": 13
+  },
+  {
+   "new": 16,
+   "hour": 13,
+   "players": 34,
+   "sessions": 26
+  },
+  {
+   "new": 14,
+   "hour": 14,
+   "players": 38,
+   "sessions": 28
+  },
+  {
+   "new": 15,
+   "hour": 15,
+   "players": 40,
+   "sessions": 34
+  },
+  {
+   "new": 7,
+   "hour": 16,
+   "players": 23,
+   "sessions": 20
+  },
+  {
+   "new": 10,
+   "hour": 17,
+   "players": 35,
+   "sessions": 31
+  },
+  {
+   "new": 14,
+   "hour": 18,
+   "players": 40,
+   "sessions": 29
+  },
+  {
+   "new": 14,
+   "hour": 19,
+   "players": 50,
+   "sessions": 43
+  },
+  {
+   "new": 22,
+   "hour": 20,
+   "players": 50,
+   "sessions": 38
+  },
+  {
+   "new": 16,
+   "hour": 21,
+   "players": 47,
+   "sessions": 41
+  },
+  {
+   "new": 12,
+   "hour": 22,
+   "players": 35,
+   "sessions": 28
+  },
+  {
+   "new": 0,
+   "hour": 23,
+   "players": 12,
+   "sessions": 12
+  }
+ ],
+ "shops": [
+  {
+   "shop": "Optics",
+   "opens": 17,
+   "players": 17
+  },
+  {
+   "shop": "Sandy",
+   "opens": 17,
+   "players": 17
+  },
+  {
+   "shop": "WorldCup",
+   "opens": 15,
+   "players": 15
+  },
+  {
+   "shop": "Clothing",
+   "opens": 14,
+   "players": 14
+  },
+  {
+   "shop": "Tattoo",
+   "opens": 13,
+   "players": 13
+  },
+  {
+   "shop": "Balls",
+   "opens": 12,
+   "players": 12
+  },
+  {
+   "shop": "Jewelry",
+   "opens": 8,
+   "players": 8
+  }
+ ],
+ "today": "2026-11-23",
+ "totals": {
+  "new": 97,
+  "events": 3865,
+  "players": 420,
+  "accounts": 207,
+  "sessions": 429,
+  "returning": 323,
+  "signed_in": 207,
+  "sessions_seen": 371,
+  "installs_new_day": 97,
+  "avg_player_seconds": 786,
+  "total_play_seconds": 291491,
+  "avg_session_seconds": 786
+ },
+ "min_day": "2026-08-26",
+ "screens": [
+  {
+   "views": 484,
+   "screen": "Playing",
+   "players": 371
+  },
+  {
+   "views": 371,
+   "screen": "MainMenu",
+   "players": 371
+  },
+  {
+   "views": 212,
+   "screen": "CircleSelect",
+   "players": 212
+  },
+  {
+   "views": 46,
+   "screen": "BeachSelect",
+   "players": 46
+  }
+ ],
+ "is_today": false,
+ "progress": [
+  {
+   "type": "CircleChallengeCompleted",
+   "times": 14,
+   "players": 14
+  },
+  {
+   "type": "CoachTestPassed",
+   "times": 10,
+   "players": 10
+  },
+  {
+   "type": "CourtMatchWon",
+   "times": 10,
+   "players": 10
+  },
+  {
+   "type": "TrainingMatchWon",
+   "times": 8,
+   "players": 8
+  },
+  {
+   "type": "CourtMatchPlayed",
+   "times": 6,
+   "players": 6
+  },
+  {
+   "type": "ItemBought",
+   "times": 6,
+   "players": 6
+  }
+ ],
+ "versions": [
+  {
+   "players": 182,
+   "app_version": "1.0.3",
+   "build_number": "25"
+  },
+  {
+   "players": 106,
+   "app_version": "1.0.2",
+   "build_number": "10"
+  },
+  {
+   "players": 56,
+   "app_version": "1.0.1",
+   "build_number": "5"
+  },
+  {
+   "players": 49,
+   "app_version": "?",
+   "build_number": ""
+  },
+  {
+   "players": 18,
+   "app_version": "1.0.3",
+   "build_number": "26"
+  },
+  {
+   "players": 4,
+   "app_version": "?",
+   "build_number": "25"
+  },
+  {
+   "players": 3,
+   "app_version": "?",
+   "build_number": "10"
+  },
+  {
+   "players": 2,
+   "app_version": "?",
+   "build_number": "5"
+  }
+ ],
+ "countries": [
+  {
+   "new": 52,
+   "country": "IL",
+   "players": 259,
+   "signed_in": 132
+  },
+  {
+   "new": 11,
+   "country": "BR",
+   "players": 41,
+   "signed_in": 22
+  },
+  {
+   "new": 11,
+   "country": "US",
+   "players": 36,
+   "signed_in": 19
+  },
+  {
+   "new": 3,
+   "country": "PT",
+   "players": 12,
+   "signed_in": 4
+  },
+  {
+   "new": 2,
+   "country": "ES",
+   "players": 11,
+   "signed_in": 3
+  },
+  {
+   "new": 4,
+   "country": "GB",
+   "players": 11,
+   "signed_in": 3
+  },
+  {
+   "new": 4,
+   "country": "MX",
+   "players": 11,
+   "signed_in": 5
+  },
+  {
+   "new": 1,
+   "country": "FR",
+   "players": 9,
+   "signed_in": 6
+  },
+  {
+   "new": 2,
+   "country": "AR",
+   "players": 6,
+   "signed_in": 3
+  },
+  {
+   "new": 1,
+   "country": "?",
+   "players": 5,
+   "signed_in": 2
+  },
+  {
+   "new": 1,
+   "country": "DE",
+   "players": 5,
+   "signed_in": 3
+  },
+  {
+   "new": 1,
+   "country": "RU",
+   "players": 5,
+   "signed_in": 3
+  },
+  {
+   "new": 2,
+   "country": "UA",
+   "players": 4,
+   "signed_in": 0
+  },
+  {
+   "new": 1,
+   "country": "CA",
+   "players": 3,
+   "signed_in": 1
+  },
+  {
+   "new": 1,
+   "country": "IT",
+   "players": 2,
+   "signed_in": 1
+  }
+ ],
+ "mode_ends": [
+  {
+   "wins": 0,
+   "event": "circle_end",
+   "plays": 212,
+   "venue": "circle",
+   "players": 212,
+   "avg_seconds": 223
+  },
+  {
+   "wins": 37,
+   "event": "match_end",
+   "plays": 82,
+   "venue": "Competitive",
+   "players": 82,
+   "avg_seconds": 328
+  },
+  {
+   "wins": 42,
+   "event": "match_end",
+   "plays": 77,
+   "venue": "Training",
+   "players": 77,
+   "avg_seconds": 327
+  },
+  {
+   "wins": 23,
+   "event": "online_end",
+   "plays": 43,
+   "venue": "",
+   "players": 43,
+   "avg_seconds": null
+  }
+ ],
+ "platforms": [
+  {
+   "new": 83,
+   "value": "iOS",
+   "players": 363
+  },
+  {
+   "new": 13,
+   "value": "Android",
+   "players": 51
+  },
+  {
+   "new": 1,
+   "value": "iOS-dev",
+   "players": 6
+  }
+ ],
+ "top_events": [
+  {
+   "event": "screen_view",
+   "events": 1113,
+   "players": 371
+  },
+  {
+   "event": "heartbeat",
+   "events": 443,
+   "players": 320
+  },
+  {
+   "event": "session_start",
+   "events": 429,
+   "players": 420
+  },
+  {
+   "event": "mode_start",
+   "events": 371,
+   "players": 371
+  },
+  {
+   "event": "coins_earned",
+   "events": 371,
+   "players": 371
+  },
+  {
+   "event": "session_end",
+   "events": 371,
+   "players": 371
+  },
+  {
+   "event": "circle_end",
+   "events": 212,
+   "players": 212
+  },
+  {
+   "event": "match_end",
+   "events": 159,
+   "players": 159
+  },
+  {
+   "event": "coins_spent",
+   "events": 106,
+   "players": 106
+  },
+  {
+   "event": "first_launch",
+   "events": 97,
+   "players": 97
+  },
+  {
+   "event": "shop_open",
+   "events": 96,
+   "players": 96
+  },
+  {
+   "event": "progress",
+   "events": 54,
+   "players": 54
+  },
+  {
+   "event": "online_end",
+   "events": 43,
+   "players": 43
+  }
+ ],
+ "mode_starts": [
+  {
+   "mode": "circle",
+   "venue": "",
+   "starts": 212,
+   "players": 212
+  },
+  {
+   "mode": "footvolley",
+   "venue": "Competitive",
+   "starts": 82,
+   "players": 82
+  },
+  {
+   "mode": "footvolley",
+   "venue": "Training",
+   "starts": 77,
+   "players": 77
+  }
+ ],
+ "generated_at": "2026-11-23T15:29:20.65+02:00"
+}

@@ -1,0 +1,4065 @@
+{
+ "os": [
+  {
+   "total": 628,
+   "value": "iOS 26.1",
+   "period": 570
+  },
+  {
+   "total": 409,
+   "value": "iOS 26.0.1",
+   "period": 373
+  },
+  {
+   "total": 355,
+   "value": "iOS 18.6.2",
+   "period": 330
+  },
+  {
+   "total": 324,
+   "value": "iOS 18.7",
+   "period": 302
+  },
+  {
+   "total": 293,
+   "value": "iOS 17.6.1",
+   "period": 266
+  },
+  {
+   "total": 269,
+   "value": "iOS 26.2",
+   "period": 245
+  },
+  {
+   "total": 248,
+   "value": "iOS 16.7.10",
+   "period": 229
+  },
+  {
+   "total": 123,
+   "value": "Android OS 13 / API-33",
+   "period": 123
+  },
+  {
+   "total": 107,
+   "value": "Android OS 14 / API-34",
+   "period": 107
+  },
+  {
+   "total": 100,
+   "value": "Android OS 15 / API-35",
+   "period": 100
+  }
+ ],
+ "tz": "Asia/Jerusalem",
+ "days": 30,
+ "cells": [
+  {
+   "day": "2026-10-25",
+   "country": "US",
+   "installs": 14,
+   "platform": "iOS",
+   "signed_in": 9
+  },
+  {
+   "day": "2026-10-25",
+   "country": "IL",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-25",
+   "country": "ES",
+   "installs": 6,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-10-25",
+   "country": "DE",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-25",
+   "country": "RU",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-25",
+   "country": "BR",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-25",
+   "country": "IL",
+   "installs": 96,
+   "platform": "iOS",
+   "signed_in": 48
+  },
+  {
+   "day": "2026-10-25",
+   "country": "IT",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-10-25",
+   "country": "PT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-25",
+   "country": "GB",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-10-25",
+   "country": "MX",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-25",
+   "country": "AR",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-25",
+   "country": "BR",
+   "installs": 9,
+   "platform": "iOS",
+   "signed_in": 7
+  },
+  {
+   "day": "2026-10-25",
+   "country": "FR",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-10-25",
+   "country": "NL",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-26",
+   "country": "MX",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-26",
+   "country": "PT",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-26",
+   "country": "DE",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-26",
+   "country": "US",
+   "installs": 11,
+   "platform": "iOS",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-10-26",
+   "country": "IT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-26",
+   "country": "FR",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-10-26",
+   "country": "IL",
+   "installs": 72,
+   "platform": "iOS",
+   "signed_in": 39
+  },
+  {
+   "day": "2026-10-26",
+   "country": "?",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-26",
+   "country": "GB",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-26",
+   "country": "AR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-26",
+   "country": "NL",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-26",
+   "country": "BR",
+   "installs": 9,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-10-27",
+   "country": "GB",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-27",
+   "country": "BR",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 4
+  },
+  {
+   "day": "2026-10-27",
+   "country": "ES",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-27",
+   "country": "US",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-10-27",
+   "country": "IL",
+   "installs": 33,
+   "platform": "iOS",
+   "signed_in": 15
+  },
+  {
+   "day": "2026-10-27",
+   "country": "AR",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-27",
+   "country": "RU",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-27",
+   "country": "IT",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-27",
+   "country": "UA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-28",
+   "country": "PT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-10-28",
+   "country": "GB",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-28",
+   "country": "RU",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-28",
+   "country": "?",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-10-28",
+   "country": "ES",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-28",
+   "country": "MX",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-10-28",
+   "country": "ES",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-28",
+   "country": "US",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-28",
+   "country": "FR",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-10-28",
+   "country": "AR",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-10-28",
+   "country": "BR",
+   "installs": 6,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-10-28",
+   "country": "IL",
+   "installs": 30,
+   "platform": "iOS",
+   "signed_in": 17
+  },
+  {
+   "day": "2026-10-29",
+   "country": "BR",
+   "installs": 10,
+   "platform": "iOS",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-10-29",
+   "country": "DE",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-29",
+   "country": "GB",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-29",
+   "country": "PT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-29",
+   "country": "IL",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-29",
+   "country": "IL",
+   "installs": 32,
+   "platform": "iOS",
+   "signed_in": 19
+  },
+  {
+   "day": "2026-10-29",
+   "country": "US",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-29",
+   "country": "ES",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-30",
+   "country": "ES",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-30",
+   "country": "PT",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-30",
+   "country": "US",
+   "installs": 7,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-10-30",
+   "country": "IT",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-30",
+   "country": "IL",
+   "installs": 40,
+   "platform": "iOS",
+   "signed_in": 23
+  },
+  {
+   "day": "2026-10-30",
+   "country": "DE",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-30",
+   "country": "?",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-30",
+   "country": "BR",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-30",
+   "country": "RU",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-30",
+   "country": "MX",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-30",
+   "country": "FR",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-10-30",
+   "country": "GB",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-30",
+   "country": "CA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-31",
+   "country": "IL",
+   "installs": 41,
+   "platform": "iOS",
+   "signed_in": 28
+  },
+  {
+   "day": "2026-10-31",
+   "country": "ES",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-10-31",
+   "country": "DE",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-10-31",
+   "country": "PT",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-10-31",
+   "country": "US",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-31",
+   "country": "IT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-31",
+   "country": "AR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-31",
+   "country": "IL",
+   "installs": 2,
+   "platform": "iOS-dev",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-10-31",
+   "country": "DE",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-31",
+   "country": "BR",
+   "installs": 15,
+   "platform": "iOS",
+   "signed_in": 7
+  },
+  {
+   "day": "2026-10-31",
+   "country": "FR",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-10-31",
+   "country": "US",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-10-31",
+   "country": "GB",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-01",
+   "country": "BR",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-01",
+   "country": "US",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-01",
+   "country": "GB",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-01",
+   "country": "PT",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-01",
+   "country": "IL",
+   "installs": 38,
+   "platform": "iOS",
+   "signed_in": 21
+  },
+  {
+   "day": "2026-11-01",
+   "country": "IL",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-01",
+   "country": "AR",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-01",
+   "country": "FR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-02",
+   "country": "IL",
+   "installs": 43,
+   "platform": "iOS",
+   "signed_in": 20
+  },
+  {
+   "day": "2026-11-02",
+   "country": "US",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-02",
+   "country": "PT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-02",
+   "country": "DE",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-02",
+   "country": "CA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-02",
+   "country": "?",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-02",
+   "country": "BR",
+   "installs": 7,
+   "platform": "iOS",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-02",
+   "country": "RU",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-02",
+   "country": "AR",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-02",
+   "country": "GB",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-02",
+   "country": "ES",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-02",
+   "country": "RU",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-03",
+   "country": "AU",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-03",
+   "country": "DE",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-03",
+   "country": "IL",
+   "installs": 30,
+   "platform": "iOS",
+   "signed_in": 16
+  },
+  {
+   "day": "2026-11-03",
+   "country": "RU",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-03",
+   "country": "FR",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-03",
+   "country": "US",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-03",
+   "country": "BR",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-03",
+   "country": "IL",
+   "installs": 4,
+   "platform": "Android",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-03",
+   "country": "US",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-03",
+   "country": "ES",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-03",
+   "country": "IT",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-03",
+   "country": "AR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-03",
+   "country": "PT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-03",
+   "country": "GB",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-03",
+   "country": "BR",
+   "installs": 10,
+   "platform": "iOS",
+   "signed_in": 6
+  },
+  {
+   "day": "2026-11-03",
+   "country": "ES",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-03",
+   "country": "FR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-04",
+   "country": "BR",
+   "installs": 5,
+   "platform": "Android",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-04",
+   "country": "BR",
+   "installs": 8,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-04",
+   "country": "IL",
+   "installs": 7,
+   "platform": "Android",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-04",
+   "country": "PT",
+   "installs": 3,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-04",
+   "country": "CA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-04",
+   "country": "US",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-04",
+   "country": "AR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-04",
+   "country": "DE",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-04",
+   "country": "IL",
+   "installs": 36,
+   "platform": "iOS",
+   "signed_in": 18
+  },
+  {
+   "day": "2026-11-04",
+   "country": "?",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-04",
+   "country": "PT",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-04",
+   "country": "US",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-05",
+   "country": "IT",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-05",
+   "country": "FR",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-05",
+   "country": "CA",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-05",
+   "country": "PT",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-05",
+   "country": "ES",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-05",
+   "country": "?",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-05",
+   "country": "CA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-05",
+   "country": "US",
+   "installs": 6,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-05",
+   "country": "IL",
+   "installs": 34,
+   "platform": "iOS",
+   "signed_in": 15
+  },
+  {
+   "day": "2026-11-05",
+   "country": "AR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-05",
+   "country": "BR",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-05",
+   "country": "IL",
+   "installs": 10,
+   "platform": "Android",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-05",
+   "country": "BR",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-06",
+   "country": "BR",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-06",
+   "country": "IL",
+   "installs": 4,
+   "platform": "Android",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-06",
+   "country": "ES",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 4
+  },
+  {
+   "day": "2026-11-06",
+   "country": "BR",
+   "installs": 5,
+   "platform": "Android",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-06",
+   "country": "US",
+   "installs": 6,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-06",
+   "country": "CA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-06",
+   "country": "IL",
+   "installs": 48,
+   "platform": "iOS",
+   "signed_in": 22
+  },
+  {
+   "day": "2026-11-06",
+   "country": "PT",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-06",
+   "country": "ES",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-06",
+   "country": "DE",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-06",
+   "country": "DE",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-06",
+   "country": "?",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-06",
+   "country": "GB",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-06",
+   "country": "IL",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-06",
+   "country": "?",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-06",
+   "country": "MX",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-06",
+   "country": "FR",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-07",
+   "country": "IL",
+   "installs": 54,
+   "platform": "iOS",
+   "signed_in": 37
+  },
+  {
+   "day": "2026-11-07",
+   "country": "PT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-07",
+   "country": "GB",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-07",
+   "country": "DE",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-07",
+   "country": "RU",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-07",
+   "country": "GB",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-07",
+   "country": "DE",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-07",
+   "country": "IL",
+   "installs": 10,
+   "platform": "Android",
+   "signed_in": 7
+  },
+  {
+   "day": "2026-11-07",
+   "country": "PT",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-07",
+   "country": "ES",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-07",
+   "country": "FR",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-07",
+   "country": "US",
+   "installs": 7,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-07",
+   "country": "BR",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-07",
+   "country": "BR",
+   "installs": 11,
+   "platform": "iOS",
+   "signed_in": 7
+  },
+  {
+   "day": "2026-11-07",
+   "country": "MX",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-07",
+   "country": "ES",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-08",
+   "country": "MX",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-08",
+   "country": "AR",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-08",
+   "country": "ES",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-08",
+   "country": "DE",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-08",
+   "country": "PT",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-08",
+   "country": "US",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-08",
+   "country": "BR",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-08",
+   "country": "BR",
+   "installs": 4,
+   "platform": "Android",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-08",
+   "country": "RU",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-08",
+   "country": "IL",
+   "installs": 6,
+   "platform": "Android",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-08",
+   "country": "GB",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-08",
+   "country": "ES",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-08",
+   "country": "FR",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-08",
+   "country": "AR",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-08",
+   "country": "IL",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-08",
+   "country": "US",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-08",
+   "country": "IT",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-08",
+   "country": "IL",
+   "installs": 44,
+   "platform": "iOS",
+   "signed_in": 28
+  },
+  {
+   "day": "2026-11-08",
+   "country": "UA",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-09",
+   "country": "BR",
+   "installs": 7,
+   "platform": "iOS",
+   "signed_in": 4
+  },
+  {
+   "day": "2026-11-09",
+   "country": "UA",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-09",
+   "country": "?",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-09",
+   "country": "ES",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-09",
+   "country": "MX",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-09",
+   "country": "IL",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-09",
+   "country": "GB",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-09",
+   "country": "FR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-09",
+   "country": "BR",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-09",
+   "country": "ES",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-09",
+   "country": "AU",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-09",
+   "country": "AR",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-09",
+   "country": "US",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-09",
+   "country": "IL",
+   "installs": 3,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-09",
+   "country": "US",
+   "installs": 7,
+   "platform": "iOS",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-09",
+   "country": "AR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-09",
+   "country": "NL",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-09",
+   "country": "IT",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-09",
+   "country": "PT",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-09",
+   "country": "CA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-09",
+   "country": "CA",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-09",
+   "country": "IL",
+   "installs": 31,
+   "platform": "iOS",
+   "signed_in": 20
+  },
+  {
+   "day": "2026-11-09",
+   "country": "RU",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-09",
+   "country": "RU",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-10",
+   "country": "FR",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-10",
+   "country": "MX",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-10",
+   "country": "AR",
+   "installs": 3,
+   "platform": "Android",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-10",
+   "country": "BR",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-10",
+   "country": "IT",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-10",
+   "country": "US",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-10",
+   "country": "BR",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-10",
+   "country": "PT",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-10",
+   "country": "IL",
+   "installs": 7,
+   "platform": "Android",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-10",
+   "country": "CA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-10",
+   "country": "IT",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-10",
+   "country": "GB",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-10",
+   "country": "DE",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-10",
+   "country": "ES",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-10",
+   "country": "ES",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-10",
+   "country": "IL",
+   "installs": 41,
+   "platform": "iOS",
+   "signed_in": 23
+  },
+  {
+   "day": "2026-11-10",
+   "country": "GB",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-11",
+   "country": "IL",
+   "installs": 8,
+   "platform": "Android",
+   "signed_in": 7
+  },
+  {
+   "day": "2026-11-11",
+   "country": "US",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-11",
+   "country": "FR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-11",
+   "country": "IL",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-11",
+   "country": "IL",
+   "installs": 46,
+   "platform": "iOS",
+   "signed_in": 19
+  },
+  {
+   "day": "2026-11-11",
+   "country": "IT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-11",
+   "country": "ES",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-11",
+   "country": "AR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-11",
+   "country": "US",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 4
+  },
+  {
+   "day": "2026-11-11",
+   "country": "ES",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-11",
+   "country": "GB",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-11",
+   "country": "MX",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-11",
+   "country": "DE",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-11",
+   "country": "BR",
+   "installs": 9,
+   "platform": "iOS",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-11",
+   "country": "PT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-11",
+   "country": "AR",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-12",
+   "country": "ES",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-12",
+   "country": "FR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-12",
+   "country": "DE",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-12",
+   "country": "?",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-12",
+   "country": "BR",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-12",
+   "country": "US",
+   "installs": 6,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-12",
+   "country": "IL",
+   "installs": 52,
+   "platform": "iOS",
+   "signed_in": 32
+  },
+  {
+   "day": "2026-11-12",
+   "country": "BR",
+   "installs": 10,
+   "platform": "iOS",
+   "signed_in": 8
+  },
+  {
+   "day": "2026-11-12",
+   "country": "GB",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-12",
+   "country": "ES",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-12",
+   "country": "PT",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-12",
+   "country": "IL",
+   "installs": 4,
+   "platform": "Android",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-12",
+   "country": "AR",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-12",
+   "country": "UA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-12",
+   "country": "MX",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-13",
+   "country": "PT",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-13",
+   "country": "IL",
+   "installs": 61,
+   "platform": "iOS",
+   "signed_in": 47
+  },
+  {
+   "day": "2026-11-13",
+   "country": "BR",
+   "installs": 7,
+   "platform": "iOS",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-13",
+   "country": "CA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-13",
+   "country": "IL",
+   "installs": 6,
+   "platform": "Android",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-13",
+   "country": "AR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-13",
+   "country": "DE",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-13",
+   "country": "IL",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-13",
+   "country": "PT",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-13",
+   "country": "GB",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-13",
+   "country": "FR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-13",
+   "country": "DE",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-13",
+   "country": "BR",
+   "installs": 7,
+   "platform": "Android",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-13",
+   "country": "AR",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-13",
+   "country": "US",
+   "installs": 7,
+   "platform": "iOS",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-13",
+   "country": "UA",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-13",
+   "country": "ES",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-13",
+   "country": "UA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-14",
+   "country": "IL",
+   "installs": 7,
+   "platform": "Android",
+   "signed_in": 4
+  },
+  {
+   "day": "2026-11-14",
+   "country": "UA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-14",
+   "country": "AR",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-14",
+   "country": "ES",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-14",
+   "country": "AU",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-14",
+   "country": "IT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-14",
+   "country": "?",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-14",
+   "country": "PT",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-14",
+   "country": "IL",
+   "installs": 51,
+   "platform": "iOS",
+   "signed_in": 23
+  },
+  {
+   "day": "2026-11-14",
+   "country": "US",
+   "installs": 7,
+   "platform": "iOS",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-14",
+   "country": "ES",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-14",
+   "country": "CA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-14",
+   "country": "DE",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-14",
+   "country": "GB",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-14",
+   "country": "US",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-14",
+   "country": "BR",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-14",
+   "country": "NL",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-14",
+   "country": "PT",
+   "installs": 7,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-14",
+   "country": "IL",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-14",
+   "country": "BR",
+   "installs": 6,
+   "platform": "Android",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-14",
+   "country": "FR",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-14",
+   "country": "GB",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-15",
+   "country": "IL",
+   "installs": 6,
+   "platform": "Android",
+   "signed_in": 4
+  },
+  {
+   "day": "2026-11-15",
+   "country": "IL",
+   "installs": 49,
+   "platform": "iOS",
+   "signed_in": 32
+  },
+  {
+   "day": "2026-11-15",
+   "country": "ES",
+   "installs": 3,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-15",
+   "country": "MX",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-15",
+   "country": "UA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-15",
+   "country": "CA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-15",
+   "country": "ES",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-15",
+   "country": "BR",
+   "installs": 10,
+   "platform": "iOS",
+   "signed_in": 6
+  },
+  {
+   "day": "2026-11-15",
+   "country": "AR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-15",
+   "country": "BR",
+   "installs": 3,
+   "platform": "Android",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-15",
+   "country": "ES",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-15",
+   "country": "PT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-15",
+   "country": "US",
+   "installs": 8,
+   "platform": "iOS",
+   "signed_in": 4
+  },
+  {
+   "day": "2026-11-15",
+   "country": "DE",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-15",
+   "country": "GB",
+   "installs": 6,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-15",
+   "country": "PT",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-16",
+   "country": "US",
+   "installs": 9,
+   "platform": "iOS",
+   "signed_in": 6
+  },
+  {
+   "day": "2026-11-16",
+   "country": "DE",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-16",
+   "country": "FR",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-16",
+   "country": "PT",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-16",
+   "country": "ES",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-16",
+   "country": "RU",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-16",
+   "country": "UA",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-16",
+   "country": "GB",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-16",
+   "country": "BR",
+   "installs": 6,
+   "platform": "iOS",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-16",
+   "country": "ES",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-16",
+   "country": "PT",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-16",
+   "country": "IL",
+   "installs": 53,
+   "platform": "iOS",
+   "signed_in": 31
+  },
+  {
+   "day": "2026-11-16",
+   "country": "IL",
+   "installs": 8,
+   "platform": "Android",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-16",
+   "country": "MX",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-17",
+   "country": "IL",
+   "installs": 46,
+   "platform": "iOS",
+   "signed_in": 31
+  },
+  {
+   "day": "2026-11-17",
+   "country": "GB",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-17",
+   "country": "US",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-17",
+   "country": "PT",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-17",
+   "country": "IL",
+   "installs": 6,
+   "platform": "Android",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-17",
+   "country": "GB",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-17",
+   "country": "MX",
+   "installs": 4,
+   "platform": "Android",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-17",
+   "country": "AR",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-17",
+   "country": "BR",
+   "installs": 10,
+   "platform": "iOS",
+   "signed_in": 6
+  },
+  {
+   "day": "2026-11-17",
+   "country": "ES",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-17",
+   "country": "DE",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-17",
+   "country": "UA",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-17",
+   "country": "IT",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-17",
+   "country": "FR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-17",
+   "country": "PT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-17",
+   "country": "?",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-17",
+   "country": "RU",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-17",
+   "country": "BR",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-17",
+   "country": "CA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-17",
+   "country": "US",
+   "installs": 10,
+   "platform": "iOS",
+   "signed_in": 9
+  },
+  {
+   "day": "2026-11-18",
+   "country": "BR",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-18",
+   "country": "AR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-18",
+   "country": "GB",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-18",
+   "country": "DE",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-18",
+   "country": "BR",
+   "installs": 13,
+   "platform": "iOS",
+   "signed_in": 9
+  },
+  {
+   "day": "2026-11-18",
+   "country": "RU",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-18",
+   "country": "CA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-18",
+   "country": "AU",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-18",
+   "country": "FR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-18",
+   "country": "UA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-18",
+   "country": "IL",
+   "installs": 13,
+   "platform": "Android",
+   "signed_in": 7
+  },
+  {
+   "day": "2026-11-18",
+   "country": "DE",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-18",
+   "country": "?",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-18",
+   "country": "PT",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-18",
+   "country": "ES",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-18",
+   "country": "IT",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-18",
+   "country": "US",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-18",
+   "country": "MX",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-18",
+   "country": "AR",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-18",
+   "country": "FR",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-18",
+   "country": "ES",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-18",
+   "country": "IL",
+   "installs": 39,
+   "platform": "iOS",
+   "signed_in": 26
+  },
+  {
+   "day": "2026-11-19",
+   "country": "IT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-19",
+   "country": "?",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-19",
+   "country": "PT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-19",
+   "country": "FR",
+   "installs": 3,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-19",
+   "country": "FR",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-19",
+   "country": "BR",
+   "installs": 11,
+   "platform": "iOS",
+   "signed_in": 4
+  },
+  {
+   "day": "2026-11-19",
+   "country": "GB",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-19",
+   "country": "US",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-19",
+   "country": "IL",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-19",
+   "country": "DE",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-19",
+   "country": "GB",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-19",
+   "country": "IL",
+   "installs": 61,
+   "platform": "iOS",
+   "signed_in": 39
+  },
+  {
+   "day": "2026-11-19",
+   "country": "BR",
+   "installs": 5,
+   "platform": "Android",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-19",
+   "country": "IL",
+   "installs": 7,
+   "platform": "Android",
+   "signed_in": 4
+  },
+  {
+   "day": "2026-11-19",
+   "country": "ES",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-19",
+   "country": "DE",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-20",
+   "country": "BR",
+   "installs": 8,
+   "platform": "iOS",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-20",
+   "country": "DE",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-20",
+   "country": "AR",
+   "installs": 3,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-20",
+   "country": "UA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-20",
+   "country": "PT",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-20",
+   "country": "DE",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-20",
+   "country": "?",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-20",
+   "country": "MX",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-20",
+   "country": "IL",
+   "installs": 16,
+   "platform": "Android",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-20",
+   "country": "AU",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-20",
+   "country": "FR",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-20",
+   "country": "IL",
+   "installs": 70,
+   "platform": "iOS",
+   "signed_in": 45
+  },
+  {
+   "day": "2026-11-20",
+   "country": "BR",
+   "installs": 3,
+   "platform": "Android",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-20",
+   "country": "CA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-20",
+   "country": "IT",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-20",
+   "country": "RU",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-20",
+   "country": "US",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-20",
+   "country": "GB",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-20",
+   "country": "ES",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-20",
+   "country": "ES",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-21",
+   "country": "GB",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-21",
+   "country": "MX",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-21",
+   "country": "RU",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-21",
+   "country": "IL",
+   "installs": 66,
+   "platform": "iOS",
+   "signed_in": 37
+  },
+  {
+   "day": "2026-11-21",
+   "country": "PT",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-21",
+   "country": "BR",
+   "installs": 8,
+   "platform": "iOS",
+   "signed_in": 4
+  },
+  {
+   "day": "2026-11-21",
+   "country": "ES",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-21",
+   "country": "RU",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-21",
+   "country": "FR",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-21",
+   "country": "FR",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-21",
+   "country": "MX",
+   "installs": 3,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-21",
+   "country": "UA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-21",
+   "country": "IT",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-21",
+   "country": "PT",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-21",
+   "country": "BR",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-21",
+   "country": "?",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-21",
+   "country": "US",
+   "installs": 7,
+   "platform": "iOS",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-21",
+   "country": "GB",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-21",
+   "country": "AR",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 4
+  },
+  {
+   "day": "2026-11-21",
+   "country": "DE",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-21",
+   "country": "IL",
+   "installs": 13,
+   "platform": "Android",
+   "signed_in": 8
+  },
+  {
+   "day": "2026-11-21",
+   "country": "ES",
+   "installs": 2,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-21",
+   "country": "AR",
+   "installs": 4,
+   "platform": "Android",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-22",
+   "country": "IT",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-22",
+   "country": "AR",
+   "installs": 3,
+   "platform": "Android",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-22",
+   "country": "DE",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-22",
+   "country": "US",
+   "installs": 8,
+   "platform": "iOS",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-22",
+   "country": "BR",
+   "installs": 6,
+   "platform": "Android",
+   "signed_in": 3
+  },
+  {
+   "day": "2026-11-22",
+   "country": "AR",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-22",
+   "country": "FR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-22",
+   "country": "RU",
+   "installs": 2,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-22",
+   "country": "RU",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-22",
+   "country": "IL",
+   "installs": 9,
+   "platform": "Android",
+   "signed_in": 6
+  },
+  {
+   "day": "2026-11-22",
+   "country": "IL",
+   "installs": 61,
+   "platform": "iOS",
+   "signed_in": 33
+  },
+  {
+   "day": "2026-11-22",
+   "country": "BR",
+   "installs": 10,
+   "platform": "iOS",
+   "signed_in": 9
+  },
+  {
+   "day": "2026-11-22",
+   "country": "US",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-22",
+   "country": "IL",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-22",
+   "country": "ES",
+   "installs": 4,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-22",
+   "country": "PT",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-22",
+   "country": "UA",
+   "installs": 3,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-22",
+   "country": "PT",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-23",
+   "country": "DE",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-23",
+   "country": "UA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-23",
+   "country": "IL",
+   "installs": 7,
+   "platform": "Android",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-23",
+   "country": "BR",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-23",
+   "country": "CA",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-23",
+   "country": "FR",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-23",
+   "country": "NL",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 0
+  },
+  {
+   "day": "2026-11-23",
+   "country": "US",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-23",
+   "country": "US",
+   "installs": 8,
+   "platform": "iOS",
+   "signed_in": 5
+  },
+  {
+   "day": "2026-11-23",
+   "country": "BR",
+   "installs": 5,
+   "platform": "iOS",
+   "signed_in": 2
+  },
+  {
+   "day": "2026-11-23",
+   "country": "IL",
+   "installs": 29,
+   "platform": "iOS",
+   "signed_in": 19
+  },
+  {
+   "day": "2026-11-23",
+   "country": "IL",
+   "installs": 1,
+   "platform": "iOS-dev",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-23",
+   "country": "IT",
+   "installs": 1,
+   "platform": "iOS",
+   "signed_in": 1
+  },
+  {
+   "day": "2026-11-23",
+   "country": "AR",
+   "installs": 1,
+   "platform": "Android",
+   "signed_in": 1
+  }
+ ],
+ "today": "2026-11-23",
+ "recent": {
+  "d1": 980,
+  "d7": 373,
+  "today": 59,
+  "last_7": 735,
+  "prev_7": 649,
+  "d1_base": 2468,
+  "d7_base": 1817,
+  "returned": 2058,
+  "yesterday": 118
+ },
+ "totals": {
+  "period": 2645,
+  "dev_total": 41,
+  "tracked_total": 2856,
+  "installs_total": 3006,
+  "signed_in_total": 1612,
+  "period_signed_in": 1488,
+  "pre_analytics_estimate": 150
+ },
+ "cohorts": [
+  {
+   "d1": 60,
+   "d7": 31,
+   "day": "2026-10-25",
+   "d1_base": 150,
+   "d7_base": 150,
+   "installs": 150,
+   "returned": 122
+  },
+  {
+   "d1": 37,
+   "d7": 21,
+   "day": "2026-10-26",
+   "d1_base": 110,
+   "d7_base": 110,
+   "installs": 110,
+   "returned": 82
+  },
+  {
+   "d1": 24,
+   "d7": 12,
+   "day": "2026-10-27",
+   "d1_base": 52,
+   "d7_base": 52,
+   "installs": 52,
+   "returned": 40
+  },
+  {
+   "d1": 20,
+   "d7": 11,
+   "day": "2026-10-28",
+   "d1_base": 54,
+   "d7_base": 54,
+   "installs": 54,
+   "returned": 44
+  },
+  {
+   "d1": 16,
+   "d7": 8,
+   "day": "2026-10-29",
+   "d1_base": 49,
+   "d7_base": 49,
+   "installs": 49,
+   "returned": 39
+  },
+  {
+   "d1": 26,
+   "d7": 9,
+   "day": "2026-10-30",
+   "d1_base": 74,
+   "d7_base": 74,
+   "installs": 74,
+   "returned": 53
+  },
+  {
+   "d1": 35,
+   "d7": 10,
+   "day": "2026-10-31",
+   "d1_base": 83,
+   "d7_base": 83,
+   "installs": 83,
+   "returned": 62
+  },
+  {
+   "d1": 14,
+   "d7": 15,
+   "day": "2026-11-01",
+   "d1_base": 60,
+   "d7_base": 60,
+   "installs": 60,
+   "returned": 43
+  },
+  {
+   "d1": 27,
+   "d7": 15,
+   "day": "2026-11-02",
+   "d1_base": 70,
+   "d7_base": 70,
+   "installs": 70,
+   "returned": 58
+  },
+  {
+   "d1": 28,
+   "d7": 8,
+   "day": "2026-11-03",
+   "d1_base": 63,
+   "d7_base": 63,
+   "installs": 63,
+   "returned": 53
+  },
+  {
+   "d1": 21,
+   "d7": 9,
+   "day": "2026-11-04",
+   "d1_base": 68,
+   "d7_base": 68,
+   "installs": 68,
+   "returned": 56
+  },
+  {
+   "d1": 25,
+   "d7": 16,
+   "day": "2026-11-05",
+   "d1_base": 70,
+   "d7_base": 70,
+   "installs": 70,
+   "returned": 51
+  },
+  {
+   "d1": 34,
+   "d7": 13,
+   "day": "2026-11-06",
+   "d1_base": 92,
+   "d7_base": 92,
+   "installs": 92,
+   "returned": 71
+  },
+  {
+   "d1": 36,
+   "d7": 14,
+   "day": "2026-11-07",
+   "d1_base": 105,
+   "d7_base": 105,
+   "installs": 105,
+   "returned": 88
+  },
+  {
+   "d1": 29,
+   "d7": 9,
+   "day": "2026-11-08",
+   "d1_base": 85,
+   "d7_base": 85,
+   "installs": 85,
+   "returned": 64
+  },
+  {
+   "d1": 28,
+   "d7": 14,
+   "day": "2026-11-09",
+   "d1_base": 76,
+   "d7_base": 76,
+   "installs": 76,
+   "returned": 64
+  },
+  {
+   "d1": 30,
+   "d7": 23,
+   "day": "2026-11-10",
+   "d1_base": 77,
+   "d7_base": 77,
+   "installs": 77,
+   "returned": 62
+  },
+  {
+   "d1": 30,
+   "d7": 20,
+   "day": "2026-11-11",
+   "d1_base": 85,
+   "d7_base": 85,
+   "installs": 85,
+   "returned": 65
+  },
+  {
+   "d1": 35,
+   "d7": 24,
+   "day": "2026-11-12",
+   "d1_base": 86,
+   "d7_base": 86,
+   "installs": 86,
+   "returned": 67
+  },
+  {
+   "d1": 41,
+   "d7": 29,
+   "day": "2026-11-13",
+   "d1_base": 104,
+   "d7_base": 104,
+   "installs": 104,
+   "returned": 80
+  },
+  {
+   "d1": 39,
+   "d7": 32,
+   "day": "2026-11-14",
+   "d1_base": 107,
+   "d7_base": 107,
+   "installs": 107,
+   "returned": 91
+  },
+  {
+   "d1": 31,
+   "d7": 30,
+   "day": "2026-11-15",
+   "d1_base": 97,
+   "d7_base": 97,
+   "installs": 97,
+   "returned": 75
+  },
+  {
+   "d1": 47,
+   "d7": 0,
+   "day": "2026-11-16",
+   "d1_base": 93,
+   "d7_base": 0,
+   "installs": 93,
+   "returned": 81
+  },
+  {
+   "d1": 46,
+   "d7": 0,
+   "day": "2026-11-17",
+   "d1_base": 97,
+   "d7_base": 0,
+   "installs": 97,
+   "returned": 79
+  },
+  {
+   "d1": 45,
+   "d7": 0,
+   "day": "2026-11-18",
+   "d1_base": 94,
+   "d7_base": 0,
+   "installs": 94,
+   "returned": 79
+  },
+  {
+   "d1": 52,
+   "d7": 0,
+   "day": "2026-11-19",
+   "d1_base": 107,
+   "d7_base": 0,
+   "installs": 107,
+   "returned": 88
+  },
+  {
+   "d1": 56,
+   "d7": 0,
+   "day": "2026-11-20",
+   "d1_base": 121,
+   "d7_base": 0,
+   "installs": 121,
+   "returned": 88
+  },
+  {
+   "d1": 68,
+   "d7": 0,
+   "day": "2026-11-21",
+   "d1_base": 139,
+   "d7_base": 0,
+   "installs": 139,
+   "returned": 116
+  },
+  {
+   "d1": 0,
+   "d7": 0,
+   "day": "2026-11-22",
+   "d1_base": 0,
+   "d7_base": 0,
+   "installs": 118,
+   "returned": 97
+  },
+  {
+   "d1": 0,
+   "d7": 0,
+   "day": "2026-11-23",
+   "d1_base": 0,
+   "d7_base": 0,
+   "installs": 59,
+   "returned": 0
+  }
+ ],
+ "devices": [
+  {
+   "total": 624,
+   "value": "iPhone16,2",
+   "period": 562
+  },
+  {
+   "total": 285,
+   "value": "iPhone15,3",
+   "period": 263
+  },
+  {
+   "total": 260,
+   "value": "iPhone14,5",
+   "period": 240
+  },
+  {
+   "total": 235,
+   "value": "iPhone15,4",
+   "period": 210
+  },
+  {
+   "total": 218,
+   "value": "iPhone13,2",
+   "period": 204
+  },
+  {
+   "total": 202,
+   "value": "iPhone17,1",
+   "period": 185
+  },
+  {
+   "total": 195,
+   "value": "iPhone14,7",
+   "period": 183
+  },
+  {
+   "total": 181,
+   "value": "iPhone12,1",
+   "period": 170
+  },
+  {
+   "total": 166,
+   "value": "iPhone16,1",
+   "period": 150
+  },
+  {
+   "total": 160,
+   "value": "iPhone14,2",
+   "period": 148
+  },
+  {
+   "total": 59,
+   "value": "Pixel 8",
+   "period": 59
+  },
+  {
+   "total": 58,
+   "value": "SM-A156B",
+   "period": 58
+  },
+  {
+   "total": 56,
+   "value": "SM-A055F",
+   "period": 56
+  },
+  {
+   "total": 54,
+   "value": "Redmi Note 13",
+   "period": 54
+  },
+  {
+   "total": 54,
+   "value": "SM-G991B",
+   "period": 54
+  },
+  {
+   "total": 49,
+   "value": "SM-S921B",
+   "period": 49
+  }
+ ],
+ "versions": [
+  {
+   "total": 1598,
+   "value": "1.0.3",
+   "period": 1478
+  },
+  {
+   "total": 868,
+   "value": "1.0.2",
+   "period": 808
+  },
+  {
+   "total": 390,
+   "value": "1.0.1",
+   "period": 359
+  }
+ ],
+ "countries": [
+  {
+   "d1": 598,
+   "d7": 228,
+   "total": 1744,
+   "period": 1602,
+   "country": "IL",
+   "d1_base": 1494,
+   "d7_base": 1095,
+   "returned": 1264,
+   "signed_in": 923
+  },
+  {
+   "d1": 108,
+   "d7": 39,
+   "total": 308,
+   "period": 292,
+   "country": "BR",
+   "d1_base": 270,
+   "d7_base": 203,
+   "returned": 217,
+   "signed_in": 164
+  },
+  {
+   "d1": 64,
+   "d7": 27,
+   "total": 192,
+   "period": 181,
+   "country": "US",
+   "d1_base": 163,
+   "d7_base": 127,
+   "returned": 136,
+   "signed_in": 106
+  },
+  {
+   "d1": 28,
+   "d7": 9,
+   "total": 93,
+   "period": 87,
+   "country": "ES",
+   "d1_base": 83,
+   "d7_base": 66,
+   "returned": 69,
+   "signed_in": 40
+  },
+  {
+   "d1": 30,
+   "d7": 13,
+   "total": 89,
+   "period": 81,
+   "country": "PT",
+   "d1_base": 79,
+   "d7_base": 63,
+   "returned": 62,
+   "signed_in": 39
+  },
+  {
+   "d1": 25,
+   "d7": 12,
+   "total": 71,
+   "period": 67,
+   "country": "GB",
+   "d1_base": 67,
+   "d7_base": 53,
+   "returned": 53,
+   "signed_in": 36
+  },
+  {
+   "d1": 25,
+   "d7": 9,
+   "total": 69,
+   "period": 62,
+   "country": "FR",
+   "d1_base": 60,
+   "d7_base": 41,
+   "returned": 52,
+   "signed_in": 33
+  },
+  {
+   "d1": 19,
+   "d7": 10,
+   "total": 63,
+   "period": 59,
+   "country": "AR",
+   "d1_base": 52,
+   "d7_base": 37,
+   "returned": 41,
+   "signed_in": 33
+  },
+  {
+   "d1": 23,
+   "d7": 6,
+   "total": 58,
+   "period": 54,
+   "country": "DE",
+   "d1_base": 51,
+   "d7_base": 34,
+   "returned": 43,
+   "signed_in": 29
+  },
+  {
+   "d1": 14,
+   "d7": 2,
+   "total": 33,
+   "period": 33,
+   "country": "IT",
+   "d1_base": 31,
+   "d7_base": 22,
+   "returned": 24,
+   "signed_in": 18
+  },
+  {
+   "d1": 17,
+   "d7": 3,
+   "total": 31,
+   "period": 29,
+   "country": "MX",
+   "d1_base": 29,
+   "d7_base": 16,
+   "returned": 23,
+   "signed_in": 15
+  },
+  {
+   "d1": 9,
+   "d7": 5,
+   "total": 26,
+   "period": 25,
+   "country": "?",
+   "d1_base": 25,
+   "d7_base": 17,
+   "returned": 20,
+   "signed_in": 12
+  },
+  {
+   "d1": 7,
+   "d7": 3,
+   "total": 25,
+   "period": 25,
+   "country": "RU",
+   "d1_base": 22,
+   "d7_base": 14,
+   "returned": 20,
+   "signed_in": 14
+  },
+  {
+   "d1": 4,
+   "d7": 3,
+   "total": 24,
+   "period": 20,
+   "country": "UA",
+   "d1_base": 16,
+   "d7_base": 9,
+   "returned": 16,
+   "signed_in": 9
+  },
+  {
+   "d1": 5,
+   "d7": 1,
+   "total": 17,
+   "period": 16,
+   "country": "CA",
+   "d1_base": 15,
+   "d7_base": 12,
+   "returned": 10,
+   "signed_in": 10
+  },
+  {
+   "d1": 1,
+   "d7": 1,
+   "total": 7,
+   "period": 6,
+   "country": "NL",
+   "d1_base": 5,
+   "d7_base": 5,
+   "returned": 3,
+   "signed_in": 2
+  },
+  {
+   "d1": 3,
+   "d7": 2,
+   "total": 6,
+   "period": 6,
+   "country": "AU",
+   "d1_base": 6,
+   "d7_base": 3,
+   "returned": 5,
+   "signed_in": 5
+  }
+ ],
+ "first_day": "2026-10-25",
+ "platforms": [
+  {
+   "total": 2485,
+   "value": "iOS",
+   "period": 2289
+  },
+  {
+   "total": 330,
+   "value": "Android",
+   "period": 330
+  },
+  {
+   "total": 41,
+   "value": "iOS-dev",
+   "period": 26
+  }
+ ],
+ "generated_at": "2026-11-23T15:29:19.532+02:00",
+ "first_versions": [
+  {
+   "env": "production",
+   "installs": 755,
+   "app_version": "1.0.2",
+   "build_number": "10"
+  },
+  {
+   "env": "production",
+   "installs": 342,
+   "app_version": "1.0.3",
+   "build_number": "25"
+  },
+  {
+   "env": "production",
+   "installs": 322,
+   "app_version": "1.0.1",
+   "build_number": "5"
+  },
+  {
+   "env": "production",
+   "installs": 316,
+   "app_version": "1.0.3",
+   "build_number": "26"
+  },
+  {
+   "env": "production",
+   "installs": 315,
+   "app_version": "1.0.3",
+   "build_number": "24"
+  },
+  {
+   "env": "?",
+   "installs": 144,
+   "app_version": "1.0.3",
+   "build_number": "25"
+  },
+  {
+   "env": "?",
+   "installs": 142,
+   "app_version": "1.0.3",
+   "build_number": "24"
+  },
+  {
+   "env": "?",
+   "installs": 117,
+   "app_version": "1.0.3",
+   "build_number": "26"
+  },
+  {
+   "env": "testflight",
+   "installs": 45,
+   "app_version": "1.0.2",
+   "build_number": "10"
+  },
+  {
+   "env": "testflight",
+   "installs": 32,
+   "app_version": "1.0.1",
+   "build_number": "5"
+  },
+  {
+   "env": "testflight",
+   "installs": 31,
+   "app_version": "1.0.3",
+   "build_number": "26"
+  },
+  {
+   "env": "testflight",
+   "installs": 31,
+   "app_version": "1.0.3",
+   "build_number": "25"
+  },
+  {
+   "env": "testflight",
+   "installs": 27,
+   "app_version": "1.0.3",
+   "build_number": "24"
+  },
+  {
+   "env": "dev",
+   "installs": 8,
+   "app_version": "1.0.2",
+   "build_number": "10"
+  },
+  {
+   "env": "dev",
+   "installs": 5,
+   "app_version": "1.0.3",
+   "build_number": "25"
+  },
+  {
+   "env": "dev",
+   "installs": 5,
+   "app_version": "1.0.1",
+   "build_number": "5"
+  },
+  {
+   "env": "dev",
+   "installs": 4,
+   "app_version": "1.0.3",
+   "build_number": "26"
+  },
+  {
+   "env": "dev",
+   "installs": 4,
+   "app_version": "1.0.3",
+   "build_number": "24"
+  }
+ ]
+}
