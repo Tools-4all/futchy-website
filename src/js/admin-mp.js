@@ -12,7 +12,8 @@ const DEMO = DEMO_HOST && new URLSearchParams(location.search).has("demo");
 const nf = new Intl.NumberFormat("he-IL");
 const nf1 = new Intl.NumberFormat("he-IL", { maximumFractionDigits: 1 });
 const isNum = (v) => v !== null && v !== undefined && v !== "" && !Number.isNaN(+v) && Number.isFinite(+v);
-const num = (v) => isNum(v) ? nf.format(Math.round(+v)) : "–";
+const kNum = (n) => { const a = Math.abs(n); if (a < 10000) return nf.format(Math.round(n)); const [d, s] = a >= 1e6 ? [1e6, "M"] : [1e3, "k"]; const v = Math.round(n / d * 10) / 10; return `${v.toLocaleString("en-US", { maximumFractionDigits: 1 })}${s}`; };
+const num = (v) => isNum(v) ? kNum(+v) : "–";
 const n1 = (v) => isNum(v) ? nf1.format(+v) : "–";
 // Left-to-right islands inside the right-to-left page ("96 ms", "9.11, 16:58" would otherwise read backwards).
 const L = (s) => `\u2066${s}\u2069`;
