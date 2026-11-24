@@ -7,7 +7,8 @@ const L = window.FutchyLabels;   // every raw id in the game's own Hebrew (admin
 
 const $ = (id) => document.getElementById(id);
 const nf = new Intl.NumberFormat("he-IL");
-const num = (v) => (v === null || v === undefined || Number.isNaN(+v)) ? "–" : nf.format(Math.round(+v));
+const kNum = (n) => { const a = Math.abs(n); if (a < 10000) return nf.format(Math.round(n)); const [d, s] = a >= 1e6 ? [1e6, "M"] : [1e3, "k"]; const v = Math.round(n / d * 10) / 10; return `${v.toLocaleString("en-US", { maximumFractionDigits: 1 })}${s}`; };
+const num = (v) => (v === null || v === undefined || Number.isNaN(+v)) ? "–" : kNum(+v);
 const pct = (v) => (v === null || v === undefined) ? "–" : `${(+v).toLocaleString("he-IL", { maximumFractionDigits: 1 })}%`;
 
 function el(tag, cls, text) {
@@ -34,7 +35,7 @@ const STEPS = { first_launch: "התקנה ראשונה", sign_in_shown: "ראו 
 const ADS = { ad_requested: "ביקשו פרסומת", ad_unavailable: "לא הייתה פרסומת", ad_completed: "צפו עד הסוף",
   ad_not_completed: "סגרו לפני הסוף", ad_failed: "הפרסומת נכשלה", double_coins_paid: "הכפילו את הכסף בפרסומת" };
 // ₪ with agorot (4.90); a pack by its name in the game's store (com.Maagalim.MaagalimBeach.coins2500 -> 2,500 כסף).
-const ils = (v) => (v === null || v === undefined || Number.isNaN(+v)) ? "–" : `₪${(+v).toLocaleString("he-IL", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+const ils = (v) => (v === null || v === undefined || Number.isNaN(+v)) ? "–" : (Math.abs(+v) >= 10000 ? `₪${kNum(+v)}` : `₪${(+v).toLocaleString("he-IL", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`);
 const pack = (p) => L.product(p).name;
 const country = (c) => `${L.flag(c)} ${L.country(c)}`.trim();
 

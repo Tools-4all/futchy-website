@@ -11,7 +11,8 @@ const DEMO = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) && new URLSear
 
 const $ = (id) => document.getElementById(id);
 const nf = new Intl.NumberFormat("he-IL");
-const num = (v) => (v === null || v === undefined || Number.isNaN(+v)) ? "–" : nf.format(Math.round(+v));
+const kNum = (n) => { const a = Math.abs(n); if (a < 10000) return nf.format(Math.round(n)); const [d, s] = a >= 1e6 ? [1e6, "M"] : [1e3, "k"]; const v = Math.round(n / d * 10) / 10; return `${v.toLocaleString("en-US", { maximumFractionDigits: 1 })}${s}`; };
+const num = (v) => (v === null || v === undefined || Number.isNaN(+v)) ? "–" : kNum(+v);
 const pct = (v) => (v === null || v === undefined || !Number.isFinite(+v)) ? "–" : `${(+v).toLocaleString("he-IL", { maximumFractionDigits: 1 })}%`;
 const share = (a, b) => b > 0 ? 100 * a / b : null;
 const dayOf = (s) => new Date(s + "T12:00:00");
@@ -35,7 +36,7 @@ function duration(sec) {
   const h = Math.floor(m / 60);
   return `${h}:${String(m % 60).padStart(2, "0")} שע׳`;
 }
-const hours = (sec) => sec ? nf.format(Math.round(sec / 3600)) : "–";
+const hours = (sec) => sec ? kNum(sec / 3600) : "–";
 // A length for a big tile: "13:18" (the unit goes in the line under it, so the display font shows digits only).
 function clock(sec) {
   if (sec === null || sec === undefined) return ["–", ""];
