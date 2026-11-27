@@ -224,6 +224,8 @@ export function build() {
   writeFileSync(join(dist, ".nojekyll"), "");
   // favicon.ico at the site root (some crawlers ask for it there)
   cpSync(join(src, "img/favicon.ico"), join(dist, "favicon.ico"));
+  // app-ads.txt at the domain root: ad networks check it to verify authorized sellers (IAB app-ads.txt).
+  if (existsSync(join(src, "app-ads.txt"))) cpSync(join(src, "app-ads.txt"), join(dist, "app-ads.txt"));
 
   console.log(`built ${PAGES.length} pages, css ${assets.css}, js ${assets.js} -> dist/`);
 }
